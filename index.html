@@ -1,13 +1,14 @@
-<!-- Crystal Flow Repair & Drain Cleaning — full 5-page site (Chrome & Gold) -->
+<!-- Crystal Flow Repair & Drain Cleaning, full 5-page site (Chrome & Gold) -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crystal Flow Repair &amp; Drain Cleaning </title>
 <meta name="description" content="Owner-operated drain cleaning and repair near Womelsdorf, PA. Sewer backups, sinks, tubs, toilets, faucets and drains. Serving Berks & Lebanon within roughly 20 miles.">
-<link rel="icon" type="image/png" href="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shield_teardrop_cropped_true_transparent.png">
-<meta property="og:title" content="Crystal Flow Repair & Drain Cleaning — Womelsdorf, PA">
+<link rel="icon" type="image/png" href="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png">
+<meta property="og:title" content="Crystal Flow Repair & Drain Cleaning, Womelsdorf, PA">
 <meta property="og:description" content="If it drains, we can fix it. Owner-operated drain cleaning and repair serving Womelsdorf and nearby towns within roughly 20 miles.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/crystal_flow_logo_true_transparent_cropped.png">
+<meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
 <!-- FAQ schema (matches the visible FAQ on the home page) -->
 <script type="application/ld+json">
@@ -80,21 +81,41 @@
   .hero-bg{position:absolute;inset:0;overflow:hidden}
   .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.85}
   .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,7,15,.92) 0%,rgba(3,7,15,.74) 38%,rgba(3,7,15,.34) 66%,rgba(3,7,15,.05) 100%)}
-  .hero .wrap{position:relative;padding:60px 20px 66px;display:grid;grid-template-columns:1.12fr .88fr;gap:42px;align-items:center}
+  .hero .wrap{position:relative;padding:40px 20px 86px;display:grid;grid-template-columns:minmax(0,760px);gap:42px;align-items:center;min-height:420px}
   .promise{display:inline-flex;gap:8px;align-items:center;color:#bfe4ff;font-weight:800;font-size:13px;border-radius:999px;padding:8px 14px;border:1px solid rgba(26,167,255,.4);background:rgba(26,167,255,.12);margin-bottom:16px}
   .promise i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(57,217,138,.25)}
-  .hero h1{font-size:clamp(36px,5.4vw,60px);font-weight:900;margin-bottom:14px}
-  .hero h1 span{background:linear-gradient(90deg,var(--gold),var(--gold-d));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero h1{font-weight:900;margin-bottom:14px;line-height:1.08}
+  .hero h1 .cf1{display:block;font-size:clamp(30px,4.3vw,44px);background:linear-gradient(180deg,#ffffff,#dCEBFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero h1 .cf2{display:block;font-size:clamp(38px,5.3vw,56px);background:linear-gradient(180deg,#6fe0e8,#159fc0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 6px rgba(40,160,200,.4))}
+  .hero h1 .cf3{display:inline-block;font-size:clamp(42px,5.8vw,62px);background:linear-gradient(180deg,#7db8ff,#1450c8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;border-bottom:4px solid #2f86ff;padding-bottom:2px;animation:cfglow 2.2s ease-in-out infinite}
+  @keyframes cfglow{0%,100%{filter:drop-shadow(0 0 12px rgba(90,160,255,.5))}50%{filter:drop-shadow(0 0 34px rgba(110,180,255,1)) drop-shadow(0 0 12px rgba(90,160,255,.7))}}
+  .hero .rhyme{font-size:clamp(18px,2.4vw,24px);font-weight:900;color:#fff;margin-top:14px}
+  .hero .rhyme .u{text-decoration:underline;text-decoration-color:#2f86ff;text-underline-offset:4px;text-decoration-thickness:3px}
+  .hero .rhyme .scr{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.5em;color:#3fb8e8;margin-left:4px}
+  .hero .promise-mid{margin:18px 0 4px}
+  .promise-topright{position:absolute;top:24px;right:28px;z-index:4;margin:0}
+  @media (max-width:980px){.promise-topright{position:static;margin:0 0 16px}}
   .hero p.lead{color:var(--muted);font-size:17px;max-width:500px}
   .callblock{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0 14px}
-  .callblock .phone{display:flex;flex-direction:row;align-items:center;gap:12px;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;border-radius:14px;padding:12px 22px;box-shadow:0 12px 30px rgba(247,201,72,.32)}
+  .callblock .phone{display:flex;flex-direction:row;align-items:center;gap:12px;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;border-radius:14px;padding:12px 22px;box-shadow:0 12px 30px rgba(247,201,72,.32);position:relative;overflow:hidden;transition:.18s transform,.18s box-shadow}
+  .callblock .phone:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(247,201,72,.5)}
+  .callblock .phone:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite}
+  .callblock .qbtn{position:relative;overflow:hidden}
+  .callblock .qbtn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite;animation-delay:.5s}
+  @keyframes shine{0%{left:-60%}28%,100%{left:130%}}
   .callblock .phone .phone-ic{width:30px;height:30px;flex:0 0 30px;stroke:#1a1304;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .callblock .phone .phone-tx{display:flex;flex-direction:column;line-height:1}
-  .svc-list{margin-top:18px;text-align:center;color:var(--chrome);font-size:13.5px;font-weight:700;letter-spacing:.02em;opacity:.92}
+  .svc-list{margin-top:18px;text-align:left;color:var(--gold);font-size:13.5px;font-weight:900;letter-spacing:.02em;opacity:1}
   .hero-card{align-self:start;margin-top:6px;text-align:center;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.20);border-radius:18px;padding:26px 24px;backdrop-filter:blur(7px);box-shadow:0 12px 34px rgba(0,0,0,.4)}
   .hero-card-brand{color:#1aa7ff;font-weight:900;font-size:23px;letter-spacing:.01em;margin-bottom:18px}
   .btn-water{width:100%;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-weight:900;font-size:16px;box-shadow:0 10px 26px rgba(247,201,72,.34)}
   .btn-water:hover{filter:brightness(1.06)}
+  .hero-float{position:absolute;right:28px;bottom:60px;z-index:4;text-align:center;max-width:380px}
+  .hero-float .hf-title{color:#3aa0ff;font-weight:900;font-size:clamp(14px,2vw,18px);line-height:1.1;margin-bottom:10px;text-shadow:0 2px 16px rgba(0,0,0,.7)}
+  .hero-float .hf-link{display:inline-block;color:var(--gold);font-weight:900;font-size:clamp(23px,2.9vw,29px);line-height:1.15;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;cursor:pointer;text-shadow:0 2px 14px rgba(0,0,0,.7);animation:hfbreathe 2.4s ease-in-out infinite}
+  @keyframes hfbreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 6px rgba(247,201,72,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 18px rgba(247,201,72,.85))}}
+  .hero-float .hf-link:hover{filter:brightness(1.1)}
+  @media (max-width:980px){.hero-float{position:static;margin:18px auto 0;right:auto;bottom:auto;max-width:420px}}
   .callblock .phone small{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
   .callblock .phone b{font-size:30px;font-weight:900;line-height:1.05;white-space:nowrap}
   .callblock .qbtn{font-size:16px;padding:0 24px}
@@ -159,6 +180,10 @@
   .faq .a{padding:0 18px 16px;color:var(--muted);font-size:14.5px}
 
   .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .drain-checklist{max-width:760px;margin:6px auto 0;list-style:none;display:grid;gap:12px}
+  .drain-checklist li{display:flex;gap:12px;align-items:flex-start;color:var(--chrome);font-size:16px;font-weight:600;line-height:1.45}
+  .drain-checklist li:before{content:"\2713";color:var(--ice);font-weight:900;font-size:18px;flex:0 0 auto;filter:drop-shadow(0 0 6px rgba(43,245,200,.4))}
+  .drain-checklist-head{text-align:center;font-size:clamp(22px,3vw,30px);font-weight:900;margin-bottom:6px}
   .chip{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;color:var(--chrome)}
 
   .twocol{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
@@ -169,12 +194,46 @@
   .lead-p{color:var(--chrome);font-size:16px;margin-top:14px}
   .lead-p+.lead-p{margin-top:12px}
 
+  .legacy{padding:0}
+  .legacy-body{padding:8px 0 4px}
+  .legacy-photo{float:right;width:320px;max-width:44%;height:auto;margin:2px 0 16px 34px}
+  .legacy-body p{color:var(--chrome);font-size:16.5px;line-height:1.74;margin-bottom:17px}
+  .legacy-body p.white-bold{color:#fff;font-weight:800}
+  .legacy-prof{display:flex;align-items:center;gap:15px;margin:24px 0}
+  .legacy-prof img{width:48px;height:auto;flex:0 0 auto;filter:drop-shadow(0 0 11px rgba(43,182,232,.5))}
+  .legacy-prof span{color:#2bb6e8;font-size:20px;font-weight:900;font-style:italic;text-decoration:underline;text-underline-offset:4px}
+  .legacy-home{font-size:17.5px;line-height:1.74;font-weight:700;margin-bottom:0}
+  .legacy-home .hl{color:#2bb6e8;text-decoration:underline;text-decoration-color:#fff;text-underline-offset:4px}
+  .legacy-home .wc{color:#fff;font-weight:800;white-space:nowrap;margin-left:4px}
+  .legacy-div{margin:24px 0 0;height:1px;background:linear-gradient(to right,rgba(43,182,232,.4),rgba(43,182,232,0))}
+  .legacy-list{list-style:none;margin:24px 0 0;display:grid;gap:14px}
+  .legacy-list li{display:flex;gap:13px;align-items:flex-start;color:#dbe6f2;font-size:16.5px;line-height:1.5}
+  .legacy-list li:before{content:"\2713";color:#2bb6e8;font-weight:900;font-size:19px;flex:0 0 auto;filter:drop-shadow(0 0 7px rgba(43,182,232,.45))}
+  .legacy-loc{margin-top:24px;color:var(--muted);font-size:14px;font-style:italic}
+  .legacy-clear{clear:both}
+  @media (max-width:760px){
+    .legacy-photo{float:none;display:block;width:80%;max-width:300px;margin:0 auto 22px}
+  }
+
+  .fastresp{display:flex;align-items:center;gap:20px;justify-content:center;text-align:left;flex-wrap:wrap}
+  .fastresp img{width:64px;height:auto;flex:0 0 auto;filter:drop-shadow(0 0 12px rgba(43,182,232,.5))}
+  .fastresp h2{font-size:clamp(24px,3.6vw,38px);font-weight:900;color:#fff;line-height:1.1}
+  .fastresp h2 .u{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:5px;text-decoration-thickness:3px}
   .flyer-banner{margin-top:8px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#0a1220}
   .flyer-banner img{width:100%;display:block}
   .badge-center{display:flex;justify-content:center;margin:6px 0 4px}
   .badge-center img{max-width:300px;width:60%}
 
   .cta .wrap{padding:58px 20px}
+  .stacked{display:flex;align-items:center;gap:24px;justify-content:center;flex-wrap:wrap;text-align:left}
+  .stacked img{width:84px;height:auto;flex:0 0 auto;filter:drop-shadow(0 0 14px rgba(43,182,232,.5))}
+  .stacked .st-tx{display:flex;flex-direction:column;line-height:1.05}
+  .stacked .st1{font-size:clamp(28px,4vw,44px);font-weight:900;color:#fff;text-shadow:0 0 22px rgba(255,255,255,.18)}
+  .stacked .st2{font-size:clamp(22px,3vw,32px);font-weight:800;color:#2fb8e8;text-shadow:0 0 18px rgba(47,184,232,.4)}
+  .brandclose{position:relative;padding:70px 20px;text-align:center;overflow:hidden;border-top:1px solid var(--line)}
+  .brandclose .bc-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .brandclose .bc-bg img{width:min(680px,90%);height:auto;opacity:.12;filter:grayscale(.1)}
+  .brandclose .bc-logo{position:relative;width:min(460px,82%);height:auto;margin:0 auto;filter:drop-shadow(0 8px 30px rgba(0,0,0,.5))}
   .ctabox{border-radius:22px;padding:46px;text-align:center}
   .ctabox h2{font-size:clamp(26px,3.6vw,38px);font-weight:900}
   .ctabox p{color:var(--muted);margin:14px auto 24px;max-width:520px}
@@ -278,13 +337,13 @@
 </defs></svg>
 
 <div class="topbar"><div class="wrap">
-  <span><b>Located in Womelsdorf.</b> Father and Son Operated. <a data-quote style="cursor:pointer">Get a Free Quote Today</a></span>
+  <span><b>Servicing Berks, Lebanon &amp; Lancaster Counties.</b> &nbsp;||&nbsp; Father &amp; Son. &nbsp;||&nbsp; <a data-quote style="cursor:pointer">Free Quote Today!</a></span>
   <a href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a>
 </div></div>
 
 <header class="site"><div class="wrap">
   <div class="brand" data-nav="home">
-    <img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield logo">
+    <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield logo">
     <span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span>
   </div>
   <button class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
@@ -303,24 +362,26 @@
 <!-- ===================== HOME ===================== -->
 <main class="page" id="home">
   <section class="hero">
-    <div class="hero-bg"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/Shield-Hero.png" alt=""></div>
+    <div class="hero-bg"><img src="https://www.crystalclearflow.com/assets/Shield-Hero.png" alt=""></div>
+    <span class="promise promise-topright"><i></i>We call back within 30 minutes, 9am to 6pm</span>
     <div class="wrap">
       <div>
-        <span class="promise"><i></i>We call back within 30 minutes, 9am to 6pm</span>
-        <span class="eyebrow">Womelsdorf PA Drain Cleaning</span>
-        <h1>If It Drains, <span>We Are the Answer to Your Problems!</span></h1>
-        <p class="lead">Owner-Operated Drain Cleaning and Repair. When It Backs Up, We Show Up.</p>
+        <h1><span class="cf1">Crystal Flow</span><span class="cf2">Crystal Clear</span><span class="cf3">Clogs Disappear</span></h1>
+        <div class="rhyme">No <span class="u">Stress</span> No <span class="u">Guess</span> <span class="scr">Just Crystal Flow</span></div>
+        <p class="lead" style="margin-top:14px;color:var(--gold)">When your pipes start fighting back, Crystal Flow steps in with Confidence, Clarity, and Control. Straight answers, and work done with Pride, not Pressure!</p>
+        <p class="lead" style="margin-top:10px;color:var(--gold)">We do not believe in Confusion. We do not believe in Surprises. We believe in showing up Strong, Protecting your home, and getting the water moving like it Should.</p>
         <div class="callblock">
           <a class="phone" href="tel:+14842583749" data-track-call><svg class="phone-ic"><use href="#i-phone"></use></svg><span class="phone-tx"><small>Call the Owner Now</small><b>(484) 258-3749</b></span></a>
           <button class="btn btn-blue qbtn" data-quote><svg class="bico"><use href="#i-doc"></use></svg> Get My Free Quote</button>
         </div>
         <div class="ticks"><span>Father &amp; Son Operated</span><span>Upfront Pricing</span><span>Same-Day When Available</span></div>
         <div class="svc-list">Clogged Drains • Sewer Backups • Sinks • Tubs • Toilets • Faucets • Showers • Drain Pipes</div>
+        <p style="color:#fff;font-weight:800;font-size:15px;margin-top:14px;line-height:1.5">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know. When your drain says no, Crystal Flow says it's gotta go</p>
       </div>
-      <div class="hero-card">
-        <div class="hero-card-brand">Crystal Flow Solutions</div>
-        <a class="btn btn-water" href="tel:+14842583749" data-track-call>Water Experts at Your Service!</a>
-      </div>
+    </div>
+    <div class="hero-float">
+      <div class="hf-title">Crystal Clear Pricing!</div>
+      <a class="hf-link" href="tel:+14842583749" data-track-call>Crystal Flow Service<br>Call Today!!</a>
     </div>
   </section>
   <div class="proofbar"><div class="wrap">
@@ -329,12 +390,12 @@
   <div class="offerbar"><div class="wrap">10% FIRST-TIME CUSTOMER DISCOUNT. <em>Just mention it in person.</em></div></div>
 
   <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Crystal Flow Services</span><h2>If It Drains, We Can Fix It.</h2><p>Fast help for the problems homeowners actually call about, done right by the owner himself.</p><button class="btn btn-ghost" data-nav="drain-cleaning">View Drain Cleaning</button></div>
+    <div class="sec-head" style="max-width:760px;margin:0 auto;text-align:center"><span class="eyebrow">Crystal Flow Services</span><h2>Clogs Don't Stand A Chance.</h2><p style="margin-left:auto;margin-right:auto">When drains slow down, back up, or stop completely, Crystal Flow brings the right tools, clean work, and straight answers to get your home moving again.</p></div>
     <div class="cards">
-      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-drain.svg'" loading="lazy"></div><h3>Drain Cleaning</h3><p>Slow drains, standing water, gurgling pipes, and stubborn clogs.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-pipe.svg'" loading="lazy"></div><h3>Sewer Clearing</h3><p>Main line backups, multiple fixture trouble, and sewer line clogs.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-nav="repairs-installations"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-home.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath</h3><p>Kitchen sinks, tubs, showers, toilets, utility sinks, and vanity drains.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-quote><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-call.svg'" loading="lazy"></div><h3>Emergency Backups</h3><p>Fast response when water is backing up or your home needs attention.</p><span class="more">Get a quote →</span></div>
+      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Drain Cleaning</h3><p>Slow drains, standing water, gurgling pipes, and stubborn clogs.</p><span class="more">Learn more →</span></div>
+      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Sewer Clearing</h3><p>Main line backups, multiple fixture trouble, and sewer line clogs.</p><span class="more">Learn more →</span></div>
+      <div class="glass card" data-nav="repairs-installations"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath</h3><p>Kitchen sinks, tubs, showers, toilets, utility sinks, and vanity drains.</p><span class="more">Learn more →</span></div>
+      <div class="glass card" data-quote><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Emergency Backups</h3><p>Fast response when water is backing up or your home needs attention.</p><span class="more">Get a quote →</span></div>
     </div>
   </div></section>
 
@@ -349,28 +410,41 @@
     </div>
   </div></section>
 
-  <section class="block"><div class="wrap twocol">
-    <div>
-      <span class="eyebrow">Owner Operated</span><h2>Speak Directly to the Owner.</h2>
-      <p class="lead-p">With Crystal Flow you are not passed around by a call center. You deal directly with Nicholas, the owner, from the first call to the final cleanup.</p>
-      <ul class="checks">
-        <li><span class="ck">✓</span>Backed by his master plumber father, decades of real piping know-how.</li>
-        <li><span class="ck">✓</span>Clear price before we start, no hidden games.</li>
-        <li><span class="ck">✓</span>One Person Responsible, Start to Finish.</li>
-      </ul>
-      <button class="btn btn-gold" data-nav="meet-the-owner">Meet the Owner</button>
+  <section class="block legacy"><div class="wrap">
+    <span class="eyebrow">Time to also meet my old man who taught me how it's done!</span>
+    <h2 class="owner-peak">I started at Abba Plumbing &amp; Heating Inc. I grew up around my father's shop.</h2>
+    <div style="color:var(--gold);font-size:20px;font-weight:900;margin-top:14px">4th &amp; 5th Generation Plumbers At Your Service!</div>
+    <div class="legacy-body">
+      <img class="legacy-photo" src="https://www.crystalclearflow.com/assets/owner-canceled.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/owner_portrait_transparent.png'" alt="Nick, Crystal Flow owner" loading="lazy">
+      <p>Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
+      <p class="white-bold">With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</p>
+      <div class="legacy-prof"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt=""><span>They called him "The Professor."</span></div>
+      <p>The men who worked for him gave him that name due to the constant, creative genius he had to be able to pipe those Long Island homes to code!</p>
+      <p>That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
+      <p class="legacy-home"><span class="hl">We prioritize the care of your home as if it were our own!</span> <span class="wc">&#10003; &#10003; &#10003;</span></p>
+      <div class="legacy-clear"></div>
     </div>
-    <div class="portrait"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/owner_portrait_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/owner-card-web.jpg'" alt="Nicholas, owner of Crystal Flow" loading="lazy"></div>
+    <div class="legacy-div"></div>
+    <ul class="legacy-list">
+      <li>Owner Accountability, Upfront Pricing, and Respect for Your Home!</li>
+      <li>Backed by Steven's Endless Depths of Plumbing Knowledge and Wisdom!</li>
+      <li>4th &amp; 5th Generation Plumbers Near You!</li>
+    </ul>
+    <div class="legacy-loc">Located out of Womelsdorf, Pennsylvania.</div>
+    <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" data-nav="meet-the-owner">Meet the Owner</button></div>
   </div></section>
 
   <!-- EMERGENCY FLYER BANNER -->
   <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Don't Wait</span><h2>Fast Response When Your Drain Can't Wait.</h2></div>
-    <div class="flyer-banner"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/CTA-FULL.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/drain-repair-web.jpg'" alt="Leaking? Don't wait. Crystal Flow responds fast." loading="lazy"></div>
+    <div class="fastresp">
+      <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
+      <h2>Fast Response, When You <span class="u">Just Can't Wait!</span></h2>
+    </div>
+    <div class="flyer-banner" style="margin-top:24px"><img src="https://www.crystalclearflow.com/assets/CTA-FULL.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/drain-repair-web.jpg'" alt="Leaking? Don't wait. Crystal Flow responds fast." loading="lazy"></div>
   </div></section>
 
   <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks &amp; Lebanon County.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
+    <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks, Lebanon &amp; Lancaster Counties.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
     <div class="chips" data-chips></div>
   </div></section>
 
@@ -386,19 +460,41 @@
     </div>
   </div></section>
 
+  <section class="block"><div class="wrap">
+    <div class="stacked">
+      <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
+      <div class="st-tx"><span class="st1">Crystal Flow</span><span class="st2">Crystal Clear Solutions</span></div>
+    </div>
+  </div></section>
+
   <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Crystal Clear Solutions. Every Time.</h2><p>Whether it's a slow sink, a clogged toilet, a backed-up shower, or a drain line that needs real attention, Crystal Flow is ready to help.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a><button class="btn btn-gold" data-quote>Get a Quote</button></div></div></div></section>
+
+  <section class="brandclose">
+    <div class="bc-bg"><img src="https://www.crystalclearflow.com/assets/drain-cleaner.png" alt="" aria-hidden="true" loading="lazy"></div>
+    <img class="bc-logo" src="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.style.display='none'" alt="Crystal Flow Repair and Drain Cleaning" loading="lazy">
+  </section>
 </main>
 
 <!-- ===================== DRAIN CLEANING ===================== -->
 <main class="page" id="drain-cleaning">
   <section class="phero"><div class="wrap">
     <span class="eyebrow">Drain Cleaning &amp; Sewer Clearing</span>
-    <h1>Clogged Drain? <span>We Get It Moving Fast.</span></h1>
-    <p>Slow sink, gurgling tub, standing water, or a sewer backing up? We find the cause and clear it, then make sure it's actually flowing before we leave.</p>
+    <h1>Crystal Flow is built for drain problems <span>that need real attention.</span></h1>
+    <p>Slow drain? Standing water? Toilet backing up? Sewer smell? Gurgling pipes? We handle drain cleaning and sewer clearing for the everyday clogs and the ugly backups, with clean work, fair pricing, and results you can feel right away.</p>
     <div class="callblock"><a class="phone" href="tel:+14842583749" data-track-call><small>Call the owner now</small><b>(484) 258-3749</b></a><button class="btn btn-blue qbtn" data-quote>Get a Free Quote</button></div>
   </div></section>
   <section class="block"><div class="wrap">
-    <div class="flyer-banner"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/Drain-cleaning-full.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/services-banner-web.jpg'" alt="Drain cleaning and repair experts" loading="lazy"></div>
+    <h2 class="drain-checklist-head">If It Drains, We Can Clear It</h2>
+    <ul class="drain-checklist">
+      <li>Slow sinks, clogged tubs &amp; backed-up showers</li>
+      <li>Toilets, floor drains, laundry drains &amp; utility lines</li>
+      <li>Main sewer backups, sewer smells &amp; gurgling pipes</li>
+      <li>Grease, hair, sludge, buildup &amp; stubborn blockages</li>
+      <li>Fast drain cleaning that gets the water moving again</li>
+    </ul>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="flyer-banner"><img src="https://www.crystalclearflow.com/assets/Drain-cleaning-full.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/services-banner-web.jpg'" alt="Drain cleaning and repair experts" loading="lazy"></div>
   </div></section>
   <section class="block"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Signs you need us</span><h2>If you're seeing any of these, call.</h2></div>
@@ -414,10 +510,10 @@
   <section class="block" id="sewer"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">What we clear</span><h2>From kitchen sinks to the main sewer line.</h2><p>The right tool for the job, and an honest price before we start.</p></div>
     <div class="cards">
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-drain.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath Drains</h3><p>Sinks, tubs, showers, toilets, utility and vanity drains.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-pipe.svg'" loading="lazy"></div><h3>Main Sewer Line</h3><p>Whole-home backups and recurring main line clogs.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-call.svg'" loading="lazy"></div><h3>Hydro Jetting</h3><p>High-pressure clearing for grease and heavy buildup.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/toilet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-home.svg'" loading="lazy"></div><h3>Sewer Line Inspection</h3><p>Camera inspection to find the real cause, not just guess.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath Drains</h3><p>Sinks, tubs, showers, toilets, utility and vanity drains.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Main Sewer Line</h3><p>Whole-home backups and recurring main line clogs.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Hydro Jetting</h3><p>High-pressure clearing for grease and heavy buildup.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/toilet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Sewer Line Inspection</h3><p>Camera inspection to find the real cause, not just guess.</p></div>
     </div>
   </div></section>
   <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Fast Response When Your Drain Can't Wait.</h2><p>Talk to the owner, get an upfront price, and get it handled today when available.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 (484) 258-3749</a><button class="btn btn-gold" data-quote>Get a Quote</button></div></div></div></section>
@@ -434,12 +530,12 @@
   <section class="block"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">What we handle</span><h2>Everyday repairs and fixture work.</h2></div>
     <div class="cards c3">
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-home.svg'" loading="lazy"></div><h3>Faucets</h3><p>Drips, leaks, low pressure, and faucet replacement.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/toilet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-home.svg'" loading="lazy"></div><h3>Toilets</h3><p>Running, weak flush, leaks at the base, and replacement.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-home.svg'" loading="lazy"></div><h3>Sinks &amp; Vanities</h3><p>Kitchen, bath, and utility sinks plus vanity drain work.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-drain.svg'" loading="lazy"></div><h3>Tub &amp; Shower Drains</h3><p>Slow or clogged tub and shower drains restored.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-pipe.svg'" loading="lazy"></div><h3>Drain Pipe Repair</h3><p>Worn, leaking, or damaged drain pipe repair.</p></div>
-      <div class="glass card"><div class="ico"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/icon-call.svg'" loading="lazy"></div><h3>Fixture Install</h3><p>Swapping out old fixtures for new ones, done clean.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Faucets</h3><p>Drips, leaks, low pressure, and faucet replacement.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/toilet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Toilets</h3><p>Running, weak flush, leaks at the base, and replacement.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Sinks &amp; Vanities</h3><p>Kitchen, bath, and utility sinks plus vanity drain work.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Tub &amp; Shower Drains</h3><p>Slow or clogged tub and shower drains restored.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Drain Pipe Repair</h3><p>Worn, leaking, or damaged drain pipe repair.</p></div>
+      <div class="glass card"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Fixture Install</h3><p>Swapping out old fixtures for new ones, done clean.</p></div>
     </div>
   </div></section>
   <section class="block"><div class="wrap">
@@ -460,26 +556,29 @@
     <span class="eyebrow">Meet the Owner</span>
     <h1>Local Owner. <span>Real Accountability.</span></h1>
     <p>When you call Crystal Flow, you reach Nicholas, the owner, the person who does the work, not a call center.</p>
-    <div class="badge-center"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.style.display='none'" alt="Crystal Flow emblem"></div>
+    <div class="badge-center"><img src="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.style.display='none'" alt="Crystal Flow emblem"></div>
   </div></section>
-  <section class="block"><div class="wrap twocol">
-    <div class="portrait"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/owner_portrait_transparent.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/master-card-web.jpg'" alt="Nicholas, owner of Crystal Flow" loading="lazy"></div>
-    <div>
-      <h2 class="owner-peak">Owner-Operated, Family-Backed.</h2>
-      <p class="lead-p"><b>Crystal Flow Repair &amp; Drain Cleaning</b> is run by Nicholas, the owner, serving Womelsdorf and the surrounding Berks and Lebanon County towns. You speak directly with the owner, the owner shows up, and the owner stands behind the work.</p>
-      <p class="lead-p">Nicholas handles the day-to-day work personally, bringing a clean, direct, no-runaround approach to drain cleaning and repair service. Every job matters because his name is attached to it.</p>
-      <p class="lead-p">Behind Crystal Flow is a real family trade history. Nicholas learned from his father, <b><u>Steven</u></b>, a Master Plumber with decades of hands-on experience and the owner behind <b><u>Abba Plumbing &amp; Heating</u></b>, a New York plumbing and heating company built on Quality Service, Job Integrity, and a Customer-First Approach, from 1987 to 2025. That background brings more than 50 years of piping, repair, drain, heating, and jobsite experience into the work Crystal Flow does today.</p>
-      <p class="lead-p">Crystal Flow is the next chapter of that family trade legacy: local, owner-operated, and built to earn trust one job at a time.</p>
-      <ul class="checks">
-        <li><span class="ck">✓</span>One Person Responsible, Start to Finish.</li>
-        <li><span class="ck">✓</span>Upfront Pricing, Agreed Before Work Begins.</li>
-        <li><span class="ck">✓</span>Clean, Respectful Work in Your Home.</li>
-      </ul>
-      <button class="btn btn-gold" data-quote>Start Quote Request</button>
+  <section class="block legacy"><div class="wrap">
+    <span class="eyebrow">Time to also meet my old man who taught me how it's done!</span>
+    <h2 class="owner-peak">I started at Abba Plumbing &amp; Heating Inc. I grew up around my father's shop.</h2>
+    <div style="color:var(--gold);font-size:20px;font-weight:900;margin-top:14px">4th &amp; 5th Generation Plumbers At Your Service!</div>
+    <div class="legacy-body">
+      <img class="legacy-photo" src="https://www.crystalclearflow.com/assets/owner-canceled.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/owner_portrait_transparent.png'" alt="Nick, Crystal Flow owner" loading="lazy">
+      <p>Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
+      <p class="white-bold">With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</p>
+      <div class="legacy-prof"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt=""><span>They called him "The Professor."</span></div>
+      <p>The men who worked for him gave him that name due to the constant, creative genius he had to be able to pipe those Long Island homes to code!</p>
+      <p>That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
+      <p class="legacy-home"><span class="hl">We prioritize the care of your home as if it were our own!</span> <span class="wc">&#10003; &#10003; &#10003;</span></p>
+      <div class="legacy-clear"></div>
     </div>
-  </div></section>
-  <section class="block"><div class="wrap">
-    <div class="flyer-banner"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/Owner-Full.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/owner-card-web.jpg'" alt="Local owner. Real accountability." loading="lazy"></div>
+    <div class="legacy-div"></div>
+    <ul class="legacy-list">
+      <li>Owner Accountability, Upfront Pricing, and Respect for Your Home!</li>
+      <li>Backed by Steven's Endless Depths of Plumbing Knowledge and Wisdom!</li>
+      <li>4th &amp; 5th Generation Plumbers Near You!</li>
+    </ul>
+    <div class="legacy-loc">Located out of Womelsdorf, Pennsylvania.</div>
   </div></section>
   <section class="block"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">What we stand for</span><h2>Small-company care. Big-company conversion style.</h2></div>
@@ -515,8 +614,8 @@
 <footer class="site">
   <div class="wrap">
     <div>
-      <div class="brand" data-nav="home"><img src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield" loading="lazy"><span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span></div>
-      <p class="ftxt"><b style="color:#1aa7ff">Family Owned, Father-Son Operated</b> Repair &amp; Drain Cleaning near Womelsdorf, PA, serving Berks and Lebanon County.</p>
+      <div class="brand" data-nav="home"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield" loading="lazy"><span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span></div>
+      <p class="ftxt"><b style="color:#1aa7ff">Family Owned, Father-Son Operated</b> Repair &amp; Drain Cleaning near Womelsdorf, PA, serving Berks, Lebanon and Lancaster Counties.</p>
     </div>
     <div><h4>Services</h4><div class="flist"><a data-nav="drain-cleaning">Drain Cleaning</a><a data-nav="drain-cleaning">Sewer Line Clearing</a><a data-nav="repairs-installations">Faucets, Vanities &amp; Drains</a><a data-nav="meet-the-owner">Meet the Owner</a></div></div>
     <div><h4>Contact</h4><div class="flist"><a href="tel:+14842583749" data-track-call>(484) 258-3749</a><a href="mailto:crystalflowdrains@gmail.com">crystalflowdrains@gmail.com</a><span>Serving Womelsdorf plus nearby towns within roughly 20 miles.</span></div></div>
@@ -532,7 +631,7 @@
 <!-- AD POPUP -->
 <div class="overlay" id="adOverlay"><div class="modal ad-pop">
   <button class="close" data-close-ad>×</button>
-  <img class="ad-img" src="https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.src='https://steep-star-17ed.crystalflowplumbing.workers.dev/assets/ad-drain-repair-experts.png'" alt="Crystal Flow" loading="lazy">
+  <img class="ad-img" src="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/ad-drain-repair-experts.png'" alt="Crystal Flow" loading="lazy">
   <div class="ad-body"><span class="eyebrow">Drain Cleaning</span><h3>If it drains, we can fix it.</h3><p>10% off your first job, just mention it in person. Get your quote before you go.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>Call Now</a><button class="btn btn-gold" data-quote data-close-ad>Get Quote</button></div></div>
 </div></div>
 
@@ -570,7 +669,7 @@
 
   document.getElementById('yr').textContent=new Date().getFullYear();
 
-  var towns=["Womelsdorf","Robesonia","Myerstown","Wernersville","Richland","Newmanstown","Schaefferstown","Bernville","Bethel","Sinking Spring","Wyomissing","West Reading","Reinholds","Stevens","Adamstown","Stouchsburg","Sheridan","Rehrersburg","Fredericksburg","Jonestown"];
+  var towns=["Womelsdorf","Robesonia","Myerstown","Wernersville","Richland","Newmanstown","Schaefferstown","Bernville","Bethel","Sinking Spring","Wyomissing","West Reading","Reinholds","Stevens","Adamstown","Stouchsburg","Sheridan","Rehrersburg","Fredericksburg","Jonestown","Lititz","Ephrata","Denver","Akron","Manheim","Lebanon","Annville","Palmyra","Cleona","Lancaster"];
   document.querySelectorAll('[data-chips]').forEach(function(box){towns.forEach(function(t){var s=document.createElement('span');s.className='chip';s.textContent=t;box.appendChild(s);});});
 
   // ---- inline icons: phone, text, quote, promise, service cards ----
@@ -599,7 +698,7 @@
   });
 
   var pages=["home","drain-cleaning","repairs-installations","meet-the-owner","quote"];
-  var titles={home:"Crystal Flow Repair & Drain Cleaning — Womelsdorf, PA","drain-cleaning":"Drain Cleaning & Sewer Clearing | Crystal Flow","repairs-installations":"Repairs & Installations | Crystal Flow","meet-the-owner":"Meet the Owner | Crystal Flow","quote":"Get a Quote | Crystal Flow"};
+  var titles={home:"Crystal Flow Repair & Drain Cleaning, Womelsdorf, PA","drain-cleaning":"Drain Cleaning & Sewer Clearing | Crystal Flow","repairs-installations":"Repairs & Installations | Crystal Flow","meet-the-owner":"Meet the Owner | Crystal Flow","quote":"Get a Quote | Crystal Flow"};
   function go(id,push){
     if(pages.indexOf(id)===-1)id="home";
     pages.forEach(function(p){document.getElementById(p).classList.toggle('show',p===id);});
@@ -630,7 +729,9 @@
   function closeAd(){adOverlay.classList.remove('open');document.body.style.overflow='';}
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeQuote();closeAd();}});
   var adShown=false,isTouch=('ontouchstart'in window)||navigator.maxTouchPoints>0;
-  if(!isTouch){document.addEventListener('mouseout',function(e){if(!adShown&&!e.relatedTarget&&e.clientY<=0&&!quoteOverlay.classList.contains('open')){adShown=true;adOverlay.classList.add('open');document.body.style.overflow='hidden';}});}
+  function showAd(){if(adShown)return;if(quoteOverlay.classList.contains('open'))return;adShown=true;adOverlay.classList.add('open');document.body.style.overflow='hidden';}
+  if(!isTouch){document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0&&(e.clientX>0&&e.clientX<window.innerWidth)){showAd();}});}
+  setTimeout(showAd,12000);
 
   // ===== Quote: 2 steps (2 questions, then 3) =====
   var qs1=document.getElementById('qs1'),qs2=document.getElementById('qs2'),qsDone=document.getElementById('qsDone');

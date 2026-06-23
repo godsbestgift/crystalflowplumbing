@@ -26,7 +26,7 @@
 
 <style>
   :root{
-    --navy:#03070f;--navy2:#071426;--panel:#0c1c33;--panel2:#102544;
+    --navy:#0a1626;--navy2:#0e1f38;--panel:#0c1c33;--panel2:#102544;
     --line:rgba(255,255,255,.10);--blue:#1aa7ff;--blue-d:#0a78d6;
     --chrome:#c9d6e4;--gold:#f7c948;--gold-d:#f2b714;--white:#fff;--muted:#9fb3c8;--green:#39d98a;--ice:#2bf5c8;
     --shadow:0 18px 40px rgba(0,0,0,.45);--font:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -51,27 +51,28 @@
   .btn-ghost{background:rgba(255,255,255,.04);color:#fff;border-color:var(--line)}
   .btn-ghost:hover{background:rgba(255,255,255,.1)}
 
-  .topbar{background:linear-gradient(90deg,var(--navy2),#0a1a30);border-bottom:1px solid var(--line);font-size:13.5px;color:var(--chrome)}
-  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:8px 20px}
+  .topbar{background:linear-gradient(90deg,#1560c8,#1aa7ff);border-bottom:1px solid rgba(255,255,255,.15);font-size:13.5px;color:#eaf4ff}
+  .topbar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;min-height:42px;padding:8px 20px;text-align:center}
   .topbar b{color:#fff}
-  .topbar a{font-weight:800;color:var(--gold);display:inline-flex;align-items:center;gap:6px}
+  .topbar a{font-weight:800;color:#fff;display:inline-flex;align-items:center;gap:6px}
 
-  header.site{position:sticky;top:0;z-index:50;background:rgba(3,7,15,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  header.site .wrap{display:flex;align-items:center;gap:18px;min-height:74px}
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
+  header.site .wrap{display:flex;align-items:center;gap:18px;min-height:88px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer}
   .brand img{width:46px;height:46px;object-fit:contain}
+  .brand .logo-full{width:auto;height:64px;object-fit:contain;display:block}
   .brand .bt{display:flex;flex-direction:column;line-height:1}
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
-  .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold);font-weight:800;margin-top:3px}
-  nav.main{display:flex;align-items:center;gap:22px;flex:1}
-  nav.main a.link{font-size:14.5px;font-weight:700;color:#eaf1f8;cursor:pointer;white-space:nowrap}
+  .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
+  nav.main{display:flex;align-items:center;gap:34px;flex:1}
+  nav.main a.link{font-size:19px;font-weight:800;color:#13243d;cursor:pointer;white-space:nowrap}
   nav.main a.link:first-of-type{margin-left:auto}
   nav.main a.link:hover{color:#1aa7ff}
-  nav.main a.link.active{color:#1aa7ff;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+  nav.main a.link.active{color:#1aa7ff;font-weight:900;text-decoration:underline;text-underline-offset:5px}
   .header-cta{display:flex;align-items:center;gap:10px;margin-left:auto}
   .btn-call-owner{background:#2E7FE0;color:#fff;font-weight:900;box-shadow:0 8px 22px rgba(46,127,224,.38)}
   .btn-call-owner:hover{filter:brightness(1.08)}
-  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
+  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(12,28,51,.25);color:#13243d;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
 
   .page{display:none}
   .page.show{display:block;animation:pfade .25s ease}
@@ -129,23 +130,42 @@
   .phero p{color:var(--muted);font-size:17px;max-width:620px}
   .phero .callblock{margin-bottom:0}
 
-  .proofbar{background:linear-gradient(90deg,var(--blue-d),var(--blue));border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
-  .proofbar .wrap{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between;padding:14px 20px;font-weight:800;font-size:14px}
+  .proofbar{background:linear-gradient(90deg,#1560c8,#1aa7ff);border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15)}
+  .proofbar .wrap{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;justify-content:space-between;padding:14px 20px;font-weight:800;font-size:14px;color:#eaf4ff}
+  .proofbar span:before{content:"";}
   .proofbar .stars{color:var(--gold);letter-spacing:2px}
 
-  .offerbar{background:linear-gradient(90deg,rgba(247,201,72,.16),rgba(247,201,72,.05));border-bottom:1px solid var(--line)}
-  .offerbar .wrap{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:12px 20px;font-weight:900;font-size:14.5px;color:var(--gold);text-align:center}
-  .offerbar em{font-style:normal;color:var(--white);font-weight:700}
+  .offerbar{background:linear-gradient(90deg,#ffd23f,#f7b500);border-top:1px solid rgba(0,0,0,.15);border-bottom:1px solid rgba(0,0,0,.2);box-shadow:0 4px 18px rgba(247,181,0,.3)}
+  .offerbar .wrap{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:16px 20px;font-weight:900;font-size:20px;color:#1a1304;text-align:center;letter-spacing:.02em;animation:offerglow 2.4s ease-in-out infinite}
+  @keyframes offerglow{0%,100%{text-shadow:0 0 6px rgba(255,255,255,.35)}50%{text-shadow:0 0 14px rgba(255,255,255,.9),0 0 22px rgba(255,248,210,.6)}}
+  .offerbar em{font-style:normal;color:#3a2c00;font-weight:800}
 
   section.block{padding:58px 0;border-top:1px solid var(--line)}
   .page section.block:nth-of-type(even){background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02))}
-  .sec-head{max-width:720px}
+  .sec-head{max-width:720px;margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head p{margin-left:auto;margin-right:auto}
   .sec-head h2{font-size:clamp(26px,3.6vw,38px);font-weight:900}
   .sec-head p{color:var(--muted);margin-top:12px;font-size:16px}
   .sec-head .btn{margin-top:20px}
 
   .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
   .cards.c3{grid-template-columns:repeat(3,1fr)}
+  /* WHITE SECTION (two-tone) */
+  .page section.block.lightsec{background:#ffffff;border-top:1px solid rgba(12,28,51,.1)}
+  .lightsec .eyebrow{color:#c98a00;font-size:14px}
+  .lightsec h2{color:#0c1c33;font-size:clamp(32px,4.6vw,48px)}
+  .lightsec .sec-head p{color:#41566f}
+  .lightsec .card{background:#eaf1fa;border:1px solid rgba(12,28,51,.12);box-shadow:0 6px 18px rgba(12,28,51,.06);transition:.18s transform,.18s box-shadow,.18s border-color}
+  .lightsec .card:hover{transform:translateY(-6px);border-color:var(--blue);box-shadow:0 16px 34px rgba(26,167,255,.22)}
+  .lightsec .card .ico{background:rgba(15,158,184,.12);border:1px solid rgba(15,158,184,.35)}
+  .lightsec .card h3{color:#0c1c33}
+  .lightsec .card p{color:#52677e}
+  .urgency-wrap{margin-top:34px;text-align:center}
+  .urgency-btn{display:inline-flex;align-items:center;gap:14px;background:linear-gradient(180deg,#ffd23f,#f7b500);color:#1a1304;font-weight:800;font-size:clamp(15px,2vw,19px);border:none;border-radius:14px;padding:16px 30px;cursor:pointer;box-shadow:0 10px 28px rgba(247,181,0,.35);max-width:760px;line-height:1.3}
+  .urgency-btn:hover{filter:brightness(1.05);transform:translateY(-2px)}
+  .urgency-btn .uarrow{flex:0 0 auto;width:30px;height:30px;animation:uarrownudge 1.6s ease-in-out infinite}
+  @keyframes uarrownudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+  .urgency-btn .ub-num{font-weight:900;text-transform:uppercase}
   .card{border-radius:16px;padding:22px;transition:.16s;display:flex;flex-direction:column}
   .card:hover{transform:translateY(-4px);border-color:rgba(26,167,255,.5)}
   .card .ico{width:58px;height:58px;border-radius:12px;display:grid;place-items:center;background:rgba(43,245,200,.10);border:1px solid rgba(43,245,200,.30);margin-bottom:14px}
@@ -195,21 +215,24 @@
   .lead-p+.lead-p{margin-top:12px}
 
   .legacy{padding:0}
+  .page section.block.legacy{background:#dde3ec;text-align:center}
+  .legacy .eyebrow{color:#c98a00}
+  .legacy h2.owner-peak{color:#0c1c33}
   .legacy-body{padding:8px 0 4px}
-  .legacy-photo{float:right;width:320px;max-width:44%;height:auto;margin:2px 0 16px 34px}
-  .legacy-body p{color:var(--chrome);font-size:16.5px;line-height:1.74;margin-bottom:17px}
-  .legacy-body p.white-bold{color:#fff;font-weight:800}
-  .legacy-prof{display:flex;align-items:center;gap:15px;margin:24px 0}
-  .legacy-prof img{width:48px;height:auto;flex:0 0 auto;filter:drop-shadow(0 0 11px rgba(43,182,232,.5))}
-  .legacy-prof span{color:#2bb6e8;font-size:20px;font-weight:900;font-style:italic;text-decoration:underline;text-underline-offset:4px}
-  .legacy-home{font-size:17.5px;line-height:1.74;font-weight:700;margin-bottom:0}
-  .legacy-home .hl{color:#2bb6e8;text-decoration:underline;text-decoration-color:#fff;text-underline-offset:4px}
-  .legacy-home .wc{color:#fff;font-weight:800;white-space:nowrap;margin-left:4px}
-  .legacy-div{margin:24px 0 0;height:1px;background:linear-gradient(to right,rgba(43,182,232,.4),rgba(43,182,232,0))}
-  .legacy-list{list-style:none;margin:24px 0 0;display:grid;gap:14px}
-  .legacy-list li{display:flex;gap:13px;align-items:flex-start;color:#dbe6f2;font-size:16.5px;line-height:1.5}
-  .legacy-list li:before{content:"\2713";color:#2bb6e8;font-weight:900;font-size:19px;flex:0 0 auto;filter:drop-shadow(0 0 7px rgba(43,182,232,.45))}
-  .legacy-loc{margin-top:24px;color:var(--muted);font-size:14px;font-style:italic}
+  .legacy-photo{float:right;width:420px;max-width:50%;height:auto;margin:2px 0 16px 24px}
+  .legacy-body p{color:#1a2332;font-size:16.5px;line-height:1.74;margin-bottom:17px}
+  .legacy-body p.white-bold{color:#000;font-weight:800}
+  .legacy-prof{display:flex;align-items:center;gap:15px;margin:24px 0;justify-content:center}
+  .legacy-prof img{width:48px;height:auto;flex:0 0 auto}
+  .legacy-prof span{color:#0c1c33;font-size:20px;font-weight:900;font-style:italic;text-decoration:underline;text-decoration-color:#000;text-underline-offset:4px}
+  .legacy-home{font-size:17.5px;line-height:1.74;font-weight:700;margin-bottom:0;color:#0c1c33}
+  .legacy-home .hl{color:#0c1c33;text-decoration:underline;text-decoration-color:#000;text-underline-offset:4px}
+  .legacy-home .wc{color:#000;font-weight:800;white-space:nowrap;margin-left:4px}
+  .legacy-div{margin:24px auto 0;height:1px;background:rgba(12,28,51,.25);max-width:600px}
+  .legacy-list{list-style:none;margin:24px auto 0;display:grid;gap:14px;max-width:640px;text-align:left}
+  .legacy-list li{display:flex;gap:13px;align-items:flex-start;color:#1a2332;font-size:16.5px;line-height:1.5}
+  .legacy-list li:before{content:"\2713";color:#000;font-weight:900;font-size:19px;flex:0 0 auto}
+  .legacy-loc{margin-top:24px;color:#41566f;font-size:14px;font-style:italic}
   .legacy-clear{clear:both}
   @media (max-width:760px){
     .legacy-photo{float:none;display:block;width:80%;max-width:300px;margin:0 auto 22px}
@@ -219,6 +242,10 @@
   .fastresp img{width:64px;height:auto;flex:0 0 auto;filter:drop-shadow(0 0 12px rgba(43,182,232,.5))}
   .fastresp h2{font-size:clamp(24px,3.6vw,38px);font-weight:900;color:#fff;line-height:1.1}
   .fastresp h2 .u{text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:5px;text-decoration-thickness:3px}
+  .fastresp-call{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:#bfe4ff;font-weight:900;font-size:clamp(17px,2.2vw,21px);text-decoration:none}
+  .fastresp-call b{color:var(--gold)}
+  .fastresp-call .dot{color:var(--gold)}
+  .fastresp-call:hover{filter:brightness(1.1)}
   .flyer-banner{margin-top:8px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#0a1220}
   .flyer-banner img{width:100%;display:block}
   .badge-center{display:flex;justify-content:center;margin:6px 0 4px}
@@ -230,6 +257,9 @@
   .stacked .st-tx{display:flex;flex-direction:column;line-height:1.05}
   .stacked .st1{font-size:clamp(28px,4vw,44px);font-weight:900;color:#fff;text-shadow:0 0 22px rgba(255,255,255,.18)}
   .stacked .st2{font-size:clamp(22px,3vw,32px);font-weight:800;color:#2fb8e8;text-shadow:0 0 18px rgba(47,184,232,.4)}
+  .flowpoem{text-align:center;margin-top:26px;color:#fff;font-weight:800;font-size:clamp(18px,2.6vw,26px);line-height:1.6}
+  .flowpoem .big{display:block;font-size:clamp(24px,3.4vw,34px);font-weight:900;margin-top:6px}
+  .flowpoem .big .u{text-decoration:underline;text-decoration-color:#2f86ff;text-underline-offset:5px;text-decoration-thickness:3px;color:#7db8ff}
   .brandclose{position:relative;padding:70px 20px;text-align:center;overflow:hidden;border-top:1px solid var(--line)}
   .brandclose .bc-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
   .brandclose .bc-bg img{width:min(680px,90%);height:auto;opacity:.12;filter:grayscale(.1)}
@@ -296,9 +326,9 @@
     footer.site .wrap{grid-template-columns:1fr 1fr}
   }
   @media (max-width:760px){
-    nav.main{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--navy2);border-bottom:1px solid var(--line);padding:8px 20px 16px}
+    nav.main{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;background:#fff;border-bottom:1px solid rgba(12,28,51,.12);padding:8px 20px 16px}
     nav.main.open{display:flex}
-    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid var(--line)}
+    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid rgba(12,28,51,.1)}
     nav.main a.link:first-of-type{margin-left:0}
     nav.main .header-cta{margin-left:0}
     nav.main .header-cta{flex-direction:column;width:100%;margin-top:12px;gap:10px}
@@ -337,14 +367,12 @@
 </defs></svg>
 
 <div class="topbar"><div class="wrap">
-  <span><b>Servicing Berks, Lebanon &amp; Lancaster Counties.</b> &nbsp;||&nbsp; Father &amp; Son. &nbsp;||&nbsp; <a data-quote style="cursor:pointer">Free Quote Today!</a></span>
-  <a href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a>
+  <span><b>Family Owned &amp; Operated</b> , Servicing Berks, Lebanon &amp; Lancaster Counties.</span>
 </div></div>
 
 <header class="site"><div class="wrap">
   <div class="brand" data-nav="home">
-    <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield logo">
-    <span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span>
+    <img class="logo-full" src="https://www.crystalclearflow.com/assets/logo1.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png';this.className=''" alt="Crystal Flow Drain Cleaning &amp; Home Repairs">
   </div>
   <button class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
   <nav class="main" id="nav">
@@ -384,18 +412,24 @@
       <a class="hf-link" href="tel:+14842583749" data-track-call>Crystal Flow Service<br>Call Today!!</a>
     </div>
   </section>
+  <div class="offerbar"><div class="wrap">10% FIRST-TIME CUSTOMER DISCOUNT</div></div>
   <div class="proofbar"><div class="wrap">
-    <!-- TEMP-DISABLED until real reviews exist: <span class="stars">★★★★★ Rated on Google</span> --><span>✓ 4th &amp; 5th Generation Plumbers</span><span>✓ Berks &amp; Lebanon Counties</span><span>✓ Local &amp; Family Operation</span>
+    <!-- TEMP-DISABLED until real reviews exist: <span class="stars">★★★★★ Rated on Google</span> --><span>✓ 4th &amp; 5th Generation Plumbers</span><span>✓ Berks, Lebanon &amp; Lancaster Counties</span><span>✓ Local &amp; Family Operation</span>
   </div></div>
-  <div class="offerbar"><div class="wrap">10% FIRST-TIME CUSTOMER DISCOUNT. <em>Just mention it in person.</em></div></div>
 
-  <section class="block"><div class="wrap">
+  <section class="block lightsec"><div class="wrap">
     <div class="sec-head" style="max-width:760px;margin:0 auto;text-align:center"><span class="eyebrow">Crystal Flow Services</span><h2>Clogs Don't Stand A Chance.</h2><p style="margin-left:auto;margin-right:auto">When drains slow down, back up, or stop completely, Crystal Flow brings the right tools, clean work, and straight answers to get your home moving again.</p></div>
     <div class="cards">
-      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Drain Cleaning</h3><p>Slow drains, standing water, gurgling pipes, and stubborn clogs.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Sewer Clearing</h3><p>Main line backups, multiple fixture trouble, and sewer line clogs.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-nav="repairs-installations"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath</h3><p>Kitchen sinks, tubs, showers, toilets, utility sinks, and vanity drains.</p><span class="more">Learn more →</span></div>
-      <div class="glass card" data-quote><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Emergency Backups</h3><p>Fast response when water is backing up or your home needs attention.</p><span class="more">Get a quote →</span></div>
+      <div class="card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Drain Cleaning</h3><p>Slow drains, standing water, gurgling pipes, and stubborn clogs.</p></div>
+      <div class="card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Sewer Clearing</h3><p>Main line backups, multiple fixture trouble, and sewer line clogs.</p></div>
+      <div class="card" data-nav="repairs-installations"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath</h3><p>Kitchen sinks, tubs, showers, toilets, utility sinks, and vanity drains.</p></div>
+      <div class="card" data-quote><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Emergency Backups</h3><p>Fast response when water is backing up or your home needs attention.</p></div>
+    </div>
+    <div class="urgency-wrap">
+      <a class="urgency-btn" href="tel:+14842583749" data-track-call>
+        <svg class="uarrow" viewBox="0 0 24 24" fill="none" stroke="#2bf5c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        <span>Backed-up drains don't fix themselves. <span class="ub-num">CALL (484) 258-3749 TODAY</span></span>
+      </a>
     </div>
   </div></section>
 
@@ -435,12 +469,12 @@
   </div></section>
 
   <!-- EMERGENCY FLYER BANNER -->
-  <section class="block"><div class="wrap">
-    <div class="fastresp">
+  <section class="block"><div class="wrap" style="text-align:center">
+    <div class="fastresp" style="justify-content:center">
       <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
       <h2>Fast Response, When You <span class="u">Just Can't Wait!</span></h2>
     </div>
-    <div class="flyer-banner" style="margin-top:24px"><img src="https://www.crystalclearflow.com/assets/CTA-FULL.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/drain-repair-web.jpg'" alt="Leaking? Don't wait. Crystal Flow responds fast." loading="lazy"></div>
+    <a class="fastresp-call" href="tel:+14842583749" data-track-call>📞 Call <b>(484) 258-3749</b> <span class="dot">·</span> Talk To The Owner Now</a>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -461,13 +495,19 @@
   </div></section>
 
   <section class="block"><div class="wrap">
-    <div class="stacked">
+    <div class="stacked" style="justify-content:center">
       <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
-      <div class="st-tx"><span class="st1">Crystal Flow</span><span class="st2">Crystal Clear Solutions</span></div>
+      <div class="st-tx"><span class="st2">Crystal Clear Solutions Every Time</span></div>
+    </div>
+    <div class="flowpoem">
+      The Flow Comes Back When Crystal Shows Up<br>
+      Clear The Clog Feel The Flow<br>
+      No Stress No Guess
+      <span class="big"><span class="u">Just Crystal Flow</span></span>
     </div>
   </div></section>
 
-  <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Crystal Clear Solutions. Every Time.</h2><p>Whether it's a slow sink, a clogged toilet, a backed-up shower, or a drain line that needs real attention, Crystal Flow is ready to help.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a><button class="btn btn-gold" data-quote>Get a Quote</button></div></div></div></section>
+  <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Crystal Clear Solutions. Every Time.</h2><p>Whether it's a slow sink, a clogged toilet, a backed-up shower, or a drain line that needs real attention, Crystal Flow is ready to help.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a></div></div></div></section>
 
   <section class="brandclose">
     <div class="bc-bg"><img src="https://www.crystalclearflow.com/assets/drain-cleaner.png" alt="" aria-hidden="true" loading="lazy"></div>

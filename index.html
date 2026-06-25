@@ -8,21 +8,7 @@
 <meta property="og:description" content="If it drains, we can fix it. Owner-operated drain cleaning and repair serving Womelsdorf and nearby towns within roughly 20 miles.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-
-<!-- FAQ schema (matches the visible FAQ on the home page) -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org","@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"Do you charge for an estimate?","acceptedAnswer":{"@type":"Answer","text":"Phone estimates are free, and you hear the price before any work begins."}},
-    {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"Womelsdorf and the nearby towns across Berks and Lebanon Counties, within roughly 20 miles."}},
-    {"@type":"Question","name":"Can you come the same day?","acceptedAnswer":{"@type":"Answer","text":"Often, yes, when the schedule allows. We call back within 30 minutes during business hours, so you know quickly."}},
-    {"@type":"Question","name":"Who actually does the work?","acceptedAnswer":{"@type":"Answer","text":"The owner does most of it, with his master plumber father, decades of hands-on piping know-how behind every job."}},
-    {"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"Payment by check, card, or Zelle. The price is given to you before the work starts."}}
-  ]
-}
-</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -60,7 +46,7 @@
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;height:100%}
   .brand img{width:46px;height:46px;object-fit:contain}
-  .brand .logo-full{width:auto;height:92px;max-height:92px;object-fit:contain;display:block}
+  .brand .logo-full{width:auto;height:80px;max-height:80px;object-fit:contain;display:block}
   .brand .bt{display:flex;flex-direction:column;line-height:1}
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
@@ -364,37 +350,39 @@
     .ctabox{padding:28px 18px}
   }
   /* owner section */
-  .owner-section{background:#eaecef;border-top:1px solid rgba(12,28,51,.08)}
-  .owner-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;align-items:end;padding:80px 40px 0}
-  .owner-text{padding-right:56px;padding-bottom:60px}
-  .owner-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-  .owner-eyebrow:before,.owner-eyebrow:after{content:"";flex:1;height:1.5px;background:#c9a84c}
+  .owner-section{background:#eaecef;border-top:1px solid rgba(12,28,51,.08);font-family:Georgia,'Times New Roman',serif}
+  .owner-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 460px;align-items:stretch;gap:36px;padding:80px 40px 0}
+  .owner-text{text-align:center;padding-bottom:60px}
+  .owner-eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:22px}
+  .owner-eyebrow:before,.owner-eyebrow:after{content:"";flex:1;max-width:70px;height:1.5px;background:#c9a84c}
   .owner-eyebrow span{color:#c98a00;font-size:11.5px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
-  .owner-headline{font-size:clamp(30px,3.8vw,50px);font-weight:900;color:#0c1c33;line-height:1.06;margin-bottom:6px}
-  .owner-headline .sub{display:block;font-size:clamp(22px,2.7vw,34px);font-weight:800;color:#0c1c33;margin-top:8px}
-  .owner-gen{display:flex;align-items:center;gap:12px;color:#c98a00;font-size:16px;font-weight:800;margin:18px 0 24px;letter-spacing:.02em}
+  .owner-headline{font-family:'Playfair Display',Georgia,serif;font-size:clamp(30px,3.8vw,50px);font-weight:900;color:#0c1c33;line-height:1.08;margin-bottom:6px}
+  .owner-headline .sub{display:block;font-size:clamp(22px,2.7vw,34px);font-weight:800;color:#0c1c33;margin-top:10px}
+  .owner-gen{display:flex;align-items:center;justify-content:center;gap:12px;color:#c98a00;font-size:16px;font-weight:800;margin:18px 0 24px;letter-spacing:.02em}
   .owner-gen:before,.owner-gen:after{content:"";flex:0 0 28px;height:1.5px;background:#c9a84c}
   .owner-body{color:#1a2332;font-size:16px;line-height:1.82;margin-bottom:18px}
-  .abba-row{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:center;margin:6px 0 6px}
-  .abba-truck{width:100%;height:auto;display:block;border-radius:10px;object-fit:cover}
-  .professor-img{width:100%;height:auto;display:block;margin:24px 0 24px}
-  @media(max-width:620px){.abba-row{grid-template-columns:1fr}.abba-truck{max-width:100%;order:2}}
+  .professor-img{width:100%;max-width:560px;height:auto;display:block;margin:28px auto 24px}
   .owner-bold{color:#0c1c33;font-size:16.5px;font-weight:900;margin-bottom:22px;line-height:1.6}
-  .owner-checklist{list-style:none;margin:0 0 38px;display:grid;gap:18px}
+  .owner-checklist{list-style:none;margin:0 auto 38px;display:inline-grid;gap:18px;text-align:left}
   .owner-checklist li{display:flex;gap:16px;align-items:flex-start;color:#1a2332;font-size:16px;font-weight:700;line-height:1.55}
   .owner-checklist li:before{content:"✓";flex:0 0 28px;height:28px;border-radius:50%;background:rgba(201,168,76,.18);border:2px solid #c9a84c;color:#c98a00;display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:1px}
   .owner-cta{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-size:16px;font-weight:900;padding:17px 32px;border-radius:12px;box-shadow:0 8px 24px rgba(247,201,72,.32);width:100%;justify-content:center;display:flex}
   .owner-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
-  .owner-cta-row{display:flex;flex-direction:column;gap:12px}
+  .owner-cta-row{display:flex;flex-direction:column;gap:12px;max-width:560px;margin:0 auto}
   .owner-cta-secondary{background:transparent;border:2px solid #0c1c33;color:#0c1c33;font-size:15px;font-weight:800;padding:15px 32px;border-radius:12px;cursor:pointer;text-align:center;transition:.16s}
   .owner-cta-secondary:hover{background:#0c1c33;color:#fff}
-  .owner-photo-wrap{align-self:flex-end}
-  .owner-photo{width:100%;height:auto;display:block}
+  .owner-photo-wrap{display:flex;flex-direction:column;align-items:flex-end}
+  .owner-truck{width:100%;height:520px;object-fit:cover;object-position:center;display:block;border-radius:10px;box-shadow:0 8px 24px rgba(12,28,51,.18);margin-top:0}
+  .owner-photo{width:100%;max-width:460px;height:auto;display:block;margin-top:24px}
   @media(max-width:900px){
     .owner-inner{grid-template-columns:1fr;padding:52px 20px 0;align-items:start}
-    .owner-photo-wrap{order:-1;max-width:280px;margin:0 auto}
-    .owner-text{padding-right:0;padding-bottom:48px}
+    .owner-photo-wrap{order:-1;align-items:center;margin:0 auto}
+    .owner-truck{max-width:340px;height:auto;margin-top:0;margin-bottom:18px}
+    .owner-photo{max-width:300px;margin:0 auto}
   }
+  /* service-area coverage map */
+  .coverage-map{max-width:880px;margin:32px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(180deg,#0b1a30,#091321)}
+  .coverage-map svg{width:100%;height:auto;display:block}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -422,7 +410,7 @@
 
 <header class="site"><div class="wrap">
   <div class="brand" data-nav="home">
-    <img class="logo-full" src="https://www.crystalclearflow.com/assets/logo1.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png';this.className=''" alt="Crystal Flow Drain Cleaning &amp; Home Repairs">
+    <img class="logo-full" src="https://www.crystalclearflow.com/assets/logo1-trim.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png';this.className=''" alt="Crystal Flow Drain Cleaning &amp; Home Repairs">
   </div>
   <button class="menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
   <nav class="main" id="nav">
@@ -477,13 +465,8 @@
         <div class="owner-eyebrow"><span>Meet the Man Who Taught Me How It's Done</span></div>
         <h2 class="owner-headline">I grew up with Abba Plumbing,<br>my father's shop.<span class="sub">That's where I became the Mechanic I am today.</span></h2>
         <p class="owner-gen">4th &amp; 5th Generation Plumbers, At Your Service</p>
-        <div class="abba-row">
-          <div>
-            <p class="owner-body">Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
-            <p class="owner-body"><strong>With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</strong></p>
-          </div>
-          <img class="abba-truck" src="https://www.crystalclearflow.com/assets/abba.jpg" alt="Abba Plumbing & Heating truck, East Meadow NY" loading="lazy">
-        </div>
+        <p class="owner-body">Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
+        <p class="owner-body"><strong>With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</strong></p>
         <img class="professor-img" src="https://www.crystalclearflow.com/assets/professor.png" alt="They called him The Professor" loading="lazy">
         <p class="owner-body">The men who worked beside him gave him that name because he always found the right answer, even on the toughest jobs. Long Island homes were complicated, and Steven had a way of figuring out what others couldn't.</p>
         <p class="owner-body">That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
@@ -499,6 +482,7 @@
         </div>
       </div>
       <div class="owner-photo-wrap">
+        <img class="owner-truck" src="https://www.crystalclearflow.com/assets/abba.jpg" alt="Abba Plumbing &amp; Heating truck, East Meadow NY" loading="lazy">
         <img class="owner-photo" src="https://www.crystalclearflow.com/assets/owner_portrait_transparent.png" alt="Nicholas, Crystal Flow owner" loading="lazy">
       </div>
     </div>
@@ -515,19 +499,44 @@
 
   <section class="block"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks, Lebanon &amp; Lancaster Counties.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
-    <div class="chips" data-chips></div>
-  </div></section>
-
-  <!-- FAQ -->
-  <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">FAQ</span><h2>Questions homeowners ask.</h2></div>
-    <div class="faq">
-      <details><summary>Do you charge for an estimate?</summary><div class="a">Phone estimates are free, and you hear the price before any work begins.</div></details>
-      <details><summary>What areas do you cover?</summary><div class="a">Womelsdorf and the nearby towns across Berks and Lebanon Counties, within roughly 20 miles.</div></details>
-      <details><summary>Can you come the same day?</summary><div class="a">Often, yes, when the schedule allows. We call back within 30 minutes during business hours, so you know quickly.</div></details>
-      <details><summary>Who actually does the work?</summary><div class="a">The owner does most of it, with his master plumber father, decades of hands-on piping know-how behind every job.</div></details>
-      <details><summary>How do I pay?</summary><div class="a">Payment by check, card, or Zelle. The price is given to you before the work starts.</div></details>
+    <div class="coverage-map">
+      <svg viewBox="0 0 820 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crystal Flow service area, roughly 20 miles around Womelsdorf PA">
+        <defs>
+          <radialGradient id="cmGlow" cx="50%" cy="52%" r="50%">
+            <stop offset="0%" stop-color="#1aa7ff" stop-opacity=".35"/>
+            <stop offset="55%" stop-color="#1aa7ff" stop-opacity=".10"/>
+            <stop offset="100%" stop-color="#1aa7ff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="820" height="480" fill="#0a1424"/>
+        <text x="600" y="92" fill="#ffffff" opacity=".05" font-size="56" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">BERKS</text>
+        <text x="150" y="250" fill="#ffffff" opacity=".05" font-size="46" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">LEBANON</text>
+        <text x="430" y="458" fill="#ffffff" opacity=".05" font-size="52" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">LANCASTER</text>
+        <circle cx="410" cy="250" r="215" fill="url(#cmGlow)"/>
+        <circle cx="410" cy="250" r="215" fill="none" stroke="#1aa7ff" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="5 7"/>
+        <circle cx="410" cy="250" r="150" fill="none" stroke="#1aa7ff" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="5 7"/>
+        <circle cx="410" cy="250" r="80" fill="none" stroke="#1aa7ff" stroke-opacity=".2" stroke-width="1.5" stroke-dasharray="5 7"/>
+        <line x1="410" y1="250" x2="625" y2="250" stroke="#f7c948" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <text x="520" y="240" fill="#f7c948" font-size="13" font-weight="800" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">~20 miles</text>
+        <g font-family="Segoe UI, Arial, sans-serif">
+          <circle cx="410" cy="250" r="9" fill="#f7c948" stroke="#fff" stroke-width="2"/>
+          <text x="410" y="231" fill="#fff" font-size="15" font-weight="900" text-anchor="middle">Womelsdorf</text>
+          <text x="410" y="277" fill="#f7c948" font-size="10.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">HOME BASE</text>
+          <g fill="#bfe4ff">
+            <circle cx="486" cy="232" r="5" fill="#1aa7ff"/><text x="486" y="221" font-size="12.5" font-weight="700" text-anchor="middle">Robesonia</text>
+            <circle cx="556" cy="262" r="5" fill="#1aa7ff"/><text x="556" y="251" font-size="12.5" font-weight="700" text-anchor="middle">Wernersville</text>
+            <circle cx="600" cy="305" r="5" fill="#1aa7ff"/><text x="600" y="324" font-size="12.5" font-weight="700" text-anchor="middle">Sinking Spring</text>
+            <circle cx="592" cy="205" r="5" fill="#1aa7ff"/><text x="592" y="194" font-size="12.5" font-weight="700" text-anchor="middle">Reading</text>
+            <circle cx="322" cy="216" r="5" fill="#1aa7ff"/><text x="322" y="205" font-size="12.5" font-weight="700" text-anchor="middle">Myerstown</text>
+            <circle cx="248" cy="205" r="5" fill="#1aa7ff"/><text x="248" y="194" font-size="12.5" font-weight="700" text-anchor="middle">Lebanon</text>
+            <circle cx="262" cy="150" r="5" fill="#1aa7ff"/><text x="262" y="139" font-size="12.5" font-weight="700" text-anchor="middle">Richland</text>
+            <circle cx="356" cy="426" r="5" fill="#1aa7ff"/><text x="356" y="446" font-size="12.5" font-weight="700" text-anchor="middle">Lititz</text>
+            <circle cx="470" cy="412" r="5" fill="#1aa7ff"/><text x="470" y="432" font-size="12.5" font-weight="700" text-anchor="middle">Ephrata</text>
+          </g>
+        </g>
+      </svg>
     </div>
+    <div class="chips" data-chips></div>
   </div></section>
 
   <section class="block"><div class="wrap">
@@ -542,8 +551,6 @@
       <span class="big"><span class="u">Just Crystal Flow</span></span>
     </div>
   </div></section>
-
-  <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Crystal Clear Solutions. Every Time.</h2><p>Whether it's a slow sink, a clogged toilet, a backed-up shower, or a drain line that needs real attention, Crystal Flow is ready to help.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 Call (484) 258-3749</a></div></div></div></section>
 
   <section class="brandclose">
     <div class="bc-bg"><img src="https://www.crystalclearflow.com/assets/drain-cleaner.png" alt="" aria-hidden="true" loading="lazy"></div>

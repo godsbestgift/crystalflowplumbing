@@ -44,7 +44,8 @@
   .topbar b{color:#fff}
   .topbar a{font-weight:800;color:#fff;display:inline-flex;align-items:center;gap:6px}
 
-  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
+  .topstick{position:sticky;top:0;z-index:60}
+  header.site{position:relative;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;position:relative;height:96px;width:360px;flex:0 0 360px}
   .brand img{width:46px;height:46px;object-fit:contain}
@@ -73,7 +74,7 @@
   .hero-bg{position:absolute;inset:0;overflow:hidden}
   .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
   .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,22,.95) 0%,rgba(4,10,22,.78) 36%,rgba(4,10,22,.28) 64%,rgba(4,10,22,0) 100%)}
-  .hero .wrap{position:relative;padding:54px 20px 92px;display:grid;grid-template-columns:minmax(0,720px);gap:42px;align-items:center;min-height:560px}
+  .hero .wrap{position:relative;padding:54px 20px 92px;display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,380px);gap:42px;align-items:center;min-height:560px}
   .hero .wrap .callblock{justify-content:flex-start}
   .hero .wrap .ticks{justify-content:flex-start}
   .hero .wrap .lead{margin-left:0;margin-right:auto}
@@ -341,7 +342,7 @@
     nav.main .header-cta{flex-direction:column;width:100%;margin-top:12px;gap:10px}
     nav.main .header-cta .btn{width:100%}
     .menu-btn{display:inline-block}
-    .topbar b{display:none}
+    .topbar .wrap span{font-size:11px;line-height:1.35}
     .hero-bg img{object-position:right center}
     .hero-bg:after{background:linear-gradient(180deg,rgba(3,7,15,.55) 0%,rgba(3,7,15,.82) 70%,rgba(3,7,15,.9) 100%)}
     .mobilebar{display:grid}
@@ -471,6 +472,22 @@
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .card .ico svg.svc{width:36px;height:36px;stroke:var(--ice);fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(43,245,200,.45))}
   .why .ic svg.pico{width:26px;height:26px;stroke:var(--ice);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(43,245,200,.45))}
+  /* hero v2 — two-column story + gold action card */
+  .hero-left{text-align:center}
+  .hero-left .svc-list{text-align:center;color:var(--gold)}
+  .hero-left .ticks{justify-content:center}
+  .hero-sub{color:#f5f7fa;font-size:clamp(17px,2.2vw,21px);font-weight:800;line-height:1.42;max-width:560px;margin:16px auto 0;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+  .hero-where{color:var(--gold);font-weight:900;font-size:clamp(15px,1.9vw,18px);letter-spacing:.02em;margin-top:12px;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+  .hero-card{align-self:center;text-align:center;background:rgba(8,18,34,.66);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:26px 24px;backdrop-filter:blur(10px);box-shadow:0 18px 40px rgba(0,0,0,.5);max-width:440px;margin:0 auto}
+  .hero-card-brand{color:#4fd0ff;font-weight:900;font-size:20px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:14px}
+  .hc-call{color:#cfe0f0;font-weight:800;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+  .hc-phone{display:block;font-size:clamp(28px,4vw,36px);font-weight:900;color:#1a1304;background:linear-gradient(180deg,var(--gold),var(--gold-d));border-radius:14px;padding:13px 10px;box-shadow:0 12px 30px rgba(247,201,72,.45);white-space:nowrap}
+  .hc-phone:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .hc-quote{width:100%;margin-top:12px;font-size:16px}
+  .hc-trust{display:flex;gap:8px;align-items:center;justify-content:center;color:#eaf4ff;font-weight:800;font-size:13px;margin-top:16px;line-height:1.3}
+  .hc-trust .bico{color:var(--gold);flex:0 0 auto}
+  .hc-promise{display:inline-flex;gap:8px;align-items:center;color:#bfe4ff;font-weight:700;font-size:12.5px;margin-top:12px}
+  .hc-promise i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(247,201,72,.22)}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -487,8 +504,9 @@
 <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></symbol>
 </defs></svg>
 
+<div class="topstick">
 <div class="topbar"><div class="wrap">
-  <span><b>Family Owned &amp; Operated</b> , Servicing Berks, Lebanon &amp; Lancaster Counties.</span>
+  <span><b>Family Owned &amp; Operated</b> &nbsp;&bull;&nbsp; <b>Father-Son Service You Can Trust</b> &nbsp;&bull;&nbsp; <b>Servicing Berks, Lebanon &amp; Lancaster Counties.</b></span>
 </div></div>
 
 <header class="site"><div class="wrap">
@@ -507,30 +525,30 @@
     </div>
   </nav>
 </div></header>
+</div>
 
 <!-- ===================== HOME ===================== -->
 <main class="page" id="home">
   <section class="hero">
-    <div class="hero-bg"><img src="https://www.crystalclearflow.com/assets/Shield-Hero.png" alt=""></div>
-    <span class="promise promise-topright"><i></i>We call back within 30 minutes, 9am to 6pm</span>
+    <div class="hero-bg"><img src="https://www.crystalclearflow.com/assets/hero-image3.jpg" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/Shield-Hero.png'" alt=""></div>
     <div class="wrap">
-      <div>
+      <div class="hero-left">
         <h1><span class="cf1-row"><span class="hexline l"></span><span class="cf1">Crystal Flow</span><span class="hexline r"></span></span><span class="cf2">Crystal Clear</span><span class="cf3">Clogs Disappear</span></h1>
         <div class="hero-divider"></div>
         <div class="rhyme">No <span class="u">Stress</span> No <span class="u">Guess</span> <span class="scr">Just Crystal Flow</span></div>
-        <p class="lead" style="margin-top:16px;color:#f5c842;font-size:18px;line-height:1.5;max-width:600px">When a drain backs up, a sewer line slows down, or water starts going where it shouldn't, you need more than a quick guess. You need someone who answers, explains the problem clearly, and treats your home with respect from the moment they arrive.</p>
-        <div class="callblock">
-          <a class="phone" href="tel:+14842583749" data-track-call><svg class="phone-ic"><use href="#i-phone"></use></svg><span class="phone-tx"><small>Call the Owner Now</small><b>(484) 258-3749</b></span></a>
-          <button class="btn btn-blue qbtn" data-quote><svg class="bico"><use href="#i-doc"></use></svg> Get My Free Quote</button>
-        </div>
-        <div class="ticks"><span>Father &amp; Son Operated</span><span>Upfront Pricing</span><span>Same-Day When Available</span></div>
+        <p class="hero-sub">When drains slow down, back up, or stop working altogether, Crystal Flow gets things moving again.</p>
+        <div class="hero-where">Serving Berks &bull; Lebanon &bull; Lancaster County</div>
         <div class="svc-list" style="font-size:15px">Clogged Drains • Sewer Backups • Sinks • Tubs • Toilets • Faucets • Showers • Drain Pipes</div>
-        <p style="color:#ffffff;font-weight:800;font-size:16px;margin-top:14px;line-height:1.55;text-shadow:0 1px 6px rgba(0,0,0,.4)">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know. When your drain says no, Crystal Flow says it's gotta go</p>
+        <div class="ticks"><span>Father &amp; Son Operated</span><span>Upfront Pricing</span><span>Same-Day When Available</span></div>
       </div>
-    </div>
-    <div class="hero-float">
-      <div class="hf-title">Crystal Clear Pricing!</div>
-      <a class="hf-link" href="tel:+14842583749" data-track-call>Crystal Flow Service<br>Call Today!!</a>
+      <aside class="hero-card">
+        <div class="hero-card-brand">Crystal Flow Service</div>
+        <div class="hc-call">Call the Owner Now</div>
+        <a class="hc-phone" href="tel:+14842583749" data-track-call>(484) 258-3749</a>
+        <button class="btn btn-blue qbtn hc-quote" data-quote="hero"><svg class="bico"><use href="#i-doc"></use></svg> Get My Free Quote</button>
+        <div class="hc-trust"><svg class="bico"><use href="#i-user"></use></svg> Owner Operated — Speak Directly to the Owner</div>
+        <div class="hc-promise"><i></i> We call back within 30 min &middot; 9am&ndash;6pm</div>
+      </aside>
     </div>
   </section>
   <div class="offerbar"><div class="wrap">10% FIRST-TIME CUSTOMER DISCOUNT</div></div>

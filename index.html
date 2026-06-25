@@ -44,9 +44,11 @@
 
   header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
-  .brand{display:flex;align-items:center;gap:12px;cursor:pointer;height:100%}
+  .brand{display:flex;align-items:center;gap:12px;cursor:pointer;position:relative;height:96px;width:360px;flex:0 0 360px}
   .brand img{width:46px;height:46px;object-fit:contain}
-  .brand .logo-full{width:auto;height:88px;max-height:88px;object-fit:contain;display:block}
+  .brand .logo-full{position:absolute;left:0;top:4px;width:auto;height:116px;max-height:116px;object-fit:contain;display:block;z-index:3}
+  @media(max-width:1080px){.brand{width:auto;height:auto;flex:0 0 auto}.brand .logo-full{position:static;top:auto;height:76px;max-height:76px}}
+  @media(max-width:760px){.brand .logo-full{height:56px;max-height:56px}}
   .brand .bt{display:flex;flex-direction:column;line-height:1}
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}

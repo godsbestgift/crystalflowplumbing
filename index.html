@@ -442,7 +442,9 @@
   .cf-maplabel:before{display:none}
   @media(max-width:600px){.cf-map{height:360px}}
   /* footer logo */
-  .foot-logo{width:300px;max-width:100%;height:auto;display:block;cursor:pointer;background:#eef3f9;padding:16px 22px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+  .foot-brand{display:inline-block;cursor:pointer}
+  .foot-logo{display:block;width:300px;height:auto}
+  @media(max-width:520px){.foot-logo{width:220px}}
   /* blue hype CTA */
   .hype-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#1aa7ff,#0a6fd0);color:#fff;font-size:clamp(15px,2vw,19px);font-weight:900;letter-spacing:.03em;text-transform:uppercase;padding:18px 38px;border:2px solid #7cd3ff;border-radius:4px;cursor:pointer;text-decoration:none;animation:hypePulse 1.5s ease-in-out infinite}
   .hype-cta:hover{filter:brightness(1.1)}
@@ -770,7 +772,7 @@
 <footer class="site">
   <div class="wrap">
     <div>
-      <div class="brand" data-nav="home" style="width:auto;flex:0 0 auto;height:auto"><img class="foot-logo" src="https://www.crystalclearflow.com/assets/logo1-trim.png" alt="Crystal Flow Repair &amp; Drain Cleaning" loading="lazy"></div>
+      <div class="foot-brand" data-nav="home"><img class="foot-logo" src="https://www.crystalclearflow.com/assets/logo1-trim.png" alt="Crystal Flow Repair &amp; Drain Cleaning" loading="lazy"></div>
       <p class="ftxt"><b style="color:#1aa7ff">Family Owned, Father-Son Operated</b> Repair &amp; Drain Cleaning near Womelsdorf, PA, serving Berks, Lebanon and Lancaster Counties.</p>
     </div>
     <div><h4>Services</h4><div class="flist"><a data-nav="drain-cleaning">Drain Cleaning</a><a data-nav="drain-cleaning">Sewer Line Clearing</a><a data-nav="repairs-installations">Faucets, Vanities &amp; Drains</a><a data-nav="meet-the-owner">Origin Story</a></div></div>

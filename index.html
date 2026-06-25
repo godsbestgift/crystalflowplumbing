@@ -363,6 +363,34 @@
     footer.site .wrap{grid-template-columns:1fr}
     .ctabox{padding:28px 18px}
   }
+  /* owner section */
+  .owner-section{background:#e6e9ed;border-top:1px solid rgba(12,28,51,.08)}
+  .owner-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 460px;align-items:center;padding:80px 0 0 40px}
+  .owner-text{padding-right:52px}
+  .owner-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+  .owner-eyebrow:before,.owner-eyebrow:after{content:"";flex:1;height:1px;background:#c9a84c}
+  .owner-eyebrow span{color:#c98a00;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+  .owner-headline{font-size:clamp(28px,3.6vw,46px);font-weight:900;color:#0c1c33;line-height:1.08;margin-bottom:8px}
+  .owner-headline .sub{display:block;font-size:clamp(20px,2.6vw,32px);font-weight:800;color:#0c1c33;margin-top:6px}
+  .owner-gen{color:#c98a00;font-size:17px;font-weight:800;margin:14px 0 22px;letter-spacing:.02em}
+  .owner-body{color:#1a2332;font-size:17px;line-height:1.8;margin-bottom:16px}
+  .professor-banner{display:flex;align-items:center;gap:18px;background:linear-gradient(90deg,#0a1626,#1a3060);border:1px solid #c9a84c;border-radius:10px;padding:18px 26px;margin:26px 0;box-shadow:0 4px 18px rgba(0,0,0,.18)}
+  .professor-banner img{width:50px;height:auto;flex:0 0 50px}
+  .professor-banner span{color:#fff;font-size:clamp(17px,2.2vw,22px);font-family:'Yellowtail',cursive;font-weight:400;font-style:italic;line-height:1.2}
+  .owner-bold{color:#0c1c33;font-size:17px;font-weight:800;margin-bottom:20px;line-height:1.6}
+  .owner-checklist{list-style:none;margin:0 0 36px;display:grid;gap:16px}
+  .owner-checklist li{display:flex;gap:14px;align-items:flex-start;color:#1a2332;font-size:16px;font-weight:700;line-height:1.55}
+  .owner-checklist li:before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:rgba(201,168,76,.15);border:2px solid #c9a84c;color:#c98a00;display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:2px}
+  .owner-cta{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-size:16px;font-weight:900;padding:17px 32px;border-radius:12px;box-shadow:0 8px 24px rgba(247,201,72,.32);width:100%;justify-content:center;display:flex}
+  .owner-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .owner-photo-wrap{align-self:flex-end}
+  .owner-photo{width:100%;height:auto;display:block}
+  @media(max-width:900px){
+    .owner-inner{grid-template-columns:1fr;padding:52px 20px 0}
+    .owner-photo-wrap{order:-1;max-width:300px;margin:0 auto}
+    .owner-text{padding-right:0}
+  }
+
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .card .ico svg.svc{width:36px;height:36px;stroke:var(--ice);fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(43,245,200,.45))}
@@ -438,29 +466,33 @@
 
   <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/slide3.png" alt="What Crystal Flow Handles Every Day" loading="lazy"></section>
 
-  <section class="block legacy"><div class="wrap">
-    <span class="eyebrow">Time to also meet my old man who taught me how it's done!</span>
-    <h2 class="owner-peak">I started at Abba Plumbing &amp; Heating Inc. I grew up around my father's shop.</h2>
-    <div style="color:var(--gold);font-size:20px;font-weight:900;margin-top:14px">4th &amp; 5th Generation Plumbers At Your Service!</div>
-    <div class="legacy-body">
-      <img class="legacy-photo" src="https://www.crystalclearflow.com/assets/owner-canceled.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/owner_portrait_transparent.png'" alt="Nick, Crystal Flow owner" loading="lazy">
-      <p>Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
-      <p class="white-bold">With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</p>
-      <div class="legacy-prof"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt=""><span>They called him "The Professor."</span></div>
-      <p>The men who worked for him gave him that name due to the constant, creative genius he had to be able to pipe those Long Island homes to code!</p>
-      <p>That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
-      <p class="legacy-home"><span class="hl">We prioritize the care of your home as if it were our own!</span> <span class="wc">&#10003; &#10003; &#10003;</span></p>
-      <div class="legacy-clear"></div>
+  <section class="owner-section">
+    <div class="owner-inner">
+      <div class="owner-text">
+        <div class="owner-eyebrow"><span>Meet the Man Who Taught Me How It's Done</span></div>
+        <h2 class="owner-headline">I grew up with Abba Plumbing,<br>my father's shop.<span class="sub">That's where I became the mechanic I am today.</span></h2>
+        <p class="owner-gen">4th &amp; 5th Generation Plumbers, At Your Service</p>
+        <p class="owner-body">Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
+        <p class="owner-body"><strong>With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</strong></p>
+        <div class="professor-banner">
+          <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="">
+          <span>They called him "The Professor."</span>
+        </div>
+        <p class="owner-body">The men who worked beside him gave him that name because he always found the right answer, even on the toughest jobs. Long Island homes were complicated, and Steven had a way of figuring out what others couldn't.</p>
+        <p class="owner-body">That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
+        <p class="owner-bold">We prioritize the care of your home as if it were our own!</p>
+        <ul class="owner-checklist">
+          <li>Owner Accountability, Upfront Pricing, and Respect for Your Home!</li>
+          <li>Backed by Steven's 55 Years of Plumbing Experience &amp; Knowledge!</li>
+          <li>4th &amp; 5th Generation Plumbers Near You!</li>
+        </ul>
+        <a class="owner-cta" href="tel:+14842583749" data-track-call>Ready to Work With Us? Call Nicholas — (484) 258-3749</a>
+      </div>
+      <div class="owner-photo-wrap">
+        <img class="owner-photo" src="https://www.crystalclearflow.com/assets/Owner-Full.png" alt="Nicholas, Crystal Flow owner" loading="lazy">
+      </div>
     </div>
-    <div class="legacy-div"></div>
-    <ul class="legacy-list">
-      <li>Owner Accountability, Upfront Pricing, and Respect for Your Home!</li>
-      <li>Backed by Steven's Endless Depths of Plumbing Knowledge and Wisdom!</li>
-      <li>4th &amp; 5th Generation Plumbers Near You!</li>
-    </ul>
-    <div class="legacy-loc">Located out of Womelsdorf, Pennsylvania.</div>
-    <div style="text-align:center;margin-top:26px"><button class="btn btn-gold" data-nav="meet-the-owner">Meet the Owner</button></div>
-  </div></section>
+  </section>
 
   <!-- EMERGENCY FLYER BANNER -->
   <section class="block"><div class="wrap" style="text-align:center">

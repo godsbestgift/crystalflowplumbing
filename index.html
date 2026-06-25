@@ -73,11 +73,11 @@
   .hero-bg{position:absolute;inset:0;overflow:hidden}
   .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
   .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,22,.95) 0%,rgba(4,10,22,.78) 36%,rgba(4,10,22,.28) 64%,rgba(4,10,22,0) 100%)}
-  .hero .wrap{position:relative;padding:54px 20px 92px;display:grid;grid-template-columns:minmax(0,720px);justify-content:center;gap:42px;align-items:center;min-height:560px;text-align:center}
-  .hero .wrap .callblock{justify-content:center}
-  .hero .wrap .ticks{justify-content:center}
-  .hero .wrap .lead{margin-left:auto;margin-right:auto}
-  .hero .wrap .svc-list{text-align:center}
+  .hero .wrap{position:relative;padding:54px 20px 92px;display:grid;grid-template-columns:minmax(0,720px);gap:42px;align-items:center;min-height:560px}
+  .hero .wrap .callblock{justify-content:flex-start}
+  .hero .wrap .ticks{justify-content:flex-start}
+  .hero .wrap .lead{margin-left:0;margin-right:auto}
+  .hero .wrap .svc-list{text-align:left}
   .hero .wrap h1{text-align:center}
   .promise{display:inline-flex;gap:8px;align-items:center;color:#ffffff;font-weight:800;font-size:13px;border-radius:999px;padding:8px 16px;border:1px solid #2f86ff;background:rgba(8,20,38,.78);box-shadow:0 0 18px rgba(47,134,255,.3);margin-bottom:16px}
   .promise i{width:8px;height:8px;border-radius:50%;background:#39d98a;box-shadow:0 0 0 4px rgba(57,217,138,.25),0 0 8px rgba(57,217,138,.8)}
@@ -442,7 +442,17 @@
   .cf-maplabel:before{display:none}
   @media(max-width:600px){.cf-map{height:360px}}
   /* footer logo */
-  .foot-logo{width:auto;height:64px;max-width:100%;display:block;cursor:pointer}
+  .foot-logo{width:min(460px,100%);height:auto;display:block;cursor:pointer}
+  /* blue hype CTA */
+  .hype-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,#1aa7ff,#0a6fd0);color:#fff;font-size:clamp(15px,2vw,19px);font-weight:900;letter-spacing:.03em;text-transform:uppercase;padding:18px 38px;border:2px solid #7cd3ff;border-radius:4px;cursor:pointer;text-decoration:none;animation:hypePulse 1.5s ease-in-out infinite}
+  .hype-cta:hover{filter:brightness(1.1)}
+  .hype-cta .ar{display:inline-block;animation:hypeArrow 1.1s ease-in-out infinite}
+  @keyframes hypePulse{0%,100%{box-shadow:0 0 16px 2px rgba(26,167,255,.5)}50%{box-shadow:0 0 38px 9px rgba(26,167,255,.95),0 8px 22px rgba(26,167,255,.45)}}
+  @keyframes hypeArrow{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+  .poem-right{text-align:right}
+  .poem-right .stacked{justify-content:flex-end}
+  .poem-right .flowpoem{text-align:right}
+  .poem-cta{display:flex;justify-content:flex-end;margin-top:24px}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -551,6 +561,7 @@
         <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Drain Pipes</h3><p>Targeted help for problem drains and pipes.</p></div>
       </div>
       <p class="cf-tag">Drain going slow? Call the pro. Crystal Flow.</p>
+      <div style="margin-top:20px"><button class="hype-cta" data-quote>What Are You Waiting For? <span class="ar">&rarr;</span></button></div>
     </div>
   </section>
 
@@ -620,8 +631,8 @@
 
   <div class="cf-divider"><span></span></div>
 
-  <section class="block"><div class="wrap">
-    <div class="stacked" style="justify-content:center">
+  <section class="block"><div class="wrap poem-right">
+    <div class="stacked" style="justify-content:flex-end">
       <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
       <div class="st-tx"><span class="st2">Crystal Clear Solutions Every Time</span></div>
     </div>
@@ -631,6 +642,7 @@
       No Stress No Guess
       <span class="big"><span class="u">Just Crystal Flow</span></span>
     </div>
+    <div class="poem-cta"><button class="hype-cta" data-quote>What Are You Waiting For? <span class="ar">&rarr;</span></button></div>
   </div></section>
 
 </main>

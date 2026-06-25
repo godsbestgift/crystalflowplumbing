@@ -425,6 +425,14 @@
   .cf-divider{height:60px;background:var(--navy);display:flex;align-items:center;justify-content:center}
   .cf-divider span{display:block;width:min(420px,62%);height:2px;background:linear-gradient(90deg,transparent,rgba(110,180,255,.55) 50%,transparent);position:relative}
   .cf-divider span:before{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:#9ecbff;box-shadow:0 0 16px 4px rgba(125,184,255,.9);transform:translate(-50%,-50%)}
+  /* service area on light water background */
+  .page section.block.area-sec{background-image:radial-gradient(ellipse 70% 78% at 50% 42%,rgba(248,250,252,.7),rgba(248,250,252,.25) 72%),url(https://www.crystalclearflow.com/assets/background6.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;border-top:1px solid rgba(12,28,51,.1)}
+  .area-sec .sec-head h2{color:#0c1c33}
+  .area-sec .sec-head p{color:#33465c}
+  .area-sec .btn-ghost{background:#0c1c33;color:#fff;border-color:#0c1c33}
+  .area-sec .btn-ghost:hover{background:#13243d}
+  .area-sec .coverage-map{border-color:rgba(12,28,51,.18)}
+  .area-sec .chip{background:rgba(255,255,255,.9);border-color:rgba(12,28,51,.18);color:#22384f}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -574,7 +582,7 @@
     <a class="fastresp-call" href="tel:+14842583749" data-track-call>📞 Call <b>(484) 258-3749</b> <span class="dot">·</span> Talk To The Owner Now</a>
   </div></section>
 
-  <section class="block"><div class="wrap">
+  <section class="block area-sec"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks, Lebanon &amp; Lancaster Counties.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
     <div class="coverage-map">
       <svg viewBox="0 0 820 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crystal Flow service area, roughly 20 miles around Womelsdorf PA">

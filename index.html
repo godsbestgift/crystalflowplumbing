@@ -385,6 +385,42 @@
   /* service-area coverage map */
   .coverage-map{max-width:880px;margin:32px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:linear-gradient(180deg,#0b1a30,#091321)}
   .coverage-map svg{width:100%;height:auto;display:block}
+  /* full-bleed photo slide sections (parts 2 & 3) */
+  .cf-slide{position:relative;background-size:cover;background-position:center;border-top:1px solid rgba(255,255,255,.08)}
+  .cf-slide:before{content:"";position:absolute;inset:0;z-index:1}
+  .cf-slide .cf-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:66px 22px;text-align:center}
+  .cf-slide.cf-light{background-image:url(https://www.crystalclearflow.com/assets/background4.jpg)}
+  .cf-slide.cf-light:before{background:radial-gradient(ellipse 62% 72% at 50% 46%,rgba(244,250,255,.6),rgba(244,250,255,0) 72%)}
+  .cf-slide.cf-dark{background-image:url(https://www.crystalclearflow.com/assets/background5.jpg)}
+  .cf-slide.cf-dark:before{background:radial-gradient(ellipse 74% 76% at 50% 50%,rgba(6,18,40,.55),rgba(6,18,40,.1) 80%)}
+  .cf-eyebrow{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
+  .cf-h2{font-size:clamp(24px,3.6vw,34px);font-weight:900;line-height:1.14;margin-bottom:12px}
+  .cf-sub{font-size:clamp(15px,2vw,17px);font-weight:700;font-style:italic;line-height:1.45;margin-bottom:20px}
+  .cf-body{font-size:15px;line-height:1.75;max-width:580px;margin:0 auto 14px}
+  .cf-gold{font-size:clamp(16px,2.2vw,19px);font-weight:800;font-style:italic;line-height:1.4;margin:8px 0 22px}
+  .cf-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-size:15px;font-weight:900;padding:15px 26px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(247,201,72,.3)}
+  .cf-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .cf-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px;margin-top:26px}
+  .cf-badge{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:7px}
+  .cf-light .cf-eyebrow{color:#1560c8}
+  .cf-light .cf-h2{color:#0c1c33}
+  .cf-light .cf-sub{color:#1a86e0}
+  .cf-light .cf-body{color:#33465c}
+  .cf-light .cf-gold{color:#b5851a}
+  .cf-light .cf-badges{border-top:1px solid rgba(12,28,51,.16);padding-top:22px}
+  .cf-light .cf-badge{color:#22384f}
+  .cf-dark .cf-eyebrow{color:var(--gold)}
+  .cf-dark .cf-h2{color:#fff}
+  .cf-dark .cf-sub{color:#cfe0f0;font-style:normal;font-weight:600}
+  .cf-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px;text-align:left}
+  .cf-card{background:rgba(8,22,44,.6);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:20px}
+  .cf-card .cf-ico{width:54px;height:54px;border-radius:12px;background:rgba(43,245,200,.1);border:1px solid rgba(43,245,200,.3);display:grid;place-items:center;margin-bottom:13px}
+  .cf-card .cf-ico img{width:32px;height:32px;object-fit:contain}
+  .cf-card h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:5px}
+  .cf-card p{font-size:13.5px;color:#9fb3c8;line-height:1.5}
+  .cf-tag{font-size:clamp(17px,2.4vw,22px);font-weight:900;font-style:italic;color:#fff;margin-top:26px}
+  @media(max-width:760px){.cf-svc{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.cf-svc{grid-template-columns:1fr}.cf-slide .cf-inner{padding:48px 18px}}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -457,9 +493,40 @@
     <!-- TEMP-DISABLED until real reviews exist: <span class="stars">★★★★★ Rated on Google</span> --><span>✓ 4th &amp; 5th Generation Plumbers</span><span>✓ Berks, Lebanon &amp; Lancaster Counties</span><span>✓ Local &amp; Family Operation</span>
   </div></div>
 
-  <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/slide2.png" alt="Crystal Flow Services - Drain Problems Don't Wait" loading="lazy"></section>
+  <section class="cf-slide cf-light">
+    <div class="cf-inner">
+      <div class="cf-eyebrow">Drain Problems Don't Wait</div>
+      <h2 class="cf-h2">Crystal Clean &bull; Crystal Flow &bull; Crystal Clear</h2>
+      <p class="cf-sub">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know.</p>
+      <p class="cf-body">When a drain backs up, a sewer line slows down, or water starts going where it shouldn't, you need more than a quick guess. You need someone who answers, explains the problem clearly, and treats your home with respect from the moment they arrive.</p>
+      <p class="cf-body">Crystal Flow Repairs &amp; Drain Cleaning provides fast &amp; reliable service to homeowners and businesses across Berks, Lebanon, and Lancaster County, with clean work, honest communication, and solutions that get your plumbing flowing the way it should.</p>
+      <p class="cf-gold">When your drain says no, it's gotta go! You know who to call &mdash; Crystal Flow!</p>
+      <a class="cf-cta" href="tel:+14842583749" data-track-call><svg class="bico"><use href="#i-phone"></use></svg> Backed-up drains don't fix themselves. Call (484) 258-3749</a>
+      <div class="cf-badges">
+        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-user"></use></svg> Father &amp; Son Operated</span>
+        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-doc"></use></svg> Clear Pricing Before Work Starts</span>
+        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-shield"></use></svg> Local. Reliable. Trusted.</span>
+        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-check"></use></svg> Satisfaction Guaranteed</span>
+      </div>
+    </div>
+  </section>
 
-  <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/slide3.png" alt="What Crystal Flow Handles Every Day" loading="lazy"></section>
+  <section class="cf-slide cf-dark">
+    <div class="cf-inner">
+      <div class="cf-eyebrow">Crystal Flow Services</div>
+      <h2 class="cf-h2">What Crystal Flow Handles Every Day</h2>
+      <p class="cf-sub">Clear pricing. Fast help. Respect for your home.</p>
+      <div class="cf-svc">
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" alt="" loading="lazy"></div><h3>Drain Cleaning</h3><p>Clear tough clogs fast.</p></div>
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/leak_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Sewer Backups</h3><p>Fast help when sewer lines back up.</p></div>
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Sinks, Tubs &amp; Showers</h3><p>Restore smooth daily flow.</p></div>
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/toilet_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Toilets &amp; Repairs</h3><p>Fix clogs, leaks, and running issues.</p></div>
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Faucets &amp; Leaks</h3><p>Stop drips and everyday leak issues.</p></div>
+        <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" alt="" loading="lazy"></div><h3>Drain Pipes</h3><p>Targeted help for problem drains and pipes.</p></div>
+      </div>
+      <p class="cf-tag">Drain going slow? Call the pro. Crystal Flow.</p>
+    </div>
+  </section>
 
   <section class="owner-section">
     <div class="owner-inner">

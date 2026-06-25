@@ -9,6 +9,8 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
   :root{
@@ -433,6 +435,14 @@
   .area-sec .btn-ghost:hover{background:#13243d}
   .area-sec .coverage-map{border-color:rgba(12,28,51,.18)}
   .area-sec .chip{background:rgba(255,255,255,.9);border-color:rgba(12,28,51,.18);color:#22384f}
+  /* interactive coverage map */
+  .cf-map{width:100%;height:440px;margin-top:24px;border-radius:14px;overflow:hidden;border:1px solid rgba(12,28,51,.22);box-shadow:var(--shadow)}
+  .leaflet-container{background:#0a1424;font-family:inherit}
+  .cf-maplabel{background:rgba(10,20,36,.82);border:none;border-radius:6px;color:#dbe8f5;font-weight:700;font-size:11px;box-shadow:none;padding:2px 7px;white-space:nowrap}
+  .cf-maplabel:before{display:none}
+  @media(max-width:600px){.cf-map{height:360px}}
+  /* footer logo */
+  .foot-logo{width:auto;height:64px;max-width:100%;display:block;cursor:pointer}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -590,43 +600,21 @@
 
   <section class="block area-sec"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks, Lebanon &amp; Lancaster Counties.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
-    <div class="coverage-map">
-      <svg viewBox="0 0 820 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crystal Flow service area, roughly 20 miles around Womelsdorf PA">
-        <defs>
-          <radialGradient id="cmGlow" cx="50%" cy="52%" r="50%">
-            <stop offset="0%" stop-color="#1aa7ff" stop-opacity=".35"/>
-            <stop offset="55%" stop-color="#1aa7ff" stop-opacity=".10"/>
-            <stop offset="100%" stop-color="#1aa7ff" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <rect width="820" height="480" fill="#0a1424"/>
-        <text x="600" y="92" fill="#ffffff" opacity=".05" font-size="56" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">BERKS</text>
-        <text x="150" y="250" fill="#ffffff" opacity=".05" font-size="46" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">LEBANON</text>
-        <text x="430" y="458" fill="#ffffff" opacity=".05" font-size="52" font-weight="900" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">LANCASTER</text>
-        <circle cx="410" cy="250" r="215" fill="url(#cmGlow)"/>
-        <circle cx="410" cy="250" r="215" fill="none" stroke="#1aa7ff" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="5 7"/>
-        <circle cx="410" cy="250" r="150" fill="none" stroke="#1aa7ff" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="5 7"/>
-        <circle cx="410" cy="250" r="80" fill="none" stroke="#1aa7ff" stroke-opacity=".2" stroke-width="1.5" stroke-dasharray="5 7"/>
-        <line x1="410" y1="250" x2="625" y2="250" stroke="#f7c948" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="4 5"/>
-        <text x="520" y="240" fill="#f7c948" font-size="13" font-weight="800" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">~20 miles</text>
-        <g font-family="Segoe UI, Arial, sans-serif">
-          <circle cx="410" cy="250" r="9" fill="#f7c948" stroke="#fff" stroke-width="2"/>
-          <text x="410" y="231" fill="#fff" font-size="15" font-weight="900" text-anchor="middle">Womelsdorf</text>
-          <text x="410" y="277" fill="#f7c948" font-size="10.5" font-weight="800" letter-spacing="1.5" text-anchor="middle">HOME BASE</text>
-          <g fill="#bfe4ff">
-            <circle cx="486" cy="232" r="5" fill="#1aa7ff"/><text x="486" y="221" font-size="12.5" font-weight="700" text-anchor="middle">Robesonia</text>
-            <circle cx="556" cy="262" r="5" fill="#1aa7ff"/><text x="556" y="251" font-size="12.5" font-weight="700" text-anchor="middle">Wernersville</text>
-            <circle cx="600" cy="305" r="5" fill="#1aa7ff"/><text x="600" y="324" font-size="12.5" font-weight="700" text-anchor="middle">Sinking Spring</text>
-            <circle cx="592" cy="205" r="5" fill="#1aa7ff"/><text x="592" y="194" font-size="12.5" font-weight="700" text-anchor="middle">Reading</text>
-            <circle cx="322" cy="216" r="5" fill="#1aa7ff"/><text x="322" y="205" font-size="12.5" font-weight="700" text-anchor="middle">Myerstown</text>
-            <circle cx="248" cy="205" r="5" fill="#1aa7ff"/><text x="248" y="194" font-size="12.5" font-weight="700" text-anchor="middle">Lebanon</text>
-            <circle cx="262" cy="150" r="5" fill="#1aa7ff"/><text x="262" y="139" font-size="12.5" font-weight="700" text-anchor="middle">Richland</text>
-            <circle cx="356" cy="426" r="5" fill="#1aa7ff"/><text x="356" y="446" font-size="12.5" font-weight="700" text-anchor="middle">Lititz</text>
-            <circle cx="470" cy="412" r="5" fill="#1aa7ff"/><text x="470" y="432" font-size="12.5" font-weight="700" text-anchor="middle">Ephrata</text>
-          </g>
-        </g>
-      </svg>
-    </div>
+    <div class="cf-map" id="cfmap"></div>
+    <script>
+      (function(){
+        if(typeof L==='undefined')return;
+        var c=[40.3637,-76.1841];
+        var map=L.map('cfmap',{scrollWheelZoom:false,zoomControl:true}).setView(c,10);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap, &copy; CARTO'}).addTo(map);
+        L.circle(c,{radius:32187,color:'#1aa7ff',weight:1.5,opacity:.6,fillColor:'#1aa7ff',fillOpacity:.07,dashArray:'6 8'}).addTo(map);
+        L.circleMarker(c,{radius:9,color:'#fff',weight:2,fillColor:'#f7c948',fillOpacity:1}).addTo(map).bindTooltip('Womelsdorf — Home Base',{permanent:true,direction:'top',className:'cf-maplabel',offset:[0,-8]});
+        var towns=[['Reading',40.3356,-75.9269],['Wyomissing',40.3290,-75.9649],['Sinking Spring',40.3234,-76.0222],['Wernersville',40.3301,-76.0808],['Robesonia',40.3490,-76.1352],['Newmanstown',40.3537,-76.2069],['Richland',40.3576,-76.2552],['Myerstown',40.3762,-76.3047],['Lebanon',40.3409,-76.4113],['Annville',40.3320,-76.5147],['Palmyra',40.3093,-76.5944],['Bernville',40.4337,-76.1083],['Denver',40.2326,-76.1352],['Adamstown',40.2434,-76.0566],['Ephrata',40.1798,-76.1791],['Lititz',40.1573,-76.3069]];
+        towns.forEach(function(t){
+          L.circleMarker([t[1],t[2]],{radius:6,color:'#bfe4ff',weight:1.5,fillColor:'#1aa7ff',fillOpacity:.9}).addTo(map).bindTooltip(t[0],{permanent:true,direction:'top',className:'cf-maplabel',offset:[0,-6]});
+        });
+      })();
+    </script>
     <div class="chips" data-chips></div>
   </div></section>
 
@@ -645,12 +633,6 @@
     </div>
   </div></section>
 
-  <div class="cf-divider"><span></span></div>
-
-  <section class="brandclose">
-    <div class="bc-bg"><img src="https://www.crystalclearflow.com/assets/drain-cleaner.png" alt="" aria-hidden="true" loading="lazy"></div>
-    <img class="bc-logo" src="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.style.display='none'" alt="Crystal Flow Repair and Drain Cleaning" loading="lazy">
-  </section>
 </main>
 
 <!-- ===================== DRAIN CLEANING ===================== -->
@@ -762,7 +744,7 @@
 <footer class="site">
   <div class="wrap">
     <div>
-      <div class="brand" data-nav="home"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield" loading="lazy"><span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span></div>
+      <div class="brand" data-nav="home" style="width:auto;flex:0 0 auto;height:auto"><img class="foot-logo" src="https://www.crystalclearflow.com/assets/logo1-trim.png" alt="Crystal Flow Repair &amp; Drain Cleaning" loading="lazy"></div>
       <p class="ftxt"><b style="color:#1aa7ff">Family Owned, Father-Son Operated</b> Repair &amp; Drain Cleaning near Womelsdorf, PA, serving Berks, Lebanon and Lancaster Counties.</p>
     </div>
     <div><h4>Services</h4><div class="flist"><a data-nav="drain-cleaning">Drain Cleaning</a><a data-nav="drain-cleaning">Sewer Line Clearing</a><a data-nav="repairs-installations">Faucets, Vanities &amp; Drains</a><a data-nav="meet-the-owner">Origin Story</a></div></div>

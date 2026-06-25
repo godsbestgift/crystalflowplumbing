@@ -389,7 +389,7 @@
   .cf-slide{position:relative;background-size:cover;background-position:center;border-top:1px solid rgba(255,255,255,.08)}
   .cf-slide:before{content:"";position:absolute;inset:0;z-index:1}
   .cf-slide .cf-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:66px 22px;text-align:center}
-  .cf-slide.cf-light{background-image:url(https://www.crystalclearflow.com/assets/background4.jpg)}
+  .cf-slide.cf-light{background-image:url(https://www.crystalclearflow.com/assets/background3.jpg)}
   .cf-slide.cf-light:before{background:radial-gradient(ellipse 62% 72% at 50% 46%,rgba(244,250,255,.6),rgba(244,250,255,0) 72%)}
   .cf-slide.cf-dark{background-image:url(https://www.crystalclearflow.com/assets/background5.jpg)}
   .cf-slide.cf-dark:before{background:radial-gradient(ellipse 74% 76% at 50% 50%,rgba(6,18,40,.55),rgba(6,18,40,.1) 80%)}
@@ -407,8 +407,8 @@
   .cf-light .cf-sub{color:#1a86e0}
   .cf-light .cf-body{color:#33465c}
   .cf-light .cf-gold{color:#b5851a}
-  .cf-light .cf-badges{border-top:1px solid rgba(12,28,51,.16);padding-top:22px}
-  .cf-light .cf-badge{color:#22384f}
+  .cf-light .cf-badges{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;background:rgba(12,28,51,.85);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 24px;margin-top:28px}
+  .cf-light .cf-badge{color:#e7eff7}
   .cf-dark .cf-eyebrow{color:var(--gold)}
   .cf-dark .cf-h2{color:#fff}
   .cf-dark .cf-sub{color:#cfe0f0;font-style:normal;font-weight:600}
@@ -421,6 +421,10 @@
   .cf-tag{font-size:clamp(17px,2.4vw,22px);font-weight:900;font-style:italic;color:#fff;margin-top:26px}
   @media(max-width:760px){.cf-svc{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.cf-svc{grid-template-columns:1fr}.cf-slide .cf-inner{padding:48px 18px}}
+  /* complementary section divider */
+  .cf-divider{height:60px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .cf-divider span{display:block;width:min(420px,62%);height:2px;background:linear-gradient(90deg,transparent,rgba(110,180,255,.55) 50%,transparent);position:relative}
+  .cf-divider span:before{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:#9ecbff;box-shadow:0 0 16px 4px rgba(125,184,255,.9);transform:translate(-50%,-50%)}
 
   /* inline icon set (drawn in code, no image files) */
   .bico{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -511,6 +515,8 @@
     </div>
   </section>
 
+  <div class="cf-divider"><span></span></div>
+
   <section class="cf-slide cf-dark">
     <div class="cf-inner">
       <div class="cf-eyebrow">Crystal Flow Services</div>
@@ -527,6 +533,8 @@
       <p class="cf-tag">Drain going slow? Call the pro. Crystal Flow.</p>
     </div>
   </section>
+
+  <div class="cf-divider"><span></span></div>
 
   <section class="owner-section">
     <div class="owner-inner">

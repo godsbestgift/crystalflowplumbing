@@ -375,8 +375,10 @@
   .owner-gen{display:flex;align-items:center;gap:12px;color:#c98a00;font-size:16px;font-weight:800;margin:18px 0 24px;letter-spacing:.02em}
   .owner-gen:before,.owner-gen:after{content:"";flex:0 0 28px;height:1.5px;background:#c9a84c}
   .owner-body{color:#1a2332;font-size:16px;line-height:1.82;margin-bottom:18px}
-  .abba-truck{width:100%;height:auto;display:block;border-radius:10px;margin:14px 0 20px;object-fit:cover}
-  .professor-img{width:100%;height:auto;display:block;margin:28px 0 24px}
+  .abba-row{display:grid;grid-template-columns:1fr 220px;gap:24px;align-items:center;margin:6px 0 6px}
+  .abba-truck{width:100%;height:auto;display:block;border-radius:10px;object-fit:cover}
+  .professor-img{width:100%;height:auto;display:block;margin:24px 0 24px}
+  @media(max-width:620px){.abba-row{grid-template-columns:1fr}.abba-truck{max-width:100%;order:2}}
   .owner-bold{color:#0c1c33;font-size:16.5px;font-weight:900;margin-bottom:22px;line-height:1.6}
   .owner-checklist{list-style:none;margin:0 0 38px;display:grid;gap:18px}
   .owner-checklist li{display:flex;gap:16px;align-items:flex-start;color:#1a2332;font-size:16px;font-weight:700;line-height:1.55}
@@ -475,9 +477,13 @@
         <div class="owner-eyebrow"><span>Meet the Man Who Taught Me How It's Done</span></div>
         <h2 class="owner-headline">I grew up with Abba Plumbing,<br>my father's shop.<span class="sub">That's where I became the Mechanic I am today.</span></h2>
         <p class="owner-gen">4th &amp; 5th Generation Plumbers, At Your Service</p>
-        <p class="owner-body">Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
-        <img class="abba-truck" src="https://www.crystalclearflow.com/assets/abba.jpg" alt="Abba Plumbing & Heating truck, East Meadow NY" loading="lazy">
-        <p class="owner-body"><strong>With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</strong></p>
+        <div class="abba-row">
+          <div>
+            <p class="owner-body">Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
+            <p class="owner-body"><strong>With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</strong></p>
+          </div>
+          <img class="abba-truck" src="https://www.crystalclearflow.com/assets/abba.jpg" alt="Abba Plumbing & Heating truck, East Meadow NY" loading="lazy">
+        </div>
         <img class="professor-img" src="https://www.crystalclearflow.com/assets/professor.png" alt="They called him The Professor" loading="lazy">
         <p class="owner-body">The men who worked beside him gave him that name because he always found the right answer, even on the toughest jobs. Long Island homes were complicated, and Steven had a way of figuring out what others couldn't.</p>
         <p class="owner-body">That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>

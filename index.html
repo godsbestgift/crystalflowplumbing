@@ -57,10 +57,10 @@
   .topbar a{font-weight:800;color:#fff;display:inline-flex;align-items:center;gap:6px}
 
   header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
-  header.site .wrap{display:flex;align-items:center;gap:18px;min-height:88px}
-  .brand{display:flex;align-items:center;gap:12px;cursor:pointer}
+  header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
+  .brand{display:flex;align-items:center;gap:12px;cursor:pointer;height:100%}
   .brand img{width:46px;height:46px;object-fit:contain}
-  .brand .logo-full{width:auto;height:64px;object-fit:contain;display:block}
+  .brand .logo-full{width:auto;height:92px;max-height:92px;object-fit:contain;display:block}
   .brand .bt{display:flex;flex-direction:column;line-height:1}
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
@@ -79,34 +79,49 @@
   @keyframes pfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
   .hero{position:relative}
+  .hero{position:relative;background:radial-gradient(900px 600px at 78% 40%,rgba(30,120,220,.38),transparent 62%),linear-gradient(120deg,#06101f 0%,#0a1830 55%,#0d2547 100%)}
   .hero-bg{position:absolute;inset:0;overflow:hidden}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.85}
-  .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,7,15,.92) 0%,rgba(3,7,15,.74) 38%,rgba(3,7,15,.34) 66%,rgba(3,7,15,.05) 100%)}
-  .hero .wrap{position:relative;padding:40px 20px 86px;display:grid;grid-template-columns:minmax(0,760px);gap:42px;align-items:center;min-height:420px}
-  .promise{display:inline-flex;gap:8px;align-items:center;color:#bfe4ff;font-weight:800;font-size:13px;border-radius:999px;padding:8px 14px;border:1px solid rgba(26,167,255,.4);background:rgba(26,167,255,.12);margin-bottom:16px}
-  .promise i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(57,217,138,.25)}
-  .hero h1{font-weight:900;margin-bottom:14px;line-height:1.08}
-  .hero h1 .cf1{display:block;font-size:clamp(30px,4.3vw,44px);background:linear-gradient(180deg,#ffffff,#dCEBFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hero h1 .cf2{display:block;font-size:clamp(38px,5.3vw,56px);background:linear-gradient(180deg,#6fe0e8,#159fc0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 6px rgba(40,160,200,.4))}
-  .hero h1 .cf3{display:inline-block;font-size:clamp(42px,5.8vw,62px);background:linear-gradient(180deg,#7db8ff,#1450c8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;border-bottom:4px solid #2f86ff;padding-bottom:2px;animation:cfglow 2.2s ease-in-out infinite}
-  @keyframes cfglow{0%,100%{filter:drop-shadow(0 0 12px rgba(90,160,255,.5))}50%{filter:drop-shadow(0 0 34px rgba(110,180,255,1)) drop-shadow(0 0 12px rgba(90,160,255,.7))}}
-  .hero .rhyme{font-size:clamp(18px,2.4vw,24px);font-weight:900;color:#fff;margin-top:14px}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
+  .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,22,.95) 0%,rgba(4,10,22,.78) 36%,rgba(4,10,22,.28) 64%,rgba(4,10,22,0) 100%)}
+  .hero .wrap{position:relative;padding:54px 20px 92px;display:grid;grid-template-columns:minmax(0,720px);gap:42px;align-items:center;min-height:560px}
+  .hero .wrap .callblock{justify-content:flex-start}
+  .hero .wrap .ticks{justify-content:flex-start}
+  .hero .wrap .lead{margin-left:0;margin-right:auto}
+  .hero .wrap .svc-list{text-align:left}
+  .hero .wrap h1{text-align:left}
+  .promise{display:inline-flex;gap:8px;align-items:center;color:#ffffff;font-weight:800;font-size:13px;border-radius:999px;padding:8px 16px;border:1px solid #2f86ff;background:rgba(8,20,38,.78);box-shadow:0 0 18px rgba(47,134,255,.3);margin-bottom:16px}
+  .promise i{width:8px;height:8px;border-radius:50%;background:#39d98a;box-shadow:0 0 0 4px rgba(57,217,138,.25),0 0 8px rgba(57,217,138,.8)}
+  .hero h1{font-weight:900;margin-bottom:14px;line-height:1.02}
+  .hero h1 .cf1{display:block;font-size:clamp(34px,4.7vw,50px);color:#ffffff;-webkit-text-fill-color:#ffffff;text-shadow:0 2px 14px rgba(0,0,0,.5),0 0 22px rgba(150,200,255,.25);letter-spacing:.01em}
+  .cf1-row{display:flex;align-items:center;gap:16px;margin-bottom:8px;justify-content:flex-start;max-width:520px}
+  .cf1-row .cf1{flex:0 0 auto}
+  .cf1-row .hexline{flex:1;height:2px;position:relative;background:linear-gradient(90deg,transparent 0%,rgba(120,185,255,.75) 80%,rgba(120,185,255,.25) 100%)}
+  .cf1-row .hexline.r{background:linear-gradient(90deg,rgba(120,185,255,.25) 0%,rgba(120,185,255,.75) 20%,transparent 100%)}
+  .cf1-row .hexline:before{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:#7db8ff;box-shadow:0 0 12px 3px rgba(125,184,255,.95);transform:translateY(-50%)}
+  .cf1-row .hexline.l:before{right:0}
+  .cf1-row .hexline.r:before{left:0}
+  .hero-divider{height:2px;margin:14px 0 6px;position:relative;background:linear-gradient(90deg,transparent 0%,rgba(110,180,255,.6) 50%,transparent 100%)}
+  .hero-divider:before{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:#9ecbff;box-shadow:0 0 16px 5px rgba(125,184,255,.98);transform:translate(-50%,-50%)}
+  .hero h1 .cf2{display:block;font-size:clamp(46px,6.4vw,72px);background:linear-gradient(180deg,#bdeeff 0%,#4fd0e8 52%,#1a9fc8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 10px rgba(60,200,232,.45));letter-spacing:-.01em}
+  .hero h1 .cf3{display:inline-block;font-size:clamp(50px,7vw,80px);background:linear-gradient(180deg,#9ec0ff 0%,#5a90ff 48%,#1450c8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;border-bottom:4px solid #2f86ff;padding-bottom:2px;animation:cfglow 2.2s ease-in-out infinite;letter-spacing:-.01em}
+  @keyframes cfglow{0%,100%{filter:drop-shadow(0 0 14px rgba(90,160,255,.55))}50%{filter:drop-shadow(0 0 38px rgba(110,180,255,1)) drop-shadow(0 0 14px rgba(90,160,255,.8))}}
+  .hero .rhyme{font-size:clamp(22px,2.9vw,30px);font-weight:900;color:#ffffff;margin-top:14px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
   .hero .rhyme .u{text-decoration:underline;text-decoration-color:#2f86ff;text-underline-offset:4px;text-decoration-thickness:3px}
-  .hero .rhyme .scr{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.5em;color:#3fb8e8;margin-left:4px}
+  .hero .rhyme .scr{font-family:'Yellowtail',cursive;font-weight:400;font-size:1.55em;color:#4fd0ff;margin-left:6px;text-shadow:0 0 16px rgba(79,208,255,.55)}
   .hero .promise-mid{margin:18px 0 4px}
   .promise-topright{position:absolute;top:24px;right:28px;z-index:4;margin:0}
   @media (max-width:980px){.promise-topright{position:static;margin:0 0 16px}}
   .hero p.lead{color:var(--muted);font-size:17px;max-width:500px}
-  .callblock{display:flex;gap:14px;flex-wrap:wrap;margin:24px 0 14px}
-  .callblock .phone{display:flex;flex-direction:row;align-items:center;gap:12px;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;border-radius:14px;padding:12px 22px;box-shadow:0 12px 30px rgba(247,201,72,.32);position:relative;overflow:hidden;transition:.18s transform,.18s box-shadow}
-  .callblock .phone:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(247,201,72,.5)}
+  .callblock{display:flex;gap:16px;flex-wrap:wrap;margin:28px 0 16px}
+  .callblock .phone{display:flex;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(180deg,#ffd64a,#f2b005);color:#1a1304;border-radius:16px;padding:14px 28px;box-shadow:0 12px 34px rgba(247,201,72,.42),0 0 0 1px rgba(255,255,255,.15) inset;position:relative;overflow:hidden;transition:.18s transform,.18s box-shadow}
+  .callblock .phone:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(247,201,72,.6)}
   .callblock .phone:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite}
-  .callblock .qbtn{position:relative;overflow:hidden}
+  .callblock .qbtn{position:relative;overflow:hidden;background:linear-gradient(180deg,#4fb4ff,#1a86e0);color:#fff;border-radius:999px;padding:0 30px;font-size:18px;font-weight:800;box-shadow:0 12px 30px rgba(40,150,240,.45)}
   .callblock .qbtn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite;animation-delay:.5s}
   @keyframes shine{0%{left:-60%}28%,100%{left:130%}}
   .callblock .phone .phone-ic{width:30px;height:30px;flex:0 0 30px;stroke:#1a1304;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .callblock .phone .phone-tx{display:flex;flex-direction:column;line-height:1}
-  .svc-list{margin-top:18px;text-align:left;color:var(--gold);font-size:13.5px;font-weight:900;letter-spacing:.02em;opacity:1}
+  .svc-list{margin-top:18px;text-align:left;color:#f7c948;font-size:13.5px;font-weight:900;letter-spacing:.02em;opacity:1;text-shadow:0 1px 6px rgba(0,0,0,.4)}
   .hero-card{align-self:start;margin-top:6px;text-align:center;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.20);border-radius:18px;padding:26px 24px;backdrop-filter:blur(7px);box-shadow:0 12px 34px rgba(0,0,0,.4)}
   .hero-card-brand{color:#1aa7ff;font-weight:900;font-size:23px;letter-spacing:.01em;margin-bottom:18px}
   .btn-water{width:100%;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-weight:900;font-size:16px;box-shadow:0 10px 26px rgba(247,201,72,.34)}
@@ -117,11 +132,11 @@
   @keyframes hfbreathe{0%,100%{transform:scale(1);filter:drop-shadow(0 0 6px rgba(247,201,72,.4))}50%{transform:scale(1.04);filter:drop-shadow(0 0 18px rgba(247,201,72,.85))}}
   .hero-float .hf-link:hover{filter:brightness(1.1)}
   @media (max-width:980px){.hero-float{position:static;margin:18px auto 0;right:auto;bottom:auto;max-width:420px}}
-  .callblock .phone small{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
-  .callblock .phone b{font-size:30px;font-weight:900;line-height:1.05;white-space:nowrap}
-  .callblock .qbtn{font-size:16px;padding:0 24px}
-  .ticks{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;color:var(--chrome);font-weight:700;font-size:14px}
-  .ticks span:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}
+  .callblock .phone small{font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;opacity:.85}
+  .callblock .phone b{font-size:34px;font-weight:900;line-height:1.05;white-space:nowrap}
+  .callblock .qbtn{font-size:18px;padding:0 30px}
+  .ticks{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;color:#ffffff;font-weight:700;font-size:14.5px}
+  .ticks span:before{content:"✓";color:#39d98a;font-weight:900;margin-right:7px;text-shadow:0 0 8px rgba(57,217,138,.5)}
 
   .phero{position:relative;border-bottom:1px solid var(--line)}
   .phero .wrap{padding:54px 20px}
@@ -141,6 +156,8 @@
   .offerbar em{font-style:normal;color:#3a2c00;font-weight:800}
 
   section.block{padding:58px 0;border-top:1px solid var(--line)}
+  .slide-section{padding:0;border-top:none;line-height:0}
+  .slide-section img{width:100%;height:auto;display:block}
   .page section.block:nth-of-type(even){background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02))}
   .sec-head{max-width:720px;margin-left:auto;margin-right:auto;text-align:center}
   .sec-head p{margin-left:auto;margin-right:auto}
@@ -394,17 +411,17 @@
     <span class="promise promise-topright"><i></i>We call back within 30 minutes, 9am to 6pm</span>
     <div class="wrap">
       <div>
-        <h1><span class="cf1">Crystal Flow</span><span class="cf2">Crystal Clear</span><span class="cf3">Clogs Disappear</span></h1>
+        <h1><span class="cf1-row"><span class="hexline l"></span><span class="cf1">Crystal Flow</span><span class="hexline r"></span></span><span class="cf2">Crystal Clear</span><span class="cf3">Clogs Disappear</span></h1>
+        <div class="hero-divider"></div>
         <div class="rhyme">No <span class="u">Stress</span> No <span class="u">Guess</span> <span class="scr">Just Crystal Flow</span></div>
-        <p class="lead" style="margin-top:14px;color:var(--gold)">When your pipes start fighting back, Crystal Flow steps in with Confidence, Clarity, and Control. Straight answers, and work done with Pride, not Pressure!</p>
-        <p class="lead" style="margin-top:10px;color:var(--gold)">We do not believe in Confusion. We do not believe in Surprises. We believe in showing up Strong, Protecting your home, and getting the water moving like it Should.</p>
+        <p class="lead" style="margin-top:16px;color:#f5c842;font-size:18px;line-height:1.5;max-width:600px">When a drain backs up, a sewer line slows down, or water starts going where it shouldn't, you need more than a quick guess. You need someone who answers, explains the problem clearly, and treats your home with respect from the moment they arrive.</p>
         <div class="callblock">
           <a class="phone" href="tel:+14842583749" data-track-call><svg class="phone-ic"><use href="#i-phone"></use></svg><span class="phone-tx"><small>Call the Owner Now</small><b>(484) 258-3749</b></span></a>
           <button class="btn btn-blue qbtn" data-quote><svg class="bico"><use href="#i-doc"></use></svg> Get My Free Quote</button>
         </div>
         <div class="ticks"><span>Father &amp; Son Operated</span><span>Upfront Pricing</span><span>Same-Day When Available</span></div>
-        <div class="svc-list">Clogged Drains • Sewer Backups • Sinks • Tubs • Toilets • Faucets • Showers • Drain Pipes</div>
-        <p style="color:#fff;font-weight:800;font-size:15px;margin-top:14px;line-height:1.5">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know. When your drain says no, Crystal Flow says it's gotta go</p>
+        <div class="svc-list" style="font-size:15px">Clogged Drains • Sewer Backups • Sinks • Tubs • Toilets • Faucets • Showers • Drain Pipes</div>
+        <p style="color:#ffffff;font-weight:800;font-size:16px;margin-top:14px;line-height:1.55;text-shadow:0 1px 6px rgba(0,0,0,.4)">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know. When your drain says no, Crystal Flow says it's gotta go</p>
       </div>
     </div>
     <div class="hero-float">
@@ -417,32 +434,9 @@
     <!-- TEMP-DISABLED until real reviews exist: <span class="stars">★★★★★ Rated on Google</span> --><span>✓ 4th &amp; 5th Generation Plumbers</span><span>✓ Berks, Lebanon &amp; Lancaster Counties</span><span>✓ Local &amp; Family Operation</span>
   </div></div>
 
-  <section class="block lightsec"><div class="wrap">
-    <div class="sec-head" style="max-width:760px;margin:0 auto;text-align:center"><span class="eyebrow">Crystal Flow Services</span><h2>Clogs Don't Stand A Chance.</h2><p style="margin-left:auto;margin-right:auto">When drains slow down, back up, or stop completely, Crystal Flow brings the right tools, clean work, and straight answers to get your home moving again.</p></div>
-    <div class="cards">
-      <div class="card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-drain.svg'" loading="lazy"></div><h3>Drain Cleaning</h3><p>Slow drains, standing water, gurgling pipes, and stubborn clogs.</p></div>
-      <div class="card" data-nav="drain-cleaning"><div class="ico"><img src="https://www.crystalclearflow.com/assets/pipe_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-pipe.svg'" loading="lazy"></div><h3>Sewer Clearing</h3><p>Main line backups, multiple fixture trouble, and sewer line clogs.</p></div>
-      <div class="card" data-nav="repairs-installations"><div class="ico"><img src="https://www.crystalclearflow.com/assets/faucet_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-home.svg'" loading="lazy"></div><h3>Kitchen &amp; Bath</h3><p>Kitchen sinks, tubs, showers, toilets, utility sinks, and vanity drains.</p></div>
-      <div class="card" data-quote><div class="ico"><img src="https://www.crystalclearflow.com/assets/shower_drain_repair_icon_transparent.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/icon-call.svg'" loading="lazy"></div><h3>Emergency Backups</h3><p>Fast response when water is backing up or your home needs attention.</p></div>
-    </div>
-    <div class="urgency-wrap">
-      <a class="urgency-btn" href="tel:+14842583749" data-track-call>
-        <svg class="uarrow" viewBox="0 0 24 24" fill="none" stroke="#2bf5c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        <span>Backed-up drains don't fix themselves. <span class="ub-num">CALL (484) 258-3749 TODAY</span></span>
-      </a>
-    </div>
-  </div></section>
+  <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/slide2.png" alt="Crystal Flow Services - Drain Problems Don't Wait" loading="lazy"></section>
 
-  <!-- OUR PROMISE -->
-  <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Our Promise</span><h2>Upfront Pricing. No Hidden Games.</h2><p>We fix. You relax. The same trust a national brand sells, from the owner who actually shows up.</p></div>
-    <div class="why">
-      <div class="glass w"><div class="ic">👤</div><b>Father and Son Operated</b><span>You deal with Nicholas directly, backed by his master plumber father and decades of real piping know-how.</span></div>
-      <div class="glass w"><div class="ic">🧾</div><b>Phone estimates are free</b><span>Tell us the problem and you hear the number before any work begins.</span></div>
-      <div class="glass w"><div class="ic">🔒</div><b>Price agreed up front</b><span>The price is set before we start, so there are no surprise games later.</span></div>
-      <div class="glass w"><div class="ic">✅</div><b>Workmanship guarantee</b><span>If something isn't right, we come back and make it right.</span></div>
-    </div>
-  </div></section>
+  <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/slide3.png" alt="What Crystal Flow Handles Every Day" loading="lazy"></section>
 
   <section class="block legacy"><div class="wrap">
     <span class="eyebrow">Time to also meet my old man who taught me how it's done!</span>
@@ -598,37 +592,7 @@
     <p>When you call Crystal Flow, you reach Nicholas, the owner, the person who does the work, not a call center.</p>
     <div class="badge-center"><img src="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png" onerror="this.onerror=null;this.style.display='none'" alt="Crystal Flow emblem"></div>
   </div></section>
-  <section class="block legacy"><div class="wrap">
-    <span class="eyebrow">Time to also meet my old man who taught me how it's done!</span>
-    <h2 class="owner-peak">I started at Abba Plumbing &amp; Heating Inc. I grew up around my father's shop.</h2>
-    <div style="color:var(--gold);font-size:20px;font-weight:900;margin-top:14px">4th &amp; 5th Generation Plumbers At Your Service!</div>
-    <div class="legacy-body">
-      <img class="legacy-photo" src="https://www.crystalclearflow.com/assets/owner-canceled.png" onerror="this.onerror=null;this.src='https://www.crystalclearflow.com/assets/owner_portrait_transparent.png'" alt="Nick, Crystal Flow owner" loading="lazy">
-      <p>Behind Crystal Flow is Steven, a master plumber who ran Abba Plumbing &amp; Heating for 40 years in East Meadow, New York.</p>
-      <p class="white-bold">With over 55 years of experience, Steven built his name the right way: with pride in his craft, integrity in his business, and the desire to always do his best.</p>
-      <div class="legacy-prof"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt=""><span>They called him "The Professor."</span></div>
-      <p>The men who worked for him gave him that name due to the constant, creative genius he had to be able to pipe those Long Island homes to code!</p>
-      <p>That same standard now backs Crystal Flow. When we come into your home, the objective is the same as it was at Abba Plumbing: we make sure we hear everything you have to say, and more.</p>
-      <p class="legacy-home"><span class="hl">We prioritize the care of your home as if it were our own!</span> <span class="wc">&#10003; &#10003; &#10003;</span></p>
-      <div class="legacy-clear"></div>
-    </div>
-    <div class="legacy-div"></div>
-    <ul class="legacy-list">
-      <li>Owner Accountability, Upfront Pricing, and Respect for Your Home!</li>
-      <li>Backed by Steven's Endless Depths of Plumbing Knowledge and Wisdom!</li>
-      <li>4th &amp; 5th Generation Plumbers Near You!</li>
-    </ul>
-    <div class="legacy-loc">Located out of Womelsdorf, Pennsylvania.</div>
-  </div></section>
-  <section class="block"><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">What we stand for</span><h2>Small-company care. Big-company conversion style.</h2></div>
-    <div class="why">
-      <div class="glass w"><b>Show up</b><span>On time, ready, and straight with you about what's going on.</span></div>
-      <div class="glass w"><b>Fair pricing</b><span>You hear the number first. No hidden games.</span></div>
-      <div class="glass w"><b>Do it right</b><span>We confirm the fix actually works before we leave.</span></div>
-      <div class="glass w"><b>Local trust</b><span>Your neighbors are our customers. Reputation is everything.</span></div>
-    </div>
-  </div></section>
+  <section class="block slide-section"><img src="https://www.crystalclearflow.com/assets/meet-the-owner2.png" alt="Meet the Owner - Crystal Flow" loading="lazy"></section>
   <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Work with the owner directly.</h2><p>Tell Crystal Flow what's going on. We call back within 30 minutes during business hours.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 (484) 258-3749</a><button class="btn btn-gold" data-quote>Get a Quote</button></div></div></div></section>
 </main>
 

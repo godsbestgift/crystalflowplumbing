@@ -383,6 +383,9 @@
   .owner-checklist li:before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:rgba(201,168,76,.15);border:2px solid #c9a84c;color:#c98a00;display:grid;place-items:center;font-weight:900;font-size:13px;margin-top:2px}
   .owner-cta{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-size:16px;font-weight:900;padding:17px 32px;border-radius:12px;box-shadow:0 8px 24px rgba(247,201,72,.32);width:100%;justify-content:center;display:flex}
   .owner-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
+  .owner-cta-row{display:flex;flex-direction:column;gap:12px}
+  .owner-cta-secondary{background:transparent;border:2px solid #0c1c33;color:#0c1c33;font-size:15px;font-weight:800;padding:15px 32px;border-radius:12px;cursor:pointer;text-align:center;transition:.16s}
+  .owner-cta-secondary:hover{background:#0c1c33;color:#fff}
   .owner-photo-wrap{align-self:flex-end}
   .owner-photo{width:100%;height:auto;display:block}
   @media(max-width:900px){
@@ -424,7 +427,7 @@
     <a class="link" data-nav="home">Home</a>
     <a class="link" data-nav="drain-cleaning">Drain Cleaning</a>
     <a class="link" data-nav="repairs-installations">Repairs &amp; Installs</a>
-    <a class="link" data-nav="meet-the-owner">Meet the Owner</a>
+    <a class="link" data-nav="meet-the-owner">Origin Story</a>
     <a class="link" data-nav="quote">Quote</a>
     <div class="header-cta">
       <a class="btn btn-call-owner" href="tel:+14842583749" data-track-call>Call the Owner Now</a>
@@ -486,7 +489,10 @@
           <li>Backed by Steven's 55 Years of Plumbing Experience &amp; Knowledge!</li>
           <li>4th &amp; 5th Generation Plumbers Near You!</li>
         </ul>
-        <a class="owner-cta" href="tel:+14842583749" data-track-call>Ready to Work With Us? Call Nicholas — (484) 258-3749</a>
+        <div class="owner-cta-row">
+          <a class="owner-cta" href="tel:+14842583749" data-track-call>Ready to Work With Us? Call Nicholas — (484) 258-3749</a>
+          <button class="owner-cta-secondary" data-nav="meet-the-owner">Learn More About the Origin Story →</button>
+        </div>
       </div>
       <div class="owner-photo-wrap">
         <img class="owner-photo" src="https://www.crystalclearflow.com/assets/Owner-Full.png" alt="Nicholas, Crystal Flow owner" loading="lazy">
@@ -653,7 +659,7 @@
       <div class="brand" data-nav="home"><img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield" loading="lazy"><span class="bt"><span class="t1">CRYSTAL FLOW</span><span class="t2">REPAIR &amp; DRAIN CLEANING</span></span></div>
       <p class="ftxt"><b style="color:#1aa7ff">Family Owned, Father-Son Operated</b> Repair &amp; Drain Cleaning near Womelsdorf, PA, serving Berks, Lebanon and Lancaster Counties.</p>
     </div>
-    <div><h4>Services</h4><div class="flist"><a data-nav="drain-cleaning">Drain Cleaning</a><a data-nav="drain-cleaning">Sewer Line Clearing</a><a data-nav="repairs-installations">Faucets, Vanities &amp; Drains</a><a data-nav="meet-the-owner">Meet the Owner</a></div></div>
+    <div><h4>Services</h4><div class="flist"><a data-nav="drain-cleaning">Drain Cleaning</a><a data-nav="drain-cleaning">Sewer Line Clearing</a><a data-nav="repairs-installations">Faucets, Vanities &amp; Drains</a><a data-nav="meet-the-owner">Origin Story</a></div></div>
     <div><h4>Contact</h4><div class="flist"><a href="tel:+14842583749" data-track-call>(484) 258-3749</a><a href="mailto:crystalflowdrains@gmail.com">crystalflowdrains@gmail.com</a><span>Serving Womelsdorf plus nearby towns within roughly 20 miles.</span></div></div>
   </div>
   <div class="footnote">© <span id="yr"></span> Crystal Flow Repair &amp; Drain Cleaning. All rights reserved.</div>

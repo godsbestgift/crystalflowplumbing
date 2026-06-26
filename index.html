@@ -21,7 +21,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--font);color:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased;
+  body{font-family:var(--font);color:var(--white);line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased;
     background:radial-gradient(1100px 560px at 78% -8%,rgba(26,167,255,.28),transparent 60%),
       radial-gradient(800px 480px at -8% 14%,rgba(247,201,72,.14),transparent 55%),var(--navy)}
   a{color:inherit;text-decoration:none}
@@ -49,14 +49,14 @@
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;position:relative;height:96px;width:360px;flex:0 0 360px}
   .brand img{width:46px;height:46px;object-fit:contain}
-  .brand .logo-full{position:absolute;left:0;top:4px;width:auto;height:116px;max-height:116px;object-fit:contain;display:block;z-index:3}
+  .brand .logo-full{position:absolute;left:-20px;top:4px;width:auto;height:132px;max-height:132px;object-fit:contain;display:block;z-index:3}
   @media(max-width:1080px){.brand{width:auto;height:auto;flex:0 0 auto}.brand .logo-full{position:static;top:auto;height:76px;max-height:76px}}
   @media(max-width:760px){.brand .logo-full{height:56px;max-height:56px}}
   .brand .bt{display:flex;flex-direction:column;line-height:1}
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
-  nav.main{display:flex;align-items:center;gap:34px;flex:1}
-  nav.main a.link{font-size:19px;font-weight:800;color:#13243d;cursor:pointer;white-space:nowrap}
+  nav.main{display:flex;align-items:center;gap:18px;flex:1}
+  nav.main a.link{font-size:16px;font-weight:800;color:#13243d;cursor:pointer;white-space:nowrap}
   nav.main a.link:first-of-type{margin-left:auto}
   nav.main a.link:hover{color:#1aa7ff}
   nav.main a.link.active{color:#1aa7ff;font-weight:900;text-decoration:underline;text-underline-offset:5px}

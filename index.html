@@ -26,9 +26,6 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@700;900&family=Playfair+Display:wght@700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <style>
   :root{
     --navy:#0a1626;--navy2:#0e1f38;--panel:#0c1c33;--panel2:#102544;
@@ -419,6 +416,27 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .cf-slide .cf-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;padding:66px 22px;text-align:center}
   .cf-slide.cf-light{background-image:url(https://www.crystalclearflow.com/assets/background3.jpg)}
   .cf-slide.cf-light:before{background:radial-gradient(ellipse 62% 72% at 50% 46%,rgba(244,250,255,.6),rgba(244,250,255,0) 72%)}
+  .cf-slide.cf-light .cf-inner{max-width:700px;background:rgba(255,255,255,.28);backdrop-filter:blur(10px);border-radius:26px;border:1.5px solid rgba(255,255,255,.75);box-shadow:0 24px 60px rgba(7,22,45,.22),inset 0 1px 0 rgba(255,255,255,.5);padding:50px 40px}
+  .cf-eb-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:16px}
+  .cf-eb-wrap .cf-eb-icon{width:20px;height:20px;color:#C69214}
+  .cf-eb-row{display:flex;align-items:center;gap:14px;width:100%;max-width:340px;margin:0 auto}
+  .cf-eb-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#C69214)}
+  .cf-eb-line.r{background:linear-gradient(90deg,#C69214,transparent)}
+  .cf-eb-row .cf-eyebrow{margin-bottom:0}
+  .cf-light .cf-eyebrow{color:#C69214;white-space:nowrap}
+  .cf-light .cf-h2{color:#07162D;font-size:clamp(20px,2.7vw,29px)}
+  .cf-h2 .bull{color:#C69214;margin:0 4px}
+  .cf-light .cf-sub{color:#009DFF}
+  .cf-light .cf-body{color:#132B45}
+  .cf-light .cf-body b{color:#009DFF;font-weight:800}
+  .cf-light .cf-gold{color:#C69214}
+  .cf-trust-bar{display:flex;align-items:center;justify-content:center;background:#0B2745;border-radius:16px;padding:20px 10px;margin-top:30px;box-shadow:0 10px 30px rgba(7,22,45,.25)}
+  .cf-trust-item{display:flex;align-items:center;gap:12px;padding:0 18px;flex:1;justify-content:center}
+  .cf-trust-ic{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:rgba(0,119,217,.14);border:1.5px solid #0077D9;display:grid;place-items:center}
+  .cf-trust-ic .bico{width:20px;height:20px;color:#009DFF}
+  .cf-trust-tx{color:#fff;font-size:13px;font-weight:800;line-height:1.3;text-align:left}
+  .cf-trust-div{width:1px;height:38px;background:rgba(255,255,255,.15);flex:0 0 auto}
+  @media(max-width:640px){.cf-trust-bar{flex-wrap:wrap;gap:16px 0}.cf-trust-item{flex:0 0 46%;padding:6px}.cf-trust-div{display:none}}
   .cf-slide.cf-dark{background-image:url(https://www.crystalclearflow.com/assets/background5.jpg)}
   .cf-slide.cf-dark:before{background:radial-gradient(ellipse 74% 76% at 50% 50%,rgba(6,18,40,.55),rgba(6,18,40,.1) 80%)}
   .cf-eyebrow{font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;margin-bottom:14px}
@@ -426,7 +444,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .cf-sub{font-size:clamp(15px,2vw,17px);font-weight:700;font-style:italic;line-height:1.45;margin-bottom:20px}
   .cf-body{font-size:15px;line-height:1.75;max-width:580px;margin:0 auto 14px}
   .cf-gold{font-size:clamp(16px,2.2vw,19px);font-weight:800;font-style:italic;line-height:1.4;margin:8px 0 22px}
-  .cf-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-size:15px;font-weight:900;padding:15px 26px;border-radius:12px;text-decoration:none;box-shadow:0 8px 24px rgba(247,201,72,.3)}
+  .cf-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#FFC928,#E2A90F);color:#1a1304;font-size:17px;font-weight:900;padding:19px 34px;border-radius:14px;text-decoration:none;box-shadow:0 12px 30px rgba(198,146,20,.35)}
   .cf-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
   .cf-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px;margin-top:26px}
   .cf-badge{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:7px}
@@ -462,11 +480,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .area-sec .coverage-map{border-color:rgba(12,28,51,.18)}
   .area-sec .chip{background:rgba(255,255,255,.9);border-color:rgba(12,28,51,.18);color:#22384f}
   /* interactive coverage map */
-  .cf-map{width:100%;height:440px;margin-top:24px;border-radius:14px;overflow:hidden;border:1px solid rgba(12,28,51,.22);box-shadow:var(--shadow)}
-  .leaflet-container{background:#0a1424;font-family:inherit}
-  .cf-maplabel{background:rgba(10,20,36,.82);border:none;border-radius:6px;color:#dbe8f5;font-weight:700;font-size:11px;box-shadow:none;padding:2px 7px;white-space:nowrap}
-  .cf-maplabel:before{display:none}
-  @media(max-width:600px){.cf-map{height:360px}}
+  .cf-map{margin-top:24px}
   /* footer logo */
   .foot-brand{display:inline-block;cursor:pointer}
   .foot-logo{display:block;width:300px;height:auto}
@@ -681,18 +695,24 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 
   <section class="cf-slide cf-light">
     <div class="cf-inner">
-      <div class="cf-eyebrow">Drain Problems Don't Wait</div>
-      <h2 class="cf-h2">Crystal Clean &bull; Crystal Flow &bull; Crystal Clear</h2>
+      <div class="cf-eb-wrap">
+        <svg class="bico cf-eb-icon"><use href="#i-drop"></use></svg>
+        <div class="cf-eb-row"><span class="cf-eb-line l"></span><span class="cf-eyebrow">Drain Problems Don't Wait</span><span class="cf-eb-line r"></span></div>
+      </div>
+      <h2 class="cf-h2">Crystal Clean <span class="bull">&bull;</span> Crystal Flow <span class="bull">&bull;</span> Crystal Clear</h2>
       <p class="cf-sub">Clog acting tough? Crystal Flow says enough. Sink won't flow? You already know.</p>
-      <p class="cf-body">When a drain backs up, a sewer line slows down, or water starts going where it shouldn't, you need more than a quick guess. You need someone who answers, explains the problem clearly, and treats your home with respect from the moment they arrive.</p>
-      <p class="cf-body">Crystal Flow Repairs &amp; Drain Cleaning provides fast &amp; reliable service to homeowners and businesses across Berks, Lebanon, and Lancaster County, with clean work, honest communication, and solutions that get your plumbing flowing the way it should.</p>
+      <p class="cf-body">When a drain backs up, a sewer line slows down, or water starts going where it shouldn't, you need more than a quick guess. You need someone who <b>answers, explains</b> the problem clearly, and treats your home with <b>respect</b> from the moment they arrive.</p>
+      <p class="cf-body">Crystal Flow Repairs &amp; Drain Cleaning provides <b>fast &amp; reliable</b> service to homeowners and businesses across Berks, Lebanon, and Lancaster County, with clean work, honest communication, and solutions that get your plumbing flowing the way it should.</p>
       <p class="cf-gold">When your drain says no, it's gotta go! You know who to call &mdash; Crystal Flow!</p>
       <a class="cf-cta" href="tel:+14842583749" data-track-call><svg class="bico"><use href="#i-phone"></use></svg> Backed-up drains don't fix themselves. Call (484) 258-3749</a>
-      <div class="cf-badges">
-        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-user"></use></svg> Father &amp; Son Operated</span>
-        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-doc"></use></svg> Clear Pricing Before Work Starts</span>
-        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-shield"></use></svg> Local. Reliable. Trusted.</span>
-        <span class="cf-badge"><svg class="bico" style="color:#0f9eb8"><use href="#i-check"></use></svg> Satisfaction Guaranteed</span>
+      <div class="cf-trust-bar">
+        <div class="cf-trust-item"><span class="cf-trust-ic"><svg class="bico"><use href="#i-user"></use></svg></span><span class="cf-trust-tx">Father &amp; Son<br>Operated</span></div>
+        <span class="cf-trust-div"></span>
+        <div class="cf-trust-item"><span class="cf-trust-ic"><svg class="bico"><use href="#i-doc"></use></svg></span><span class="cf-trust-tx">Clear Pricing<br>Before Work Starts</span></div>
+        <span class="cf-trust-div"></span>
+        <div class="cf-trust-item"><span class="cf-trust-ic"><svg class="bico"><use href="#i-shield"></use></svg></span><span class="cf-trust-tx">Local. Reliable.<br>Trusted.</span></div>
+        <span class="cf-trust-div"></span>
+        <div class="cf-trust-item"><span class="cf-trust-ic"><svg class="bico"><use href="#i-check"></use></svg></span><span class="cf-trust-tx">Satisfaction<br>Guaranteed</span></div>
       </div>
     </div>
   </section>
@@ -762,21 +782,42 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 
   <section class="block area-sec"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Service Area</span><h2>Serving Berks, Lebanon &amp; Lancaster Counties.</h2><p>Womelsdorf plus nearby towns within roughly 20 miles. Subtle local coverage built around the towns homeowners actually search from.</p><button class="btn btn-ghost" data-quote>Check Availability</button></div>
-    <div class="cf-map" id="cfmap"></div>
-    <script>
-      (function(){
-        if(typeof L==='undefined')return;
-        var c=[40.3637,-76.1841];
-        var map=L.map('cfmap',{scrollWheelZoom:false,zoomControl:true}).setView(c,10);
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap, &copy; CARTO'}).addTo(map);
-        L.circle(c,{radius:32187,color:'#1aa7ff',weight:1.5,opacity:.6,fillColor:'#1aa7ff',fillOpacity:.07,dashArray:'6 8'}).addTo(map);
-        L.circleMarker(c,{radius:9,color:'#fff',weight:2,fillColor:'#f7c948',fillOpacity:1}).addTo(map).bindTooltip('Womelsdorf — Home Base',{permanent:true,direction:'top',className:'cf-maplabel',offset:[0,-8]});
-        var towns=[['Reading',40.3356,-75.9269],['Wyomissing',40.3290,-75.9649],['Sinking Spring',40.3234,-76.0222],['Wernersville',40.3301,-76.0808],['Robesonia',40.3490,-76.1352],['Newmanstown',40.3537,-76.2069],['Richland',40.3576,-76.2552],['Myerstown',40.3762,-76.3047],['Lebanon',40.3409,-76.4113],['Annville',40.3320,-76.5147],['Palmyra',40.3093,-76.5944],['Bernville',40.4337,-76.1083],['Denver',40.2326,-76.1352],['Adamstown',40.2434,-76.0566],['Ephrata',40.1798,-76.1791],['Lititz',40.1573,-76.3069]];
-        towns.forEach(function(t){
-          L.circleMarker([t[1],t[2]],{radius:6,color:'#bfe4ff',weight:1.5,fillColor:'#1aa7ff',fillOpacity:.9}).addTo(map).bindTooltip(t[0],{permanent:true,direction:'top',className:'cf-maplabel',offset:[0,-6]});
-        });
-      })();
-    </script>
+    <div class="coverage-map cf-map">
+      <svg viewBox="0 0 680 406" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Crystal Flow's service area: Womelsdorf and surrounding towns across Berks, Lebanon, and Lancaster Counties">
+        <defs>
+          <radialGradient id="homeGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f7c948" stop-opacity=".4"/>
+            <stop offset="100%" stop-color="#f7c948" stop-opacity="0"/>
+          </radialGradient>
+          <pattern id="mapDots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="1.5" cy="1.5" r="1.1" fill="rgba(255,255,255,.06)"/>
+          </pattern>
+        </defs>
+        <rect width="680" height="406" fill="url(#mapDots)"/>
+        <circle cx="408.8" cy="122.6" r="230" fill="#1aa7ff" fill-opacity=".06" stroke="#1aa7ff" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="6 8"/>
+        <g font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+          <g><circle cx="640" cy="155.7" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="640" y="144" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Reading</text></g>
+          <g><circle cx="605.9" cy="163.5" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="605.9" y="181" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Wyomissing</text></g>
+          <g><circle cx="554.3" cy="170.1" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="554.3" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Sinking Spring</text></g>
+          <g><circle cx="501.7" cy="162.2" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="501.7" y="150.5" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Wernersville</text></g>
+          <g><circle cx="452.7" cy="139.9" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="474" y="139.9" text-anchor="start" font-size="11" font-weight="700" fill="#dbe8f5">Robesonia</text></g>
+          <g><circle cx="388.3" cy="134.4" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="388.3" y="176" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Newmanstown</text></g>
+          <g><circle cx="344.9" cy="129.7" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="322" y="129.7" text-anchor="end" font-size="11" font-weight="700" fill="#dbe8f5">Richland</text></g>
+          <g><circle cx="300.4" cy="107.8" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="300.4" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Myerstown</text></g>
+          <g><circle cx="204.6" cy="149.4" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="204.6" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Lebanon</text></g>
+          <g><circle cx="111.6" cy="160" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="111.6" y="148" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Annville</text></g>
+          <g><circle cx="48" cy="186.7" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="60" y="203" text-anchor="start" font-size="11" font-weight="700" fill="#dbe8f5">Palmyra</text></g>
+          <g><circle cx="476.9" cy="46" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="476.9" y="34" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Bernville</text></g>
+          <g><circle cx="452.7" cy="277.1" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="452.7" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Denver</text></g>
+          <g><circle cx="523.4" cy="264.4" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="523.4" y="253" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Adamstown</text></g>
+          <g><circle cx="413.3" cy="339.4" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="413.3" y="328" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Ephrata</text></g>
+          <g><circle cx="298.4" cy="366" r="5" fill="#1aa7ff" fill-opacity=".9" stroke="#bfe4ff" stroke-width="1.5"/><text x="298.4" y="384" text-anchor="middle" font-size="11" font-weight="700" fill="#dbe8f5">Lititz</text></g>
+          <circle cx="408.8" cy="122.6" r="42" fill="url(#homeGlow)"/>
+          <circle cx="408.8" cy="122.6" r="9" fill="#f7c948" stroke="#fff" stroke-width="2"/>
+          <text x="408.8" y="104" text-anchor="middle" font-size="13" font-weight="900" fill="#fff">Womelsdorf — Home Base</text>
+        </g>
+      </svg>
+    </div>
     <div class="chips" data-chips></div>
   </div></section>
 

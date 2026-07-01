@@ -559,6 +559,14 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .hv-tag{text-align:center;font-weight:900;font-size:clamp(19px,2.5vw,26px);margin-top:18px;line-height:1.2}
   .hv-tag .t1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
   .hv-tag .t2{background:linear-gradient(180deg,#cfe6ff,#5a9fe0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 10px rgba(90,159,224,.4))}
+  /* floating legacy trust badge */
+  .hero-legacy{align-self:end;justify-self:end;display:inline-flex;align-items:center;gap:14px;max-width:300px;margin:0 0 6px;padding:12px 16px;background:rgba(8,20,40,.55);backdrop-filter:blur(10px);border:1px solid rgba(247,201,72,.45);border-radius:14px;box-shadow:0 0 22px rgba(63,185,232,.22),0 10px 24px rgba(0,0,0,.4);cursor:pointer;transition:.18s transform,.18s box-shadow}
+  .hero-legacy:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(63,185,232,.32),0 12px 28px rgba(0,0,0,.45)}
+  .hero-legacy .hl-badge{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#173463,#0a1830);border:1.5px solid var(--gold);display:grid;place-items:center;font-family:'Cinzel',serif;font-weight:900;font-size:12.5px;color:var(--gold);text-shadow:0 0 8px rgba(247,201,72,.55)}
+  .hero-legacy .hl-text{display:flex;flex-direction:column;line-height:1.28;text-align:left}
+  .hero-legacy .hl-main{font-size:12.5px;font-weight:800;color:#fff}
+  .hero-legacy .hl-sub{font-size:11px;font-weight:600;color:#7ecbe8;margin-top:2px}
+  @media(max-width:980px){.hero-legacy{align-self:center;justify-self:center;margin:20px auto 0}}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -621,6 +629,13 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
         <div class="hv-area">Serving Berks &bull; Lebanon &bull; Lancaster County</div>
         <div class="hv-tag"><span class="t1">Drain Problems Don't Wait.</span> <span class="t2">Neither Do We.</span></div>
       </div>
+      <a class="hero-legacy" href="#trust" aria-label="55+ Years Family Plumbing Experience, Abba Plumbing and Heating Legacy — see our story">
+        <span class="hl-badge">55+</span>
+        <span class="hl-text">
+          <span class="hl-main">55+ Years Family Plumbing Experience</span>
+          <span class="hl-sub">Abba Plumbing &amp; Heating Legacy</span>
+        </span>
+      </a>
     </div>
   </section>
   <div class="offerbar"><div class="wrap">10% FIRST-TIME CUSTOMER DISCOUNT</div></div>
@@ -670,7 +685,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 
   <div class="cf-divider"><span></span></div>
 
-  <section class="owner-section">
+  <section class="owner-section" id="trust">
     <div class="owner-inner">
       <div class="owner-text">
         <div class="owner-eyebrow"><span>Meet the Man Who Taught Me How It's Done</span></div>

@@ -65,7 +65,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   @media(max-width:1080px){.topbar-quote{display:none}}
 
   .topstick{position:sticky;top:0;z-index:60}
-  header.site{position:relative;z-index:50;background:rgba(10,22,38,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+  header.site{position:relative;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12)}
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px;max-width:1340px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;position:relative;height:96px;width:360px;flex:0 0 360px}
   .brand img{width:46px;height:46px;object-fit:contain}
@@ -76,14 +76,14 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
   nav.main{display:flex;align-items:center;gap:26px;flex:1}
-  nav.main a.link{font-size:18px;font-weight:800;color:#eaf4ff;cursor:pointer;white-space:nowrap}
+  nav.main a.link{font-size:18px;font-weight:800;color:#13243d;cursor:pointer;white-space:nowrap}
   nav.main a.link:first-of-type{margin-left:auto}
   nav.main a.link:hover{color:#1aa7ff}
   nav.main a.link.active{color:#1aa7ff;font-weight:900;text-decoration:underline;text-underline-offset:5px}
   .header-cta{display:flex;align-items:center;gap:10px;margin-left:8px}
   .btn-call-owner{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:#1a1304;font-weight:900;box-shadow:0 8px 22px rgba(247,201,72,.42)}
   .btn-call-owner:hover{filter:brightness(1.08)}
-  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.25);color:#eaf4ff;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
+  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(12,28,51,.25);color:#13243d;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
 
   .page{display:none}
   .page.show{display:block;animation:pfade .25s ease}
@@ -357,9 +357,9 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     footer.site .wrap{grid-template-columns:1fr 1fr}
   }
   @media (max-width:760px){
-    nav.main{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;background:rgba(10,22,38,.98);border-bottom:1px solid rgba(255,255,255,.1);padding:8px 20px 16px}
+    nav.main{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;background:#fff;border-bottom:1px solid rgba(12,28,51,.12);padding:8px 20px 16px}
     nav.main.open{display:flex}
-    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.1)}
+    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid rgba(12,28,51,.1)}
     nav.main a.link:first-of-type{margin-left:0}
     nav.main .header-cta{margin-left:0}
     nav.main .header-cta{flex-direction:column;width:100%;margin-top:12px;gap:10px}
@@ -535,7 +535,10 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   /* hero v3 — Trusted Neighbors layout */
   .hero-v3{text-align:left;max-width:600px;margin:0;transform:none}
   .hero .wrap .hero-v3 .hv-head{text-align:left}
-  .hv-eyebrow{color:#6aa6e6;font-size:14px;font-weight:700;letter-spacing:.02em;margin-bottom:20px}
+  .hv-eyebrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#6aa6e6;font-size:14px;font-weight:700;letter-spacing:.02em;margin-bottom:20px}
+  .hv-eb-item{display:inline-flex;align-items:center;gap:7px}
+  .hv-eb-item .bico{color:#6aa6e6;width:15px;height:15px;flex:0 0 auto}
+  .hv-eb-div{width:1px;height:14px;background:rgba(106,166,230,.4);flex:0 0 auto}
   .hv-eyebrow b{color:#3f6f9f;font-weight:700;margin:0 5px}
   .hv-head{font-family:'Playfair Display',Georgia,serif;line-height:1.03;margin-bottom:18px}
   .hv-head .l1{display:block;font-size:clamp(38px,5.4vw,66px);color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.55)}
@@ -554,8 +557,11 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .hv-chips{display:flex;gap:12px;flex-wrap:wrap}
   .hv-chips span{display:inline-flex;align-items:center;gap:8px;color:#cfddec;font-size:14px;font-weight:600;border:1px solid rgba(255,255,255,.14);border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.03)}
   .hv-chips .bico{color:#6aa6e6}
-  .hv-svc{text-align:center;color:#f7c948;font-size:15px;font-weight:900;letter-spacing:.02em;line-height:1.5;margin-top:22px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
-  .hv-area{text-align:center;color:#f7c948;font-size:13.5px;font-weight:700;letter-spacing:.04em;margin-top:14px;text-decoration:underline;text-underline-offset:3px}
+  .hv-svc{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+  .hv-svc-item{display:inline-flex;align-items:center;gap:7px;color:#f7c948;font-size:13px;font-weight:800;letter-spacing:.02em;background:rgba(247,201,72,.08);border:1px solid rgba(247,201,72,.3);border-radius:999px;padding:7px 14px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+  .hv-svc-item .bico{color:#f7c948;width:14px;height:14px;flex:0 0 auto}
+  .hv-area{display:flex;align-items:center;justify-content:center;gap:7px;color:#f7c948;font-size:13.5px;font-weight:700;letter-spacing:.04em;margin-top:14px;text-decoration:underline;text-underline-offset:3px}
+  .hv-area .bico{width:14px;height:14px;flex:0 0 auto;text-decoration:none}
   .hv-tag{text-align:center;font-weight:900;font-size:clamp(19px,2.5vw,26px);margin-top:18px;line-height:1.2}
   .hv-tag .t1{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)}
   .hv-tag .t2{background:linear-gradient(180deg,#cfe6ff,#5a9fe0);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 10px rgba(90,159,224,.4))}
@@ -624,7 +630,13 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     </div>
     <div class="wrap">
       <div class="hero-left hero-v3">
-        <div class="hv-eyebrow">Womelsdorf-Based <b>&bull;</b> Father-Son Trade Experience <b>&bull;</b> Fast Response</div>
+        <div class="hv-eyebrow">
+          <span class="hv-eb-item"><svg class="bico"><use href="#i-shield"></use></svg> Womelsdorf-Based</span>
+          <span class="hv-eb-div"></span>
+          <span class="hv-eb-item"><svg class="bico"><use href="#i-user"></use></svg> Father-Son Trade Experience</span>
+          <span class="hv-eb-div"></span>
+          <span class="hv-eb-item"><svg class="bico"><use href="#i-bolt"></use></svg> Fast Response</span>
+        </div>
         <h1 class="hv-head"><span class="l1">Trusted Neighbors.</span><span class="l2">Reliable Results.</span></h1>
         <div class="hv-sub">Crystal Clear Pricing. <span class="cf">Crystal Flow</span> Results.</div>
         <p class="hv-body">Premium drain cleaning and repair services with clear communication, honest pricing, and a standard built on generations of real plumbing experience.</p>
@@ -632,8 +644,17 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
           <a class="hv-call" href="tel:+14842583749" data-track-call><svg class="bico"><use href="#i-phone"></use></svg> Call Nicholas Direct</a>
           <button class="hv-quote" data-quote="hero"><svg class="bico"><use href="#i-doc"></use></svg> Get Free Quote</button>
         </div>
-        <div class="hv-svc">Clogged Drains • Sewer Backups • Sinks • Tubs • Toilets • Faucets • Showers • Drain Pipes</div>
-        <div class="hv-area">Serving Berks &bull; Lebanon &bull; Lancaster County</div>
+        <div class="hv-svc">
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Clogged Drains</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Sewer Backups</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Sinks</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Tubs</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Toilets</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Faucets</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-drop"></use></svg> Showers</span>
+          <span class="hv-svc-item"><svg class="bico"><use href="#i-pipe"></use></svg> Drain Pipes</span>
+        </div>
+        <div class="hv-area"><svg class="bico"><use href="#i-drop"></use></svg> Serving Berks &bull; Lebanon &bull; Lancaster County</div>
         <div class="hv-tag"><span class="t1">Drain Problems Don't Wait.</span> <span class="t2">Neither Do We.</span></div>
       </div>
       <div class="hero-legacy-group">

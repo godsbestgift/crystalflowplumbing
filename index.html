@@ -471,11 +471,11 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .cfd-eb-row i{display:block;width:46px;height:1.5px;background:#C69214}
   .cfd-eb-row .cf-eyebrow{margin-bottom:0;font-family:'Cinzel',serif;font-size:clamp(14px,1.6vw,17px);font-weight:900;letter-spacing:.3em}
   .cf-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;text-align:left}
-  .cf-card{position:relative;display:flex;gap:14px;align-items:flex-start;min-height:150px;background:rgba(4,18,34,.72);border:1px solid rgba(42,174,255,.35);border-radius:16px;padding:18px 30px 18px 16px;backdrop-filter:blur(6px);transition:.18s transform,.18s border-color,.18s box-shadow}
+  .cf-card{position:relative;display:flex;gap:14px;align-items:flex-start;min-height:150px;background:#071B2D;border:1px solid rgba(73,199,255,.35);border-radius:16px;padding:18px 30px 18px 16px;transition:.18s transform,.18s border-color,.18s box-shadow}
   .cf-card:hover{transform:translateY(-4px);border-color:#2AAEFF;box-shadow:0 14px 34px rgba(0,0,0,.65),0 0 22px rgba(0,175,255,.35)}
-  .cf-card .cf-ico{flex:0 0 64px;width:64px;height:64px;border-radius:12px;background:rgba(0,175,255,.10);border:1px solid rgba(56,199,255,.5);box-shadow:0 0 14px rgba(0,175,255,.30);display:grid;place-items:center;transition:.18s border-color,.18s box-shadow}
-  .cf-card:hover .cf-ico{border-color:#7DDCFF;box-shadow:0 0 22px rgba(0,175,255,.55)}
-  .cf-card .cf-ico img{width:56px;height:56px;object-fit:contain}
+  .cf-card .cf-ico{flex:0 0 100px;width:100px;height:100px;border-radius:16px;background:rgba(73,199,255,.06);border:2px solid #49C7FF;box-shadow:0 0 20px rgba(73,199,255,.55),inset 0 0 12px rgba(73,199,255,.15);display:grid;place-items:center;transition:.18s border-color,.18s box-shadow}
+  .cf-card:hover .cf-ico{border-color:#7DDCFF;box-shadow:0 0 30px rgba(73,199,255,.8),inset 0 0 16px rgba(73,199,255,.2)}
+  .cf-card .cf-ico img{width:66px;height:66px;object-fit:contain}
   .cf-card h3{font-size:16px;font-weight:800;color:#F4F8FF;margin-bottom:4px}
   .cf-card p{font-size:14px;color:#A9B8CC;line-height:1.55}
   .cf-card .cf-arrow{position:absolute;right:11px;bottom:8px;color:#F5B942;font-size:20px;font-weight:900;line-height:1;transition:.18s transform,.18s color}
@@ -486,7 +486,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   @media(max-width:760px){.cf-svc{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.cf-svc{grid-template-columns:1fr}.cf-slide .cf-inner{padding:48px 18px}}
   /* complementary section divider */
-  .cf-divider{height:60px;background:var(--navy);display:flex;align-items:center;justify-content:center}
+  .cf-divider{height:60px;background:transparent;display:flex;align-items:center;justify-content:center}
   .cf-divider span{display:block;width:min(420px,62%);height:2px;background:linear-gradient(90deg,transparent,rgba(110,180,255,.55) 50%,transparent);position:relative}
   .cf-divider span:before{content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;border-radius:50%;background:#9ecbff;box-shadow:0 0 16px 4px rgba(125,184,255,.9);transform:translate(-50%,-50%)}
   /* service area on light water background */
@@ -504,7 +504,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .foot-logo{display:block;width:300px;height:auto}
   @media(max-width:520px){.foot-logo{width:220px}}
   /* blue hype CTA */
-  .hype-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(180deg,#00B7FF,#078BFF);color:#F4F8FF;font-size:clamp(14px,1.9vw,18px);font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:17px 34px;border:2px solid #7DDCFF;border-radius:16px;cursor:pointer;text-decoration:none;animation:hypePulse 1.6s ease-in-out infinite}
+  .hype-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(180deg,#49C7FF,#13AFFF);color:#F4F8FF;font-size:clamp(14px,1.9vw,18px);font-weight:900;letter-spacing:.14em;text-transform:uppercase;padding:17px 34px;border:2px solid #7DDCFF;border-radius:22px;cursor:pointer;text-decoration:none;animation:hypePulse 1.6s ease-in-out infinite}
   .hype-cta:hover{filter:brightness(1.12)}
   .hype-cta .bico{flex:0 0 auto;width:28px;height:28px;padding:5px;border-radius:8px;background:rgba(244,248,255,.95);color:#078BFF}
   .hype-cta .ar{display:inline-block;animation:hypeArrow 1.1s ease-in-out infinite}
@@ -706,7 +706,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     <div class="cf-inner">
       <div class="cfd-eb"><svg class="bico"><use href="#i-drop"></use></svg><div class="cfd-eb-row"><i></i><span class="cf-eyebrow">Crystal Flow Services</span><i></i></div></div>
       <h2 class="cf-h2">What Crystal Flow Handles Every Day</h2>
-      <p class="cf-sub">Clear pricing. Fast help. Respect for your home.</p>
+      <p class="cf-sub">Clear pricing. <span style="color:#49C7FF">Fast help.</span> Respect for your home.</p>
       <div class="cf-svc">
         <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/drain_cleaning_icon_transparent.png" alt="" loading="lazy"></div><div class="cf-tx"><h3>Drain Cleaning</h3><p>Slow sinks, standing water, and stubborn clogs cleared fast. We cut through grease, hair, and buildup so your drains run like new.</p></div><span class="cf-arrow">&#8250;</span></div>
         <div class="cf-card"><div class="cf-ico"><img src="https://www.crystalclearflow.com/assets/leak_repair_icon_transparent.png" alt="" loading="lazy"></div><div class="cf-tx"><h3>Sewer Backups</h3><p>Whole-home backups, sewer smells, and gurgling pipes handled quickly. We find the real blockage in the main line and clear it.</p></div><span class="cf-arrow">&#8250;</span></div>

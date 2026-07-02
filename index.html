@@ -162,7 +162,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .proofbar span:before{content:"";}
   .proofbar .stars{color:var(--gold);letter-spacing:2px}
 
-  .offerbar{background:linear-gradient(90deg,#C69214,#8f6508);border-top:1px solid rgba(201,214,228,.28);border-bottom:1px solid rgba(201,214,228,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),inset 0 -6px 14px rgba(0,0,0,.18)}
+  .offerbar{background:linear-gradient(90deg,#f7c948,#f2b714);border-top:1px solid rgba(201,214,228,.28);border-bottom:1px solid rgba(201,214,228,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 4px 18px rgba(247,181,0,.25)}
   .offerbar .wrap{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;padding:16px 20px;font-weight:900;font-size:20px;color:#1a1304;text-align:center;letter-spacing:.02em;animation:offerglow 5s ease-in-out infinite}
   @keyframes offerglow{0%,100%{text-shadow:0 0 4px rgba(255,255,255,.2)}50%{text-shadow:0 0 8px rgba(255,255,255,.5)}}
   .offerbar em{font-style:normal;color:#3a2c00;font-weight:800}
@@ -577,8 +577,9 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .hero-v3{position:relative;text-align:left;max-width:600px;margin:0;transform:none}
   .hero-v3:before{content:"";position:absolute;inset:-26px -30px -26px -22px;z-index:-1;pointer-events:none;border-radius:24px;border:1px solid rgba(201,214,228,.22);background:radial-gradient(ellipse 70% 60% at 30% 35%,rgba(26,167,255,.14),transparent 70%)}
   .hero .wrap .hero-v3 .hv-head{text-align:left}
-  .hv-eyebrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#6aa6e6;font-size:14px;font-weight:700;letter-spacing:.02em;margin-bottom:20px}
-  .hv-eb-item{display:inline-flex;align-items:center;gap:7px;background:rgba(10,22,44,.5);border:1px solid rgba(73,199,255,.3);border-radius:999px;padding:6px 14px}
+  .hv-eyebrow{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;color:#6aa6e6;font-size:13px;font-weight:700;letter-spacing:.01em;margin-bottom:20px}
+  .hv-eb-item{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:rgba(10,22,44,.5);border:1px solid rgba(73,199,255,.3);border-radius:999px;padding:5px 11px}
+  @media(max-width:900px){.hv-eyebrow{flex-wrap:wrap}}
   .hv-eb-item .bico{color:#6aa6e6;width:15px;height:15px;flex:0 0 auto}
   .hv-eb-div{display:none}
   .hv-eyebrow b{color:#3f6f9f;font-weight:700;margin:0 5px}
@@ -661,7 +662,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     <a class="link" data-nav="meet-the-owner">Origin Story</a>
     <a class="link" data-nav="quote">Quote</a>
     <div class="header-cta">
-      <a class="btn btn-call-owner" href="tel:+14842583749" data-track-call>Call the Owner Now</a>
+      <a class="btn btn-call-owner" href="tel:+14842583749" data-track-call>(484) 258-3749</a>
     </div>
   </nav>
 </div></header>

@@ -26,7 +26,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@700;900&family=Playfair+Display:wght@700;800;900&family=Yellowtail&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -555,6 +555,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .svc-map-tip{background:rgba(4,16,31,.9)!important;border:1px solid rgba(73,199,255,.4)!important;color:#dbe8f5!important;font-size:11px!important;font-weight:700!important;font-family:var(--font)!important;padding:2px 7px!important;border-radius:6px!important;box-shadow:none!important}
   .svc-map-tip:before{display:none!important}
   .svc-map-home{color:#fff!important;border-color:#f7c948!important;font-weight:900!important}
+  .leaflet-container img{max-width:none!important;max-height:none!important}
   .cta-back-sec .fastresp h2{font-size:clamp(22px,3.2vw,36px);white-space:nowrap}
   @media(max-width:600px){.cta-back-sec{min-height:200px}.cta-back-sec .fastresp h2{white-space:normal;font-size:clamp(20px,5.5vw,26px)}}
 
@@ -775,7 +776,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   <section class="cta-back-sec"><a class="wrap fastresp-link" href="tel:+14842583749" data-track-call data-no-icon style="text-align:center">
     <div class="fastresp" style="justify-content:center">
       <img src="https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png" alt="Crystal Flow shield">
-      <div>
+      <div style="text-align:center">
         <h2>Fast Response When You <span class="u">Just Can't Wait!</span></h2>
         <div class="fastresp-phone">(484) 258-3749</div>
       </div>
@@ -848,7 +849,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     <div class="coverage-map cf-map">
       <div id="serviceMap" role="img" aria-label="Map of Crystal Flow's 18-mile service area centered on Womelsdorf, PA" style="width:100%;height:406px;border-radius:12px"></div>
     </div>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
     (function(){
       var HOME=[40.3659,-76.1874];

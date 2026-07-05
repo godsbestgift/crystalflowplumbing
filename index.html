@@ -78,7 +78,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .btn-ghost:hover{background:rgba(255,255,255,.1)}
 
   .topstick{position:sticky;top:0;z-index:60}
-  header.site{position:relative;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(12,28,51,.12);box-shadow:0 8px 24px rgba(12,28,51,.06),0 2px 0 rgba(26,167,255,.15)}
+  header.site{position:relative;z-index:50;background:rgba(8,20,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(43,180,255,.18);box-shadow:0 8px 28px rgba(0,0,0,.35),0 1px 0 rgba(43,180,255,.15)}
   header.site .wrap{display:flex;align-items:center;gap:18px;min-height:96px;max-width:1340px}
   .brand{display:flex;align-items:center;gap:12px;cursor:pointer;position:relative;height:96px;width:360px;flex:0 0 360px}
   .brand img{width:46px;height:46px;object-fit:contain}
@@ -89,10 +89,10 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .brand .bt .t1{font-weight:900;letter-spacing:.06em;font-size:17px}
   .brand .bt .t2{font-size:10.5px;letter-spacing:.18em;color:var(--gold-d);font-weight:800;margin-top:3px}
   nav.main{display:flex;align-items:center;gap:26px;flex:1}
-  nav.main a.link{font-size:18px;font-weight:800;color:#13243d;cursor:pointer;white-space:nowrap}
+  nav.main a.link{font-size:18px;font-weight:800;color:var(--chrome);cursor:pointer;white-space:nowrap}
   nav.main a.link:first-of-type{margin-left:auto}
-  nav.main a.link:hover{color:var(--blue)}
-  nav.main a.link.active{color:var(--blue);font-weight:900;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--blue);text-shadow:0 0 12px rgba(26,167,255,.35)}
+  nav.main a.link:hover{color:var(--ice)}
+  nav.main a.link.active{color:var(--ice);font-weight:900;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--ice);text-shadow:0 0 12px rgba(43,180,255,.45)}
   nav.main a.link{transition:.15s color}
   .header-cta{display:flex;align-items:center;gap:10px;margin-left:8px}
   .btn-call-owner{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--gold-metal-1),var(--gold-metal-2) 46%,var(--gold-metal-3));color:#0b3a5c;font-weight:900;min-height:44px;line-height:1;box-shadow:0 8px 22px rgba(201,154,58,.42)}
@@ -100,7 +100,7 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   .btn-call-owner:after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);opacity:0;transition:opacity .15s}
   .btn-call-owner:hover:after{opacity:1;animation:shine 1s ease-in-out}
   .btn-call-owner:hover{filter:brightness(1.08)}
-  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(12,28,51,.25);color:#13243d;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
+  .menu-btn{display:none;margin-left:auto;background:none;border:1px solid rgba(201,214,228,.3);color:var(--chrome);border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
 
   .page{display:none}
   .page.show{display:block;animation:pfade .25s ease}
@@ -379,9 +379,9 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     footer.site .wrap{grid-template-columns:1fr 1fr}
   }
   @media (max-width:760px){
-    nav.main{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;background:#fff;border-bottom:1px solid rgba(12,28,51,.12);padding:8px 20px 16px}
+    nav.main{display:none;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:flex-start;background:var(--panel2);border-bottom:1px solid rgba(43,180,255,.18);padding:8px 20px 16px}
     nav.main.open{display:flex}
-    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid rgba(12,28,51,.1)}
+    nav.main a.link{padding:12px 0;width:100%;border-bottom:1px solid rgba(201,214,228,.14)}
     nav.main a.link:first-of-type{margin-left:0}
     nav.main .header-cta{margin-left:0}
     nav.main .header-cta{flex-direction:column;width:100%;margin-top:12px;gap:10px}
@@ -915,10 +915,6 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
   <div class="footnote">© <span id="yr"></span> Crystal Flow Repair &amp; Drain Cleaning. All rights reserved.</div>
 </footer>
 
-<div class="mobilebar">
-  <a class="call" href="tel:+14842583749" data-track-call>📞 Ring The Owner</a>
-  <a class="text" href="sms:+14842583749" data-track-text data-no-icon>Text Us</a>
-</div>
 <div class="mobilebar">
   <a class="call" href="tel:+14842583749" data-track-call>📞 Ring The Owner</a>
   <a class="text" href="sms:+14842583749" data-track-text data-no-icon>Text Us</a>

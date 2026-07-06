@@ -283,7 +283,7 @@
   .flyer-banner{margin-top:8px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#0a1220}
   .flyer-banner img{width:100%;display:block}
   .badge-center{display:flex;justify-content:center;margin:6px 0 4px}
-  .badge-center img{max-width:300px;width:60%}
+  .badge-center img{max-width:300px;width:60%;height:auto}
 
   .cta .wrap{padding:58px 20px}
   .stacked{display:flex;align-items:center;gap:24px;justify-content:center;flex-wrap:wrap;text-align:left}
@@ -696,7 +696,7 @@
   .dc-tl p{font-size:13.5px;color:var(--muted);line-height:1.5}
   .dc-tl-tag{text-align:center;margin-top:34px;font-size:clamp(19px,2.6vw,25px);font-weight:900;font-style:italic;color:var(--gold-tag);text-decoration:underline;text-decoration-color:var(--gold-tag);text-underline-offset:4px;text-decoration-thickness:2px}
   .dc-banner{max-width:980px;margin:0 auto;border:1px solid rgba(247,201,72,.4);border-radius:18px;overflow:hidden;box-shadow:0 0 44px rgba(26,167,255,.16),var(--shadow)}
-  .dc-banner img{width:100%;display:block}
+  .dc-banner img{width:100%;height:auto;display:block}
   .dc-steps .n{background:linear-gradient(180deg,var(--gold),var(--gold-d));color:var(--on-gold)}
   @media(prefers-reduced-motion:reduce){.dc-tl[data-day="7"]:before{animation:none}}
   @media(max-width:860px){.dc-timeline{grid-template-columns:1fr 1fr;row-gap:26px}.dc-tl:nth-child(2):after{display:none}}

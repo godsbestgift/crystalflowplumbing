@@ -206,6 +206,9 @@
   .sev-card{appearance:none;-webkit-appearance:none;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;transition:.2s border-color,.2s box-shadow,.2s transform}
   .sev-card:hover{transform:translateY(-3px)}
   .sev-card:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+  .sev-card[data-sev="mild"]{border-color:rgba(43,180,255,.45)}
+  .sev-card[data-sev="moderate"]{border-color:rgba(247,201,72,.45)}
+  .sev-card[data-sev="severe"]{border-color:rgba(160,107,10,.6)}
   .sev-card[data-sev="mild"]:hover,.sev-card[data-sev="mild"].active{border-color:var(--ice);box-shadow:0 0 0 1px var(--ice),0 12px 28px rgba(43,180,255,.18)}
   .sev-card[data-sev="moderate"]:hover,.sev-card[data-sev="moderate"].active{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 12px 28px rgba(247,201,72,.18)}
   .sev-card[data-sev="severe"]:hover,.sev-card[data-sev="severe"].active{border-color:var(--gold-metal-3);box-shadow:0 0 0 1px var(--gold-metal-3),0 12px 28px rgba(160,107,10,.22)}

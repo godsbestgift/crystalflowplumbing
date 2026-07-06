@@ -201,6 +201,8 @@
   .faq .a{padding:0 18px 16px;color:var(--muted);font-size:14.5px}
 
   .sev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  .sev-grid.fix4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:1000px){.sev-grid.fix4{grid-template-columns:repeat(2,1fr)}}
   .sev-card{appearance:none;-webkit-appearance:none;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;transition:.2s border-color,.2s box-shadow,.2s transform}
   .sev-card:hover{transform:translateY(-3px)}
   .sev-card:focus-visible{outline:2px solid var(--ice);outline-offset:3px}

@@ -39,12 +39,14 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
 <meta property="og:description" content="Faucet, toilet, sink and fixture repair or installation, owner-operated with upfront pricing. Serving Berks, Reading, Lebanon & Lancaster Counties.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.crystalclearflow.com/repairs-installations">
-<meta property="og:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
+<meta property="og:image" content="https://www.crystalclearflow.com/assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Crystal Flow Repair & Drain Cleaning logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Plumbing Repairs & Installations in Womelsdorf, PA | Crystal Flow">
 <meta name="twitter:description" content="Faucet, toilet, sink and fixture repair or installation, owner-operated with upfront pricing. Serving Berks, Reading, Lebanon & Lancaster Counties.">
-<meta name="twitter:image" content="https://www.crystalclearflow.com/assets/crystal_flow_logo_true_transparent_cropped.png">
+<meta name="twitter:image" content="https://www.crystalclearflow.com/assets/og-card.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@700;900&family=Playfair+Display:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
@@ -84,11 +86,37 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
       "isPartOf": { "@id": "https://www.crystalclearflow.com/#website" },
       "about": { "@id": "https://www.crystalclearflow.com/repairs-installations#service" },
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.crystalclearflow.com/repairs-installations#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you install a fixture I bought myself?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bring home the faucet, toilet, or vanity you like and we'll install it clean. We'll tell you upfront if the one you picked has a known problem, before it goes in the wall." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you decide between repairing and replacing?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We tell you both prices and what each buys you. If a repair only postpones the same failure, we say so; if the fixture has years left, we don't push a replacement you don't need. Your call either way." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the work under warranty?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, our workmanship carries a 1 year warranty. If something we installed or repaired acts up, call and we make it right." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get a price before you start?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Always. You hear the number before any work begins, no surprise charges once the job's underway." }
+        }
+      ]
     }
   ]
 }
 </script>
-<link rel="stylesheet" href="/styles.css?v=20260705b">
+<link rel="stylesheet" href="/styles.css?v=20260706a">
 <!--
   ============ NOTES FOR FUTURE EDITORS (read before touching this page) ============
   ARCHITECTURE
@@ -163,6 +191,54 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     </div>
   </div></section>
   <section class="block"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">What's acting up?</span><h2>Tap it. We'll tell you what it usually means.</h2><p>Pick the fixture giving you trouble and get a matched quote in two quick steps.</p></div>
+    <div class="sev-grid fix4" role="group" aria-label="Which fixture is acting up?">
+      <button type="button" class="glass sev-card" data-fix="faucet" data-sev="mild" aria-pressed="false">
+        <span class="sev-ico"><svg class="bico"><use href="#i-drop"></use></svg></span>
+        <h3>Faucet</h3>
+        <p>Dripping, leaking under the handle, or pressure gone weak.</p>
+        <span class="sev-tap">Tap to check &rsaquo;</span>
+      </button>
+      <button type="button" class="glass sev-card" data-fix="toilet" data-sev="mild" aria-pressed="false">
+        <span class="sev-ico"><svg class="bico"><use href="#i-check"></use></svg></span>
+        <h3>Toilet</h3>
+        <p>Running nonstop, weak flush, or water at the base.</p>
+        <span class="sev-tap">Tap to check &rsaquo;</span>
+      </button>
+      <button type="button" class="glass sev-card" data-fix="sink" data-sev="mild" aria-pressed="false">
+        <span class="sev-ico"><svg class="bico"><use href="#i-wrench"></use></svg></span>
+        <h3>Sink or Vanity</h3>
+        <p>Leaking underneath, draining slow, or ready for replacement.</p>
+        <span class="sev-tap">Tap to check &rsaquo;</span>
+      </button>
+      <button type="button" class="glass sev-card" data-fix="pipe" data-sev="mild" aria-pressed="false">
+        <span class="sev-ico"><svg class="bico"><use href="#i-pipe"></use></svg></span>
+        <h3>Drain Pipe</h3>
+        <p>Worn, leaking, or a line that keeps acting up.</p>
+        <span class="sev-tap">Tap to check &rsaquo;</span>
+      </button>
+    </div>
+    <div class="sev-result" id="fixResult" data-level="mild" aria-live="polite" hidden>
+      <div class="sev-result-inner glass">
+        <span class="sev-badge-tx" id="fixBadge"></span>
+        <h3 id="fixTitle"></h3>
+        <p id="fixBody"></p>
+        <div class="cta-row">
+          <a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 (484) 258-3749</a>
+          <button class="btn btn-gold" data-quote id="fixQuoteBtn">Get Matched Quote</button>
+        </div>
+      </div>
+    </div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">How it works</span><h2>Three steps from call to fixed.</h2></div>
+    <div class="steps dc-steps">
+      <div class="glass step"><div class="n">1</div><h3>Call or request a quote</h3><p>Tell us what's acting up. You get an honest price before anyone touches your plumbing.</p></div>
+      <div class="glass step"><div class="n">2</div><h3>Owner shows up &amp; diagnoses</h3><p>No rotating crew. You deal directly with the person doing the work, every time.</p></div>
+      <div class="glass step"><div class="n">3</div><h3>Repaired, tested, cleaned up</h3><p>We test the fix while we're still there and leave the space the way we found it.</p></div>
+    </div>
+  </div></section>
+  <section class="block"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Why neighbors call</span><h2>Real piping know-how behind every repair.</h2></div>
     <div class="why">
       <div class="glass w"><b>Owner on every job</b><span>You deal with the owner directly, not a rotating crew.</span></div>
@@ -177,6 +253,15 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d388873.60445608024!2d-75.98499699999999!3d40.407188500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c674bbb60ee60d%3A0x5eab46061952565!2sBerks%20County%2C%20PA!5e0!3m2!1sen!2sus!4v1783025039928!5m2!1sen!2sus" width="100%" height="280" style="border:0;border-radius:12px" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map of Berks County, PA — Crystal Flow's service area"></iframe>
     </div>
     <div class="chips" data-chips></div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Questions</span><h2>What homeowners ask before booking a repair.</h2></div>
+    <div class="faq">
+      <details><summary>Can you install a fixture I bought myself?<span></span></summary><div class="a">Yes. Bring home the faucet, toilet, or vanity you like and we'll install it clean. We'll tell you upfront if the one you picked has a known problem, before it goes in the wall.</div></details>
+      <details><summary>How do you decide between repairing and replacing?<span></span></summary><div class="a">We tell you both prices and what each buys you. If a repair only postpones the same failure, we say so; if the fixture has years left, we don't push a replacement you don't need. Your call either way.</div></details>
+      <details><summary>Is the work under warranty?<span></span></summary><div class="a">Yes, our workmanship carries a 1 year warranty. If something we installed or repaired acts up, call and we make it right.</div></details>
+      <details><summary>Do I get a price before you start?<span></span></summary><div class="a">Always. You hear the number before any work begins, no surprise charges once the job's underway.</div></details>
+    </div>
   </div></section>
   <section class="block cta"><div class="wrap"><div class="glass ctabox"><h2>Got something that needs fixing?</h2><p>Send a quick quote request or call. We call back within 30 minutes during business hours.</p><div class="cta-row"><a class="btn btn-blue" href="tel:+14842583749" data-track-call>📞 (484) 258-3749</a><button class="btn btn-gold" data-quote>Get a Quote</button></div></div></div></section>
 </main>
@@ -328,6 +413,45 @@ src="https://www.facebook.com/tr?id=1344141971239571&ev=PageView&noscript=1"
     fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({access_key:CONFIG.WEB3FORMS_KEY,subject:'New Quote Request, '+(p.name||'Crystal Flow website'),from_name:'Crystal Flow Website','Service needed':p.service,'Town / location':p.town,'Name':p.name,'Phone':p.phone,'Prefers':p.prefer})})
       .then(function(r){return r.json();}).then(function(d){if(d&&d.success){track('Lead',{content_name:'Quote Request'});setStep(3);}else{mailtoFallback(p);}}).catch(function(){mailtoFallback(p);});
   });
+
+  // ===== Fixture quick-check (mirrors drain-cleaning severity picker) =====
+  var fixData={
+    faucet:{badge:'Faucet trouble',title:"Usually a worn cartridge or seal, not a big job.",body:"Most faucet drips and leaks come down to a worn internal part. We repair it if the faucet has life left, or swap in a new one you pick, priced upfront either way.",service:"Faucet dripping or leaking, want it repaired or replaced."},
+    toilet:{badge:'Toilet trouble',title:"Running toilets waste water every hour they run.",body:"A running or weak-flushing toilet is usually flapper, fill valve, or flush valve wear, quick fixes. Water at the base is a seal issue worth handling before it reaches the floor below.",service:"Toilet running, flushing weak, or leaking at the base."},
+    sink:{badge:'Sink trouble',title:"Under-sink leaks do quiet damage fast.",body:"A slow drip under the vanity ruins the cabinet before you notice. We fix the trap, supply lines, or drain connections, or install the new sink and vanity you've picked out.",service:"Sink or vanity leaking underneath or needs replacement."},
+    pipe:{badge:'Pipe trouble',title:"A line that keeps acting up has a root cause.",body:"Repeated leaks or clogs on the same drain line mean something's wrong at the source, worn pipe, bad slope, or a failing joint. We find it and fix that section right.",service:"Drain pipe worn or leaking, keeps having problems."}
+  };
+  var fixCards=document.querySelectorAll('.sev-card[data-fix]');
+  var fixResult=document.getElementById('fixResult');
+  if(fixResult&&fixCards.length){
+    var fixBadge=document.getElementById('fixBadge');
+    var fixTitle=document.getElementById('fixTitle');
+    var fixBody=document.getElementById('fixBody');
+    var fixSelectedService='';
+    var fixReduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    fixCards.forEach(function(card){
+      card.addEventListener('click',function(){
+        var d=fixData[card.dataset.fix];
+        if(!d)return;
+        fixCards.forEach(function(c){c.classList.remove('active');c.setAttribute('aria-pressed','false');});
+        card.classList.add('active');
+        card.setAttribute('aria-pressed','true');
+        fixBadge.textContent=d.badge;
+        fixTitle.textContent=d.title;
+        fixBody.textContent=d.body;
+        fixSelectedService=d.service;
+        fixResult.hidden=false;
+        fixResult.classList.remove('sev-fade');
+        void fixResult.offsetWidth;
+        fixResult.classList.add('sev-fade');
+        fixResult.scrollIntoView({behavior:fixReduceMotion?'auto':'smooth',block:'nearest'});
+      });
+    });
+    document.getElementById('fixQuoteBtn').addEventListener('click',function(){
+      var qs=document.getElementById('qService');
+      if(qs&&fixSelectedService)qs.value=fixSelectedService;
+    });
+  }
 
   setStep(1);
 })();

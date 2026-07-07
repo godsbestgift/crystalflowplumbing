@@ -578,7 +578,7 @@
   .card .ico svg.svc{width:36px;height:36px;stroke:var(--ice);fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(63,185,232,.45))}
   .why .ic svg.pico{width:26px;height:26px;stroke:var(--ice);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(63,185,232,.45))}
   /* hero v2 — story left + gold call-emblem ON the shield (no card box) */
-  .hero-left{text-align:center;max-width:760px;margin:0 auto;transform:translateX(-90px) scale(.85)}
+  .hero-left{text-align:center;max-width:760px;margin:0 auto;transform:translateX(-90px) scale(.85);align-self:end}
   .hero-left .rhyme{margin-top:4px;white-space:nowrap}
   @media(max-width:820px){.hero-left .rhyme{white-space:normal}}
   .hero-sub{color:var(--text-pale);font-size:clamp(17px,2.1vw,20px);font-weight:800;line-height:1.45;max-width:540px;margin:20px auto 0;text-shadow:0 2px 12px rgba(0,0,0,.6)}
@@ -659,7 +659,7 @@
   .hv-tag .t1{color:var(--white);text-shadow:0 2px 12px rgba(0,0,0,.5);text-decoration:underline;text-decoration-color:var(--underline-blue);text-underline-offset:5px;text-decoration-thickness:3px}
   .hv-tag .t2{color:var(--ice);filter:drop-shadow(0 0 10px rgba(90,159,224,.4));text-decoration:underline;text-decoration-color:var(--underline-blue);text-underline-offset:5px;text-decoration-thickness:3px}
   /* floating legacy trust badge + stat pills */
-  .hero-legacy-group{align-self:end;justify-self:end;display:flex;flex-direction:column;gap:10px;max-width:480px;margin:0 -120px 24px 0}
+  .hero-legacy-group{align-self:end;justify-self:end;display:flex;flex-direction:column;gap:10px;max-width:480px;margin:0 -120px 0 0}
   .hero-legacy{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:18px;padding:18px 26px;background:rgba(8,20,40,.55);backdrop-filter:blur(10px);border:1.5px solid rgba(247,201,72,.45);border-radius:16px;box-shadow:0 0 22px rgba(63,185,232,.22),0 10px 24px rgba(0,0,0,.4);cursor:pointer;transition:.2s border-color,.2s box-shadow,.2s transform}
   .hero-legacy:hover{border-color:var(--ice);box-shadow:0 0 34px rgba(63,185,232,.65),0 14px 30px rgba(0,0,0,.45);transform:translateY(-2px)}
   .hero-legacy:after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);opacity:0}

@@ -747,3 +747,42 @@
   .cards .card:hover:before{transform:scaleX(1)}
   .cards .card:hover .ico img{filter:drop-shadow(0 0 10px rgba(43,180,255,.55))}
   @media(prefers-reduced-motion:reduce){.ri-tool,.ri-track{animation:none}.ri-track{flex-wrap:wrap;width:auto;justify-content:center}}
+
+  /* ===== origin story page (mo-*) ===== */
+  .mo-hero{position:relative;overflow:hidden;background:radial-gradient(1100px 620px at 50% -12%,rgba(30,140,255,.32),transparent 62%),linear-gradient(160deg,rgba(1,2,4,.35) 0%,rgba(5,13,24,.15) 55%,rgba(8,26,48,.18) 100%),url(https://www.crystalclearflow.com/assets/background123-photo.jpg);background-size:cover;background-position:center;border-bottom:1px solid rgba(43,180,255,.18)}
+  .mo-hero:after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold-metal-2),transparent);opacity:.6}
+  .mo-hero .wrap{position:relative;padding:60px 20px 52px;text-align:center}
+  .mo-h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,5vw,58px);line-height:1.06;letter-spacing:.02em;color:var(--gold);text-shadow:0 2px 6px rgba(0,0,0,.85),0 6px 22px rgba(0,0,0,.7);margin-bottom:12px}
+  .mo-h1 .ice{color:var(--ice);filter:drop-shadow(0 0 16px rgba(43,180,255,.5))}
+  .mo-sub{color:var(--text-pale);font-size:16px;max-width:600px;margin:0 auto;text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 10px rgba(0,0,0,.7)}
+  .mo-hero .badge-center img{filter:drop-shadow(0 10px 30px rgba(26,167,255,.35))}
+  .mo-stats{display:flex;align-items:center;justify-content:center;gap:0;margin:26px auto 0;max-width:860px;background:rgba(3,9,18,.72);backdrop-filter:blur(10px);border:1px solid rgba(247,201,72,.35);border-radius:16px;padding:18px 8px}
+  .mo-stat{flex:1;padding:0 14px}
+  .mo-stat b{display:block;font-family:'Cinzel',serif;font-size:clamp(20px,2.6vw,30px);font-weight:900;color:var(--gold);line-height:1.1}
+  .mo-stat span{font-size:11.5px;font-weight:700;letter-spacing:.05em;color:var(--text-pale);line-height:1.35;display:block;margin-top:4px}
+  .mo-stats i{width:1px;height:44px;background:rgba(255,255,255,.15)}
+  @media(max-width:640px){.mo-stats{flex-wrap:wrap;gap:14px 0}.mo-stat{flex:0 0 50%}.mo-stats i{display:none}}
+  .mo-legacy{background-image:radial-gradient(ellipse 72% 82% at 50% 30%,rgba(245,247,250,.6),rgba(245,247,250,.12) 70%),url(https://www.crystalclearflow.com/assets/background2.jpg);background-size:cover;background-position:center;background-color:#dfe4ea;border-top:1px solid rgba(12,28,51,.08);font-family:Georgia,'Times New Roman',serif;padding:64px 20px 56px}
+  .mo-legacy-wrap{max-width:880px;margin:0 auto}
+  .mo-legacy-head{text-align:center;margin-bottom:44px}
+  .mo-kicker{display:inline-block;font-family:'Cinzel',serif;font-size:13px;font-weight:900;letter-spacing:.26em;text-transform:uppercase;color:#8a6d1d;margin-bottom:10px}
+  .mo-legacy-head h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:#0c1c33;line-height:1.15}
+  .mo-rail{position:relative;padding-left:44px}
+  .mo-rail:before{content:"";position:absolute;left:17px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--gold-metal-1),var(--gold-metal-3))}
+  .mo-chapter{position:relative;margin-bottom:36px}
+  .mo-chapter:last-child{margin-bottom:0}
+  .mo-marker{position:absolute;left:-44px;top:6px;width:36px;height:36px;border-radius:50%;background:#0c1c33;border:2px solid var(--gold);display:grid;place-items:center;box-shadow:0 4px 14px rgba(12,28,51,.35)}
+  .mo-marker .bico{width:16px;height:16px;color:var(--gold)}
+  .mo-card{background:rgba(255,255,255,.82);border:1px solid rgba(12,28,51,.14);border-radius:16px;padding:26px 28px;box-shadow:0 12px 34px rgba(12,28,51,.12)}
+  .mo-chapter-tag{display:inline-block;font-family:'Cinzel',serif;font-size:11.5px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:#8a6d1d;margin-bottom:8px}
+  .mo-card h3{font-family:'Playfair Display',Georgia,serif;font-size:clamp(20px,2.8vw,27px);font-weight:900;color:#0c1c33;margin-bottom:10px}
+  .mo-card p{color:#22314a;font-size:15.5px;line-height:1.75}
+  .mo-card img{margin-top:18px;border-radius:12px;max-width:420px;width:100%;height:auto;border:1px solid rgba(12,28,51,.15);box-shadow:0 10px 26px rgba(12,28,51,.18)}
+  .mo-card .mo-professor{margin:4px 0 14px;border:0;box-shadow:none;border-radius:0;max-width:460px}
+  .mo-card .mo-owner{max-width:280px;display:block;margin-left:auto;margin-right:auto}
+  .mo-card-quote{background:linear-gradient(140deg,#0c1c33,#081426);border-color:rgba(247,201,72,.4)}
+  .mo-card-quote p{color:var(--text-pale)}
+  .mo-values{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:46px;padding-top:30px;border-top:1px solid rgba(12,28,51,.15)}
+  .mo-values span{font-family:'Cinzel',serif;font-size:15px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#0c1c33}
+  .mo-values i{color:#b8860b;font-style:normal;font-size:10px}
+  @media(max-width:640px){.mo-rail{padding-left:36px}.mo-marker{left:-36px;width:30px;height:30px}.mo-card{padding:20px 18px}}

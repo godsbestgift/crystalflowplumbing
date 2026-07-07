@@ -786,3 +786,8 @@
   .mo-values span{font-family:'Cinzel',serif;font-size:15px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#0c1c33}
   .mo-values i{color:#b8860b;font-style:normal;font-size:10px}
   @media(max-width:640px){.mo-rail{padding-left:36px}.mo-marker{left:-36px;width:30px;height:30px}.mo-card{padding:20px 18px}}
+
+  /* index big-logo banner: glow divider + clickable number */
+  .fastresp-wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .fastresp-divider{display:flex;justify-content:center;width:100%;margin:16px 0 2px}
+  .cta-back-sec .hype-cta-phone{margin-top:10px;text-shadow:0 0 18px rgba(247,201,72,.45)}

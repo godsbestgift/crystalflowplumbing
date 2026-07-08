@@ -94,7 +94,7 @@
   function mailtoFallback(p){var subject='New Quote Request, '+(p.name||'Crystal Flow website');var body='New quote request from the website\n\nService: '+p.service+'\nTown: '+p.town+'\nName: '+p.name+'\nPhone: '+p.phone+'\nPrefers: '+p.prefer+'\n';window.location.href='mailto:'+CONFIG.EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);}
   sendBtn.addEventListener('click',function(){
     var p={service:val('qService'),town:val('qTown'),name:val('qName'),phone:val('qPhone'),prefer:pref()};
-    if(!p.phone){var ph=document.getElementById('qPhone');ph.focus();ph.style.borderColor='#ff6b6b';return;}
+    if(!p.phone){var ph=document.getElementById('qPhone');ph.focus();ph.style.borderColor='#f2b714';ph.style.boxShadow='0 0 0 3px rgba(247,201,72,.25)';return;}
     var hasKey=CONFIG.WEB3FORMS_KEY&&CONFIG.WEB3FORMS_KEY.indexOf('PASTE')===-1;
     if(!hasKey){mailtoFallback(p);track('Lead');return;}
     sendBtn.disabled=true;sendBtn.textContent='Sending...';

@@ -802,3 +802,14 @@
   .ri-hero .svc-list li::after{content:"✓";position:absolute;left:5px;top:5px;font-size:10px;font-weight:900;color:var(--on-gold)}
   .ri-hero .ri-sub{margin-top:14px}
   @media (max-width:560px){.ri-hero .svc-list{columns:1}}
+
+  /* drain hero: full service list, hex-cut markers, alternating ice/gold */
+  .dc-hero .svc-eb{margin-top:34px}
+  .dc-hero .svc-list{columns:2;column-gap:48px;max-width:760px;margin:20px auto 0;list-style:none;text-align:left}
+  .dc-hero .svc-list li{break-inside:avoid;padding:7px 0 7px 32px;position:relative;color:var(--text-pale);font-size:15px;font-weight:600;border-bottom:1px dashed var(--line);transition:.15s color}
+  .dc-hero .svc-list li:hover{color:var(--white)}
+  .dc-hero .svc-list li::before{content:"";position:absolute;left:2px;top:10px;width:17px;height:19px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:linear-gradient(160deg,var(--ice-l),var(--ice-d));box-shadow:0 0 12px rgba(43,180,255,.45)}
+  .dc-hero .svc-list li::after{content:"✓";position:absolute;left:6px;top:6px;font-size:10px;font-weight:900;color:var(--navy)}
+  .dc-hero .svc-list li:nth-child(even)::before{background:linear-gradient(160deg,var(--gold-metal-1),var(--gold-metal-2));box-shadow:0 0 12px rgba(247,201,72,.4)}
+  .dc-hero .svc-list li:nth-child(even)::after{color:var(--on-gold)}
+  @media (max-width:560px){.dc-hero .svc-list{columns:1}}

@@ -324,7 +324,9 @@
   .modal{position:relative;width:100%;max-width:480px;max-height:none;margin:auto 0;background:linear-gradient(180deg,var(--panel2),var(--navy2));border:1px solid rgba(73,199,255,.35);border-radius:18px;box-shadow:var(--shadow),0 0 30px rgba(73,199,255,.18);overflow-y:visible}
   .modal .close{position:absolute;top:12px;right:12px;z-index:3;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:rgba(0,0,0,.35);color:var(--white);font-size:18px;cursor:pointer;line-height:1}
   .ad-pop .ad-img{width:100%;height:auto;aspect-ratio:1916/821;object-fit:cover;display:block;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
-  .ad-pop .ad-body{padding:14px 24px 22px;text-align:center}
+  .ad-pop .ad-body{position:relative;padding:14px 24px 22px;text-align:center;overflow:hidden}
+  .ad-pop .ad-body::before{content:"";position:absolute;inset:0;background:url(https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png) center 55%/230px auto no-repeat;opacity:.2;pointer-events:none}
+  .ad-pop .ad-body>*{position:relative}
   .ad-pop .ad-h{font-size:22.5px;font-weight:900;color:var(--ice);text-shadow:0 0 18px rgba(43,180,255,.35),0 2px 8px rgba(0,0,0,.6);margin-top:2px}
   .ad-trust{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;flex-wrap:wrap}
   .ad-trust span{position:relative;overflow:hidden;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);background:rgba(247,201,72,.1);border:1px solid rgba(247,201,72,.5);border-radius:999px;padding:7px 14px;box-shadow:0 0 12px rgba(247,201,72,.22),0 0 0 1px rgba(255,255,255,.05) inset}

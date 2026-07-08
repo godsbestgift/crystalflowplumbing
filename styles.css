@@ -203,7 +203,7 @@
   .sev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
   .sev-grid.fix4{grid-template-columns:repeat(4,1fr)}
   @media(max-width:1000px){.sev-grid.fix4{grid-template-columns:repeat(2,1fr)}}
-  .sev-card{appearance:none;-webkit-appearance:none;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left;transition:.2s border-color,.2s box-shadow,.2s transform}
+  .sev-card{appearance:none;-webkit-appearance:none;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;transition:.2s border-color,.2s box-shadow,.2s transform}
   .sev-card:hover{transform:translateY(-3px)}
   .sev-card:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
   .sev-card[data-sev="mild"]{border-color:rgba(43,180,255,.45)}
@@ -677,7 +677,7 @@
   /* ===== drain-cleaning page redesign (dc-*) ===== */
   .dc-hero{position:relative;overflow:hidden;background:radial-gradient(1100px 620px at 50% -12%,rgba(30,140,255,.28),transparent 62%),linear-gradient(160deg,rgba(1,2,4,.14) 0%,rgba(5,13,24,.12) 55%,rgba(8,26,48,.14) 100%),url(https://www.crystalclearflow.com/assets/drain-background1.jpg);background-size:cover,cover,cover;background-position:center,center,center;border-bottom:1px solid rgba(43,180,255,.18)}
   .dc-hero .dc-h1{text-shadow:0 2px 4px rgba(0,0,0,.9),0 4px 18px rgba(0,0,0,.8)}
-  .dc-hero .dc-sub{text-shadow:0 1px 4px rgba(0,0,0,.95),0 2px 10px rgba(0,0,0,.85);background:rgba(2,6,14,.55);backdrop-filter:blur(6px);display:inline-block;padding:6px 18px;border-radius:10px}
+  .dc-hero .dc-sub{color:var(--text-pale);text-shadow:0 1px 4px rgba(0,0,0,.95),0 2px 10px rgba(0,0,0,.85);background:linear-gradient(180deg,rgba(8,26,48,.82),rgba(4,12,24,.82));backdrop-filter:blur(8px);display:inline-block;padding:10px 22px;border-radius:12px;border:1px solid rgba(43,180,255,.4);box-shadow:0 0 18px rgba(43,180,255,.18)}
   .dc-hero .dc-rhyme{text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 10px rgba(0,0,0,.75)}
   .dc-hero .glass{background:rgba(3,9,18,.72);backdrop-filter:blur(14px)}
   .dc-hero .dc-eb span{text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 10px rgba(0,0,0,.75)}
@@ -805,7 +805,7 @@
 
   /* drain hero: full service list under the headline, ice hex markers, centered grid */
   .dc-hero .svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,300px));justify-content:center;column-gap:52px;margin:20px auto 22px;list-style:none;text-align:left}
-  .dc-hero .svc-list li{padding:7px 0 7px 32px;position:relative;color:var(--text-pale);font-size:15px;font-weight:600;border-bottom:1px dashed var(--line);transition:.15s color}
+  .dc-hero .svc-list li{padding:7px 0 7px 32px;position:relative;color:var(--white);font-size:15px;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.95),0 2px 12px rgba(0,0,0,.8);border-bottom:1px dashed rgba(255,255,255,.22);transition:.15s color}
   .dc-hero .svc-list li:hover{color:var(--white)}
   .dc-hero .svc-list li::before{content:"";position:absolute;left:2px;top:10px;width:17px;height:19px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:linear-gradient(160deg,var(--ice-l) 0%,var(--ice) 55%,var(--ice-d) 100%);box-shadow:0 0 12px rgba(43,180,255,.55)}
   .dc-hero .svc-list li::after{content:"✓";position:absolute;left:6px;top:6px;font-size:10px;font-weight:900;color:var(--navy)}

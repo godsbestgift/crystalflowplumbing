@@ -677,7 +677,8 @@
   /* ===== drain-cleaning page redesign (dc-*) ===== */
   .dc-hero{position:relative;overflow:hidden;background:radial-gradient(1100px 620px at 50% -12%,rgba(30,140,255,.28),transparent 62%),linear-gradient(160deg,rgba(1,2,4,.14) 0%,rgba(5,13,24,.12) 55%,rgba(8,26,48,.14) 100%),url(https://www.crystalclearflow.com/assets/drain-background1.jpg);background-size:cover,cover,cover;background-position:center,center,center;border-bottom:1px solid rgba(43,180,255,.18)}
   .dc-hero .dc-h1{text-shadow:0 2px 4px rgba(0,0,0,.9),0 4px 18px rgba(0,0,0,.8)}
-  .dc-hero .dc-sub{color:var(--text-pale);text-shadow:0 1px 4px rgba(0,0,0,.95),0 2px 10px rgba(0,0,0,.85);background:linear-gradient(180deg,rgba(8,26,48,.82),rgba(4,12,24,.82));backdrop-filter:blur(8px);display:inline-block;padding:10px 22px;border-radius:12px;border:1px solid rgba(43,180,255,.4);box-shadow:0 0 18px rgba(43,180,255,.18)}
+  .dc-hero .dc-sub{color:var(--text-pale);text-shadow:0 1px 4px rgba(0,0,0,.95),0 2px 10px rgba(0,0,0,.85);background:linear-gradient(180deg,rgba(8,26,48,.82),rgba(4,12,24,.82));backdrop-filter:blur(8px);display:inline-block;padding:10px 22px;border-radius:12px;border:1px solid rgba(43,180,255,.4);box-shadow:0 0 18px rgba(43,180,255,.18);margin-top:26px}
+  .dc-hero .callblock{justify-content:center;margin:22px 0 8px}
   .dc-hero .dc-rhyme{text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 10px rgba(0,0,0,.75)}
   .dc-hero .glass{background:rgba(3,9,18,.72);backdrop-filter:blur(14px)}
   .dc-hero .dc-eb span{text-shadow:0 1px 4px rgba(0,0,0,.9),0 2px 10px rgba(0,0,0,.75)}
@@ -690,7 +691,8 @@
   .dc-h1 .ice{color:var(--ice);filter:drop-shadow(0 0 16px rgba(43,180,255,.5))}
   .dc-rhyme{font-size:clamp(17px,2.3vw,22px);font-weight:800;font-style:italic;color:var(--white);text-decoration:underline;text-decoration-color:var(--ice);text-underline-offset:5px;text-decoration-thickness:2px;margin-bottom:6px}
   .dc-sub{color:var(--muted);font-size:15.5px;max-width:640px;margin:0 auto}
-  .dc-hero .sev-grid{text-align:left;margin-top:36px}
+  .dc-hero .sev-grid{text-align:left;margin-top:26px}
+  .dc-hero .cf-trust-bar{margin-top:34px}
   .dc-hero .sev-result{margin-left:auto;margin-right:auto;text-align:left}
   .dc-pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:30px}
   .dc-timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:40px}

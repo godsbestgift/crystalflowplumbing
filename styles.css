@@ -795,13 +795,10 @@
   .fastresp-divider{display:flex;justify-content:center;width:100%;margin:16px 0 2px}
   .cta-back-sec .hype-cta-phone{margin-top:10px;text-shadow:0 0 18px rgba(247,201,72,.45)}
 
-  /* installations: full service list bullets (top of page) */
-  .svc-index{padding-top:34px;padding-bottom:10px}
-  .svc-index .svc-list{columns:3;column-gap:34px;max-width:980px;margin:26px auto 0;list-style:none;text-align:left}
-  .svc-index .svc-list li{break-inside:avoid;padding:7px 0 7px 30px;position:relative;color:var(--text-pale);font-size:16px;font-weight:600;border-bottom:1px dashed var(--line)}
-  .svc-index .svc-list li::before{content:"";position:absolute;left:2px;top:13px;width:16px;height:16px;background:linear-gradient(160deg,var(--gold-metal-1),var(--gold-metal-2));border-radius:50%;box-shadow:0 0 10px rgba(247,201,72,.35)}
-  .svc-index .svc-list li::after{content:"✓";position:absolute;left:5px;top:7px;font-size:11px;font-weight:900;color:var(--on-gold)}
-  .svc-index .svc-note{text-align:center;color:var(--muted);font-size:14px;margin-top:18px}
-  .svc-index .svc-note b{color:var(--gold)}
-  @media (max-width:900px){.svc-index .svc-list{columns:2}}
-  @media (max-width:560px){.svc-index .svc-list{columns:1}}
+  /* installations hero: full service list, two even columns under the headline */
+  .ri-hero .svc-list{columns:2;column-gap:44px;max-width:720px;margin:22px auto 8px;list-style:none;text-align:left}
+  .ri-hero .svc-list li{break-inside:avoid;padding:6px 0 6px 28px;position:relative;color:var(--text-pale);font-size:15px;font-weight:600;border-bottom:1px dashed var(--line)}
+  .ri-hero .svc-list li::before{content:"";position:absolute;left:2px;top:11px;width:15px;height:15px;background:linear-gradient(160deg,var(--gold-metal-1),var(--gold-metal-2));border-radius:50%;box-shadow:0 0 10px rgba(247,201,72,.35)}
+  .ri-hero .svc-list li::after{content:"✓";position:absolute;left:5px;top:5px;font-size:10px;font-weight:900;color:var(--on-gold)}
+  .ri-hero .ri-sub{margin-top:14px}
+  @media (max-width:560px){.ri-hero .svc-list{columns:1}}

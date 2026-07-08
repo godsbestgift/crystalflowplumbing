@@ -330,7 +330,7 @@
   .ad-pop .cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 
   .q-head{position:relative;padding:26px 24px 0;text-align:center;background:radial-gradient(340px 190px at 50% -40px,rgba(43,180,255,.22),transparent 70%)}
-  .q-shield{width:62px;height:auto;margin:0 auto 10px;display:block;filter:drop-shadow(0 0 14px rgba(43,180,255,.55)) drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+  .q-logo{width:min(320px,86%);height:auto;margin:0 auto 2px;display:block;filter:drop-shadow(0 0 16px rgba(43,180,255,.35)) drop-shadow(0 4px 12px rgba(0,0,0,.55))}
   .q-trust{display:flex;align-items:center;justify-content:center;gap:12px;padding:0 18px 20px;flex-wrap:wrap}
   .q-trust span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-tag);white-space:nowrap}
   .q-trust i{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.7}

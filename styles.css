@@ -868,3 +868,12 @@
   .as-resp .bico{width:30px;height:30px;fill:none;stroke:var(--ice);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 10px}
   .as-resp b{display:block;font-size:16.5px;color:var(--white);margin-bottom:6px}
   .as-resp span{font-size:14px;color:var(--muted);line-height:1.5}
+
+  /* town pages: real hero art + glass content panel instead of floating text */
+  .town-hero{background:radial-gradient(1000px 560px at 78% -8%,rgba(26,167,255,.24),transparent 60%),radial-gradient(800px 480px at 15% 10%,rgba(247,201,72,.12),transparent 55%),linear-gradient(160deg,rgba(1,2,4,.5) 0%,rgba(5,13,24,.32) 55%,rgba(8,26,48,.4) 100%),url(https://www.crystalclearflow.com/assets/background123-photo.jpg);background-size:cover,cover,cover,cover;background-position:center,center,center,center 30%}
+  .town-hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--ice),var(--gold-metal-2),transparent);opacity:.7}
+  .town-panel{background:rgba(4,12,24,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:38px 32px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+  .town-history{position:relative;max-width:640px;margin:0 auto 26px;padding:20px 26px;background:rgba(43,180,255,.06);border:1px solid rgba(43,180,255,.28);border-radius:14px}
+  .town-history .th-tag{display:block;font-family:'Cinzel',serif;font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--ice-l);margin-bottom:8px}
+  .town-history p{margin:0;color:var(--text-pale);font-style:italic;font-size:14.5px;line-height:1.65}
+  .town-panel .cf-body{color:var(--text-pale)}

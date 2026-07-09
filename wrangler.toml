@@ -1,0 +1,7 @@
+name = "crystalflowplumbing"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "crystalflow_analytics"
+database_id = "ffe9129d-4771-498c-b051-67e1848e4abd"

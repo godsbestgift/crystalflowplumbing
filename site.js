@@ -10,6 +10,25 @@
   }
   function track(ev,d){try{if(window.fbq)fbq('track',ev,d||{});}catch(e){}}
 
+  (function(){
+    try{
+      var qs=new URLSearchParams(location.search);
+      var payload={
+        path:location.pathname,
+        referrer:document.referrer||null,
+        utm_source:qs.get('utm_source'),
+        utm_medium:qs.get('utm_medium'),
+        utm_campaign:qs.get('utm_campaign')
+      };
+      var body=JSON.stringify(payload);
+      if(navigator.sendBeacon){
+        navigator.sendBeacon('/api/track',new Blob([body],{type:'application/json'}));
+      }else{
+        fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:body,keepalive:true}).catch(function(){});
+      }
+    }catch(e){}
+  })();
+
   document.getElementById('yr').textContent=new Date().getFullYear();
 
   var towns=["Womelsdorf","Reading","Robesonia","Myerstown","Wernersville","Richland","Newmanstown","Schaefferstown","Bernville","Bethel","Sinking Spring","Wyomissing","West Reading","Reinholds","Stevens","Adamstown","Stouchsburg","Sheridan","Rehrersburg","Fredericksburg","Jonestown","Lititz","Ephrata","Denver","Akron","Manheim","Lebanon","Annville","Palmyra","Cleona","Lancaster"];

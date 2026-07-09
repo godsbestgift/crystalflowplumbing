@@ -326,7 +326,7 @@
   .modal.ad-pop{outline:1px solid rgba(0,0,0,.9)}
   .ad-pop .ad-img{width:100%;height:auto;aspect-ratio:1916/821;object-fit:cover;display:block;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
   .ad-pop .ad-body{position:relative;padding:8px 24px 18px;text-align:center;overflow:hidden}
-  .ad-pop .ad-body::before{content:"";position:absolute;inset:0;background:url(https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png) right -2px top 0/300px auto no-repeat;opacity:.4;pointer-events:none}
+  .ad-pop .ad-body::before{content:"";position:absolute;inset:0;background:url(https://www.crystalclearflow.com/assets/shield_teardrop_cropped_true_transparent.png) right 1px top 0/300px auto no-repeat;opacity:.4;pointer-events:none}
   .ad-pop .ad-body>*{position:relative}
   .ad-pop .ad-h{font-size:clamp(14px,4.3vw,17.5px);font-weight:900;color:var(--white);white-space:nowrap;text-shadow:0 2px 8px rgba(0,0,0,.6);margin-top:2px}
   .ad-trust{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:12px;flex-wrap:nowrap}

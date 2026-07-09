@@ -43,7 +43,8 @@
 
   document.addEventListener('click',function(e){
     if(e.target.closest('[data-quote]')){e.preventDefault();openQuote();}
-    if(e.target.closest('[data-close-ad]'))closeAd();
+    var cad=e.target.closest('[data-close-ad]');
+    if(cad){if(!cad.hasAttribute('data-quote')&&adOverlay.classList.contains('open')){try{if(window.fbq)fbq('trackCustom','AdPopupDismiss');}catch(err){}}closeAd();}
     if(e.target.closest('[data-close-quote]'))closeQuote();
     if(e.target===quoteOverlay)closeQuote();
     if(e.target===adOverlay)closeAd();

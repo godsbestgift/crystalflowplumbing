@@ -51,6 +51,7 @@
   document.querySelectorAll('.why .ic').forEach(function(el){var k=el.textContent.trim();if(pmap[k])el.innerHTML=ic(pmap[k],'pico');});
   document.querySelectorAll('.card').forEach(function(card){
     var box=card.querySelector('.ico');if(!box)return;
+    if(box.querySelector('img'))return; // card has a real product image; keep it, don't swap in a generic sprite
     var h=((card.querySelector('h3')||{}).textContent||'').toLowerCase();
     var id='i-wrench';
     if(h.indexOf('sewer')>-1||h.indexOf('pipe')>-1||h.indexOf('main')>-1)id='i-pipe';

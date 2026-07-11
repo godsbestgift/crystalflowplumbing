@@ -214,6 +214,8 @@
   .sev-card[data-sev="moderate"]:hover,.sev-card[data-sev="moderate"].active{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 12px 28px rgba(247,201,72,.18)}
   .sev-card[data-sev="severe"]:hover,.sev-card[data-sev="severe"].active{border-color:var(--gold-metal-3);box-shadow:0 0 0 1px var(--gold-metal-3),0 12px 28px rgba(160,107,10,.22)}
   .sev-ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex:0 0 auto}
+  .sev-ico.has-photo{width:64px;height:64px;overflow:hidden}
+  .sev-ico.has-photo img{width:100%;height:100%;object-fit:cover;border-radius:9px}
   .sev-ico svg{width:20px;height:20px}
   .sev-card[data-sev="mild"] .sev-ico{background:rgba(43,180,255,.14);border:1px solid var(--ice);color:var(--ice)}
   .sev-card[data-sev="moderate"] .sev-ico{background:rgba(247,201,72,.14);border:1px solid var(--gold);color:var(--gold)}

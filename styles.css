@@ -532,10 +532,12 @@
   .problem-strip span:before{content:"";position:absolute;left:9px;top:50%;width:5px;height:5px;border-radius:50%;background:#f7c948;box-shadow:0 0 6px rgba(247,201,72,.7);transform:translateY(-50%)}
   @media(max-width:600px){.problem-strip{gap:8px}.problem-strip span{font-size:12px;padding:7px 13px 7px 18px}}
   .cf-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;text-align:left}
-  #sewer .cf-svc{grid-template-columns:repeat(6,1fr)}
-  #sewer .cf-svc .cf-card:nth-child(-n+2){grid-column:span 3}
-  #sewer .cf-svc .cf-card:nth-child(n+3){grid-column:span 2}
-  @media(max-width:760px){#sewer .cf-svc{grid-template-columns:1fr 1fr}#sewer .cf-svc .cf-card{grid-column:auto!important}}
+  #sewer .cf-svc .cf-card:nth-child(1){grid-row:1;grid-column:1}
+  #sewer .cf-svc .cf-card:nth-child(2){grid-row:1;grid-column:2}
+  #sewer .cf-svc .cf-card:nth-child(3){grid-row:2;grid-column:1}
+  #sewer .cf-svc .cf-card:nth-child(4){grid-row:2;grid-column:2}
+  #sewer .cf-svc .cf-card:nth-child(5){grid-row:2;grid-column:3}
+  @media(max-width:760px){#sewer .cf-svc{grid-template-columns:1fr 1fr}#sewer .cf-svc .cf-card{grid-row:auto!important;grid-column:auto!important}}
   @media(max-width:520px){#sewer .cf-svc{grid-template-columns:1fr}}
   .cf-card{position:relative;display:flex;gap:14px;align-items:flex-start;min-height:150px;background:#071B2D;border:1px solid rgba(73,199,255,.35);border-radius:16px;padding:18px 30px 18px 16px;transition:.18s transform,.18s border-color,.18s box-shadow,.18s background}
   .cf-card:hover{transform:translateY(-4px);border-color:#2AAEFF;box-shadow:0 14px 34px rgba(0,0,0,.65),0 0 22px rgba(0,175,255,.35);background:#0d2740}

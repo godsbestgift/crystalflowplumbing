@@ -79,10 +79,9 @@
   function closeQuote(){quoteOverlay.classList.remove('open');document.body.style.overflow='';}
   function closeAd(){adOverlay.classList.remove('open');document.body.style.overflow='';}
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeQuote();closeAd();}});
-  var adShown=false,isTouch=('ontouchstart'in window)||navigator.maxTouchPoints>0;
+  var adShown=false;
   function showAd(fromExit){if(adShown)return;if(quoteOverlay.classList.contains('open'))return;adShown=true;adOverlay.classList.add('open');document.body.style.overflow='hidden';}
-  if(!isTouch){document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0&&(e.clientX>0&&e.clientX<window.innerWidth)){showAd(true);}});}
-  setTimeout(function(){showAd(false);},12000);
+  setTimeout(function(){showAd(false);},40000);
 
   // ===== Quote: 2 steps (2 questions, then 3) =====
   var qs1=document.getElementById('qs1'),qs2=document.getElementById('qs2'),qsDone=document.getElementById('qsDone');
